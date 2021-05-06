@@ -100,7 +100,7 @@ color_scheme: nil
 
 # Google Analytics Tracking (optional)
 # e.g, UA-1234567-89
-ga_tracking: UA-2709176-10
+ga_tracking: G-L2NNDMHQ7K
 ga_tracking_anonymize_ip: true # Use GDPR compliant Google Analytics settings (true/nil by default)
 
 plugins:
@@ -111,7 +111,7 @@ plugins:
 kramdown:
   syntax_highlighter_opts:
     block:
-      line_numbers: true
+      line_numbers: false
 
 compress_html:
   clippings: all
@@ -122,3 +122,44 @@ compress_html:
   profile: false
   # ignore:
   #   envs: all
+
+collections:
+  tutorials:
+    permalink: "/:collection/:path/"
+    output: true
+  extensions:
+    permalink: "/:collection/:path/"
+    output: true
+  talks:
+    permalink: "/:collection/:path/"
+    output: true
+    
+just_the_docs:
+  # Define which collections are used in just-the-docs
+  collections:
+    # Reference the "docs" collection
+    tutorials:
+      # Give the collection a name
+      name: TUTORIALS
+      # Exclude the collection from the navigation
+      # Supports true or false (default)
+      nav_exclude: false
+      # Exclude the collection from the search
+      # Supports true or false (default)
+      search_exclude: false
+    extensions:
+      name: EXTENSIONS
+      # Exclude the collection from the navigation
+      # Supports true or false (default)
+      nav_exclude: false
+      # Exclude the collection from the search
+      # Supports true or false (default)
+      search_exclude: false
+    talks:
+      name: TALKS
+      # Exclude the collection from the navigation
+      # Supports true or false (default)
+      nav_exclude: false
+      # Exclude the collection from the search
+      # Supports true or false (default)
+      search_exclude: false
