@@ -13,11 +13,11 @@
 # you will see them accessed via {{ site.title }}, {{ site.github_repo }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Just the Docs
-description: A Jekyll theme for documentation
+title: GameMaker 8.0 从入门到入土
+description: 托管于Github的《GameMaker 8.0 从入门到入土》教程的Markdown版本。
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://pmarsceill.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-
+url: "https://gm8.nihil.cc" # the base hostname & protocol for your site, e.g. http://example.com
+logo: "assets/images/logo.png"
 permalink: pretty
 exclude: ["node_modules/", "*.gemspec", "*.gem", "Gemfile", "Gemfile.lock", "package.json", "package-lock.json",  "script/", "LICENSE.txt", "lib/", "bin/", "README.md", "Rakefile"
 , "docs/tests/"
@@ -64,8 +64,8 @@ heading_anchors: true
 
 # Aux links for the upper right navigation
 aux_links:
-  "Just the Docs on GitHub":
-    - "//github.com/pmarsceill/just-the-docs"
+  "转到 GitHub 仓库":
+    - "//github.com/NichtsHsu/gm8_tutorial"
 
 # Makes Aux links open in a new tab. Default is false
 aux_links_new_tab: false
@@ -78,19 +78,17 @@ nav_sort: case_sensitive # Capital letters sorted before lowercase
 # appears at the bottom of every page's main content
 
 # Back to top link
-back_to_top: true
-back_to_top_text: "Back to top"
-
-footer_content: "Copyright &copy; 2017-2020 Patrick Marsceill. Distributed by an <a href=\"https://github.com/pmarsceill/just-the-docs/tree/master/LICENSE.txt\">MIT license.</a>"
+back_to_top: false
+back_to_top_text: "回到顶部"
 
 # Footer last edited timestamp
-last_edit_timestamp: true # show or hide edit time - page must have `last_modified_date` defined in the frontmatter
+last_edit_timestamp: false # show or hide edit time - page must have `last_modified_date` defined in the frontmatter
 last_edit_time_format: "%b %e %Y at %I:%M %p" # uses ruby's time format: https://ruby-doc.org/stdlib-2.7.0/libdoc/time/rdoc/Time.html
 
 
 
 # Footer "Edit this page on GitHub" link text
-gh_edit_link: true # show or hide edit this page link
+gh_edit_link: false # show or hide edit this page link
 gh_edit_link_text: "Edit this page on GitHub"
 gh_edit_repository: "https://github.com/pmarsceill/just-the-docs" # the github URL for your repo
 gh_edit_branch: "master" # the branch that your docs is served from
@@ -107,11 +105,13 @@ ga_tracking_anonymize_ip: true # Use GDPR compliant Google Analytics settings (t
 
 plugins:
   - jekyll-seo-tag
+  - jekyll-feed
+  - jekyll-redirect-from
 
 kramdown:
   syntax_highlighter_opts:
     block:
-      line_numbers: false
+      line_numbers: true
 
 compress_html:
   clippings: all
