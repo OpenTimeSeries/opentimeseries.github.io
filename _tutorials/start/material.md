@@ -14,7 +14,7 @@ parent: 初识GameMaker
 
 最好办法当然是勾搭一个（或多个）美工。而像我这种勾搭不上美工的，就只能到处抠图了（偷偷安利东方素材：[http://pan.baidu.com/s/1o8NYoQm](http://pan.baidu.com/s/1o8NYoQm)）。
 
-一般来说，我们拿到的图不可能刚好满足我们的需求，这个时候GM自带的图像编辑器可以帮我们大忙。
+一般来说，我们拿到的图不可能刚好满足我们的需求，这个时候 GM 自带的图像编辑器可以帮我们大忙。
 
 ## 获取音乐素材
 
@@ -27,13 +27,13 @@ parent: 初识GameMaker
 
 # 导入素材
 
-精灵（Sprites）可以导入静图也可以导入gif动态图，而背景（Backgrounds）只允许导入静图。
+精灵（Sprites）可以导入静图也可以导入 gif 动态图，而背景（Backgrounds）只允许导入静图。
 
-方法一：直接将素材文件拖入GM8中，如图所示：
+方法一：直接将素材文件拖入 GM8 中，如图所示：
 
 ![Drag Import](/assets/images/start/drag_import.png)
 
-如果是图片素材，拖入时会询问你是创建一个Sprite还是Background，根据实际选择即可：
+如果是图片素材，拖入时会询问你是创建一个 Sprite 还是 Background，根据实际选择即可：
 
 ![Sprite Or Background](/assets/images/start/sprite_or_background.png)
 
@@ -43,11 +43,11 @@ parent: 初识GameMaker
 
 ![Topbar Import](/assets/images/start/topbar_import.png)
 
-从左到右分别是创建Sprite/Sound/Background/Path/Script/Font/Timeline/Object/Room
+从左到右分别是创建 Sprite/Sound/Background/Path/Script/Font/Timeline/Object/Room
 
 只有第一、二、三是可以导入外部素材的。
 
-以创建Sprite为例，会出现下面这个弹窗：
+以创建 Sprite 为例，会出现下面这个弹窗：
 
 ![Sprite Window](/assets/images/start/sprite_window.png)
 
@@ -57,7 +57,7 @@ parent: 初识GameMaker
 
 从上到下分别是：显示预览，不透明化（如果图片本身有透明区域），清除底色，平滑边缘。
 
-这里要提一下，GM8清除底色的机理，是将**最左下角的点**的颜色当做底色，将整张图的这个颜色全部去掉（变为透明），这个功能效果不是理想，我们还有别的方法可以清除底色（详见后文）。
+这里要提一下，GM8 清除底色的机理，是将**最左下角的点**的颜色当做底色，将整张图的这个颜色全部去掉（变为透明），这个功能效果不是理想，我们还有别的方法可以清除底色（详见后文）。
 
 ---
 
@@ -71,17 +71,17 @@ parent: 初识GameMaker
 
 PS：给资源命名时，一般遵照下面规则：
 
-* 开头写**资源类型简写**，如精灵（Sprites）简写为spr，背景（Backgrounds）简写为back，音效（Sounds）简写为snd，均使用小写。
-* 之后写上素材的性质，如形状，用途，颜色，可以组合，一般以便于区分作为第一法则，每个单词第一个字母大写，例：sprGreenApple，sndGameOver，backSky，sndJump等。
-* 其他资源中，对象（Objects）简写为obj，时间轴（Timeline）简写为tl，房间(Rooms)简写为r，也可以写room，字体（Fonts）仍用font，脚本（Scripts）不使用类型名开头，而是根据实际用途命名，首字母也要大写，例如FlashScreen。（有兴趣可以去百度一下骆驼命名法）
+* 开头写**资源类型简写**，如精灵（Sprites）简写为 spr，背景（Backgrounds）简写为 back，音效（Sounds）简写为 snd，均使用小写。
+* 之后写上素材的性质，如形状，用途，颜色，可以组合，一般以便于区分作为第一法则，每个单词第一个字母大写，例：sprGreenApple，sndGameOver，backSky，sndJump 等。
+* 其他资源中，对象（Objects）简写为 obj，时间轴（Timeline）简写为 tl，房间（Rooms）简写为 r，也可以写 room，字体（Fonts）仍用 font，脚本（Scripts）不使用类型名开头，而是根据实际用途命名，首字母也要大写，例如 FlashScreen。（有兴趣可以去百度一下骆驼命名法）
 
 # 编辑素材
 
-## 编辑Sprites
+## 编辑 Sprites
 
 点击**编辑精灵**。
 
-如果你的图片是静图，你只能看到一张**子图（Images）**，如果你的图片是gif，你可以看到有很多张**子图（Images）**，每一张子图叫做**一帧（Frame）**。左边的“显示预览”勾选可以显示该gif的预览图，注意勾选后出现的“速度”，该值单位为**帧/秒**，这里填入的数字只代表预览图的播放速度，与在游戏里实际使用时的播放速度无关。如图：
+如果你的图片是静图，你只能看到一张**子图（Images）**，如果你的图片是 gif，你可以看到有很多张**子图（Images）**，每一张子图叫做**一帧（Frame）**。左边的“显示预览”勾选可以显示该 gif 的预览图，注意勾选后出现的“速度”，该值单位为**帧/秒**，这里填入的数字只代表预览图的播放速度，与在游戏里实际使用时的播放速度无关。如图：
 
 ![GIF Images](/assets/images/start/gif_images.png)
 
@@ -125,10 +125,10 @@ GM8的图片编辑器，基本的功能都有，上面一行菜单栏，“查�
 
 ![Tolerance](/assets/images/start/tolerance.png)
 
-## 编辑Backgrounds
+## 编辑 Backgrounds
 
 背景和精灵的编辑是差不多的，但是背景编辑删除了一些功能。相对的，背景也多了一个功能：作为贴图使用，这在我们讲到房间（Rooms）的时候会做讲解。
 
-## 编辑Sounds
+## 编辑 Sounds
 
 这个没啥好编辑的，用默认的配置就行了。

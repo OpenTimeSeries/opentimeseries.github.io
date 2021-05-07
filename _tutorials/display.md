@@ -6,38 +6,38 @@ nav_order: 33
 
 # 三种坐标系
 
-在本章之前，我们提到的所有的坐标都是基于**房间坐标系**（Room Coordinate System）的，也就是以房间左上角为原点，向右为x轴，向下为y轴的坐标系。现在，我们来了解一下GM8的另外两种坐标系，**显示坐标系**（Display Coordinate System）——以屏幕左上角为原点的坐标系，和**窗口坐标系**（Window Coordinate System）——以窗口左上角为原点的坐标系（包含标题栏和边框）。
+在本章之前，我们提到的所有的坐标都是基于**房间坐标系**（Room Coordinate System）的，也就是以房间左上角为原点，向右为 x 轴，向下为 y 轴的坐标系。现在，我们来了解一下 GM8 的另外两种坐标系，**显示坐标系**（Display Coordinate System）——以屏幕左上角为原点的坐标系，和**窗口坐标系**（Window Coordinate System）——以窗口左上角为原点的坐标系（包含标题栏和边框）。
 
 GM8提供获取和设置鼠标在三种不同坐标系下的坐标的方法：
 
-* `mouse_x` 获取鼠标在房间坐标系下的x坐标。
-* `mouse_y` 获取鼠标在房间坐标系下的y坐标。
-* `window_views_mouse_get_x()` 等同于`mouse_x`。
-* `window_views_mouse_get_y()` 等同于`mouse_y`。
-* `window_views_mouse_set(x, y)` 设置鼠标位置到房间坐标系的(x, y)处。
-* `window_view_mouse_get_x(id)` 如果同时开启了多个视野，那么鼠标的房间坐标对于不同视野而言是不一样的，例如视野0的view_x[0]是100，而视野1的`view_x[0]`是200，当鼠标放在左上角时，对于视野0而言鼠标指向房间`x=100`处，而对于视野1而言，鼠标指向房间`x=200`处。在这种情况下，你可以使用`window_view_mouse_get_x(id)`分别获取各个视野中鼠标的房间坐标的x。启用单视野时，该函数等同于`mouse_x`。
-* `window_view_mouse_get_y(id)` 同上，在启用多视野时分别获取各个视野中鼠标的房间坐标的y。启用单视野时，该函数等同于`mouse_y`。
-* `window_view_mouse_set(id, x, y)` 同上，在启用多视野时，以索引为id的视野为基准设置鼠标的房间坐标。
-* `window_mouse_get_x()` 获取鼠标在窗口坐标系下的x坐标。
-* `window_mouse_get_y()` 获取鼠标在窗口坐标系下的y坐标。
-* `window_mouse_set(x, y)` 设置鼠标位置到窗口坐标系的(x, y)处。
-* `display_mouse_get_x()` 获取鼠标在显示坐标系下的x坐标。
-* `display_mouse_get_y()` 获取鼠标在显示坐标系下的y坐标。
-* `display_mouse_set(x, y)` 设置鼠标位置到显示坐标系的(x, y)处。
+* `mouse_x` 获取鼠标在房间坐标系下的 x 坐标。
+* `mouse_y` 获取鼠标在房间坐标系下的 y 坐标。
+* `window_views_mouse_get_x()` 等同于 `mouse_x`。
+* `window_views_mouse_get_y()` 等同于 `mouse_y`。
+* `window_views_mouse_set(x, y)` 设置鼠标位置到房间坐标系的 (x, y) 处。
+* `window_view_mouse_get_x(id)` 如果同时开启了多个视野，那么鼠标的房间坐标对于不同视野而言是不一样的，例如视野 0 的 `view_x[0]` 是 100，而视野 1 的 `view_x[1]` 是 200，当鼠标放在左上角时，对于视野 0 而言鼠标指向房间 `x=100` 处，而对于视野 1 而言，鼠标指向房间 `x=200` 处。在这种情况下，你可以使用 `window_view_mouse_get_x(id)` 分别获取各个视野中鼠标的房间坐标的 x。启用单视野时，该函数等同于 `mouse_x`。
+* `window_view_mouse_get_y(id)` 同上，在启用多视野时分别获取各个视野中鼠标的房间坐标的y。启用单视野时，该函数等同于 `mouse_y`。
+* `window_view_mouse_set(id, x, y)` 同上，在启用多视野时，以索引为 id 的视野为基准设置鼠标的房间坐标。
+* `window_mouse_get_x()` 获取鼠标在窗口坐标系下的 x 坐标。
+* `window_mouse_get_y()` 获取鼠标在窗口坐标系下的 y 坐标。
+* `window_mouse_set(x, y)` 设置鼠标位置到窗口坐标系的 (x, y) 处。
+* `display_mouse_get_x()` 获取鼠标在显示坐标系下的 x 坐标。
+* `display_mouse_get_y()` 获取鼠标在显示坐标系下的 y 坐标。
+* `display_mouse_set(x, y)` 设置鼠标位置到显示坐标系的 (x, y) 处。
 
 # 显示控制
 
-通常来说，直接改变用户显示设置是比较冒险的事情，但是有时候为了提供更好的显示效果，不少游戏会改变用户的分辨率（比如东方系列）。由于GM8提供函数可以重置所有显示设置，因此倒也不算是什么需要避讳的事情。
+通常来说，直接改变用户显示设置是比较冒险的事情，但是有时候为了提供更好的显示效果，不少游戏会改变用户的分辨率（比如东方系列）。由于 GM8 提供函数可以重置所有显示设置，因此倒也不算是什么需要避讳的事情。
 
 * `display_get_width()` 返回显示的分辨率宽度。
 * `display_get_height()` 返回显示的分辨率高度。
 * `display_get_colordepth()` 返回显示的色深。
 * `display_get_frequency()` 返回显示的刷新率。
 * `display_set_size(w, h)` 设定显示的分辨率，单位像素。返回是否成功。只有某些特定的组合才能成功，即通过系统设置能修改的那些组合。
-* `display_set_colordepth(coldepth)` 设置色深为16和32二者之一。返回是否成功。
-* `display_set_frequency(frequency)` 设置屏幕刷新率。返回是否成功。只有某些特定的组合才能成功（ 比如60、75、85等等），即通过系统设置能修改的那些组合。
-* `display_set_all(w, h, frequency, coldepth)` 一次性设置上述所有值。参数填-1代表不更改。返回是否成功。
-* `display_test_all(w, h, frequency, coldepth)` 返回给定的设置是否允许。参数填-1代表不更改。
+* `display_set_colordepth(coldepth)` 设置色深为 16 和 32 二者之一。返回是否成功。
+* `display_set_frequency(frequency)` 设置屏幕刷新率。返回是否成功。只有某些特定的组合才能成功（ 比如 60、75、85 等等），即通过系统设置能修改的那些组合。
+* `display_set_all(w, h, frequency, coldepth)` 一次性设置上述所有值。参数填 -1 代表不更改。返回是否成功。
+* `display_test_all(w, h, frequency, coldepth)` 返回给定的设置是否允许。参数填 -1 代表不更改。
 * `display_reset()` 将设置重置到程序初始时的状态。
 
 # 窗口控制
@@ -56,14 +56,14 @@ GM8提供获取和设置鼠标在三种不同坐标系下的坐标的方法：
 * `window_get_stayontop()` 返回窗口是否置顶。
 * `window_set_sizeable(sizeable)` 设置窗口大小是否可以被玩家调整。
 * `window_get_sizeable()` 返回窗口大小是否可以被玩家调整。
-* `window_set_caption(caption)` 设置窗口标题。由于有`room_caption`的存在，该函数并不是那么有用。
+* `window_set_caption(caption)` 设置窗口标题。由于有 `room_caption` 的存在，该函数并不是那么有用。
 * `window_get_caption()` 返回窗口标题。
 * `window_set_color(color)` 设置窗口的底色。
 * `window_get_color()` 返回窗口底色。
-* `window_set_region_scale(scale, adaptwindow)` 如果窗口比当前房间大，通常画面就会拉伸到接触窗口边框，并且显示在窗口的中心位置。你可以设置scale为1使得画面不进行缩放，保持原本大小居中，四周填充底色，在此设置下窗口不能调整到比房间小；当scale为其他正数时，画面会扩大到scale倍；设置为0时，画面将填充到整个窗口，不保持原本的宽高比；而设置为负数时，画面会在保持宽高比的情况下，尽可能地拉伸到最大，也就是默认的情况。adaptwindow仅在scale为0\~1之间时生效，默认情况下（即adaptwindow为false）当scale大于1时，窗口也会随之放大相同倍数以显示画面内容，但是当scale为0\~1时，默认的情况下窗口会保持原本的大小，缩小的画面则位于中心，四周以底色填充。设置adaptwindow为true，则当scale为0\~1时，窗口会自动缩小相同倍数以适配画面的大小。
-* `window_get_region_scale()` 返回上述函数设置的scale值。
+* `window_set_region_scale(scale, adaptwindow)` 如果窗口比当前房间大，通常画面就会拉伸到接触窗口边框，并且显示在窗口的中心位置。你可以设置 scale 为 1 使得画面不进行缩放，保持原本大小居中，四周填充底色，在此设置下窗口不能调整到比房间小；当 scale 为其他正数时，画面会扩大到scale 倍；设置为 0 时，画面将填充到整个窗口，不保持原本的宽高比；而设置为负数时，画面会在保持宽高比的情况下，尽可能地拉伸到最大，也就是默认的情况。adaptwindow 仅在 scale 为 0\~1 之间时生效，默认情况下（即 adaptwindow 为 false）当 scale 大于 1 时，窗口也会随之放大相同倍数以显示画面内容，但是当 scale 为 0\~1 时，默认的情况下窗口会保持原本的大小，缩小的画面则位于中心，四周以底色填充。设置 adaptwindow 为 true，则当 scale 为 0\~1 时，窗口会自动缩小相同倍数以适配画面的大小。
+* `window_get_region_scale()` 返回上述函数设置的 scale 值。
 * `window_set_position(x, y)` 设置窗口位于显示坐标系下的位置。
-* `window_set_size(w, h)` 设置窗口的大小。注意该函数的优先级低于`window_set_region_scale`，如果冲突了会以`window_set_region_scale`为准。
+* `window_set_size(w, h)` 设置窗口的大小。注意该函数的优先级低于 `window_set_region_scale`，如果冲突了会以 `window_set_region_scale` 为准。
 * `window_set_rectangle(x, y, w, h)` 设置窗口的位置和大小。
 * `window_center()` 将窗口移动至屏幕正中央。
 * `window_default()` 将窗口重置为默认大小和位置（居中显示）。
@@ -78,7 +78,7 @@ GM8提供获取和设置鼠标在三种不同坐标系下的坐标的方法：
 
 要想改变鼠标光标，使用以下函数。下面函数的效果取决于用户所使用的光标主题：
 
-* `window_set_cursor(curs)` 设置窗口内鼠标指针的类型。你可以使用如下几种鼠标指针类型，特别的，隐藏鼠标使用`cr_none`：
+* `window_set_cursor(curs)` 设置窗口内鼠标指针的类型。你可以使用如下几种鼠标指针类型，特别的，隐藏鼠标使用 `cr_none`：
   * `cr_default` 默认
   * `cr_none` 无
   * `cr_arrow` 箭头
@@ -95,7 +95,7 @@ GM8提供获取和设置鼠标在三种不同坐标系下的坐标的方法：
   * `cr_hsplit` 水平分离
   * `cr_vsplit` 垂直分离
   * `cr_multidrag` 复数拖拽选中
-  * `cr_sqlwait` SQL等待
+  * `cr_sqlwait` SQL 等待
   * `cr_no` 拒绝
   * `cr_appstart` 载入中
   * `cr_help` 帮助
@@ -105,4 +105,4 @@ GM8提供获取和设置鼠标在三种不同坐标系下的坐标的方法：
 
 你也可以使用自己的精灵图像作为鼠标指针使用：
 
-* `cursor_sprite` 使用精灵来取代鼠标指针的绘制，默认为-1。
+* `cursor_sprite` 使用精灵来取代鼠标指针的绘制，默认为 -1。

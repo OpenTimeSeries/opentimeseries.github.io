@@ -44,7 +44,7 @@ if(条件)
 </tr>
 <tr>
 <td>else</td>
-<td>作为当if结构中条件为false时的分支</td>
+<td>作为当 if 结构中条件为 false 时的分支</td>
 <td markdown="1">
 ```c
 if(条件)
@@ -56,7 +56,7 @@ else
 </tr>
 <tr>
 <td>switch</td>
-<td>与case，break一起使用的多分支结构</td>
+<td>与 case，break 一起使用的多分支结构</td>
 <td markdown="1">
 ```c
 switch (表达式)
@@ -73,7 +73,7 @@ switch (表达式)
 </tr>
 <tr>
 <td>default</td>
-<td>作为switch结构的默认分支</td>
+<td>作为 switch 结构的默认分支</td>
 <td markdown="1">
 ```c
 switch (表达式)
@@ -124,7 +124,7 @@ for(初始化语句; 循环条件; 变量自增)
 </tr>
 <tr>
 <td>do</td>
-<td>与until一起使用的循环结构，必定循环一次</td>
+<td>与 until 一起使用的循环结构，必定循环一次</td>
 <td markdown="1">
 ```c
 do
@@ -135,7 +135,7 @@ until(条件);
 </tr>
 <tr>
 <td>until</td>
-<td>与do一起使用的循环结构，必定循环一次</td>
+<td>与 do 一起使用的循环结构，必定循环一次</td>
 <td markdown="1">
 ```c
 do
@@ -180,12 +180,12 @@ return 表达式;
 </tr>
 <tr>
 <td>true</td>
-<td>逻辑真，等效于1</td>
+<td>逻辑真，等效于 1</td>
 <td></td>
 </tr>
 <tr>
 <td>false</td>
-<td>逻辑假，等效于0</td>
+<td>逻辑假，等效于 0</td>
 <td></td>
 </tr>
 <tr>
@@ -195,7 +195,7 @@ return 表达式;
 </tr>
 <tr>
 <td>and</td>
-<td>逻辑与，等效于&&</td>
+<td>逻辑与，等效于 &&</td>
 <td markdown="1">
 ```c
 逻辑表达式 and 逻辑表达式
@@ -204,7 +204,7 @@ return 表达式;
 </tr>
 <tr>
 <td>or</td>
-<td>逻辑或，等效于||</td>
+<td>逻辑或，等效于 ||</td>
 <td markdown="1">
 ```c
 逻辑表达式 or 逻辑表达式
@@ -213,7 +213,7 @@ return 表达式;
 </tr>
 <tr>
 <td>xor</td>
-<td>逻辑异或，等效于^^</td>
+<td>逻辑异或，等效于 ^^</td>
 <td markdown="1">
 ```c
 逻辑表达式 xor 逻辑表达式
@@ -222,7 +222,7 @@ return 表达式;
 </tr>
 <tr>
 <td>not</td>
-<td>逻辑否，等效于!</td>
+<td>逻辑否，等效于 !</td>
 <td markdown="1">
 ```c
 not 逻辑表达式
@@ -231,37 +231,37 @@ not 逻辑表达式
 </tr>
 <tr>
 <td>self</td>
-<td>值为-1，表示运行代码的当前实例</td>
+<td>值为 -1，表示运行代码的当前实例</td>
 <td></td>
 </tr>
 <tr>
 <td>other</td>
-<td>值为-2，表示参与碰撞事件的另一个实例或with结构的调用者</td>
+<td>值为 -2，表示参与碰撞事件的另一个实例或 with 结构的调用者</td>
 <td></td>
 </tr>
 <tr>
 <td>all</td>
-<td>值为-3，表示所有实例</td>
+<td>值为 -3，表示所有实例</td>
 <td></td>
 </tr>
 <tr>
 <td>noone</td>
-<td>值为-4，表示无实例</td>
+<td>值为 -4，表示无实例</td>
 <td></td>
 </tr>
 <tr>
 <td>global</td>
-<td>值为-5，表示全局变量</td>
+<td>值为 -5，表示全局变量</td>
 <td></td>
 </tr>
 <tr>
 <td>local</td>
-<td>值为-7，表示局部变量</td>
+<td>值为 -7，表示局部变量</td>
 <td></td>
 </tr>
 <tr>
 <td>then</td>
-<td>兼容pascal语法，无特殊作用</td>
+<td>兼容 pascal 语法，无特殊作用</td>
 <td markdown="1">
 ```c
 if (条件) then
@@ -271,7 +271,7 @@ if (条件) then
 </tr>
 <tr>
 <td>begin</td>
-<td>兼容pascal语法，等同于{，可混用</td>
+<td>兼容 pascal 语法，等同于 {，可混用</td>
 <td markdown="1">
 ```c
 begin
@@ -283,7 +283,7 @@ end
 </tr>
 <tr>
 <td>end</td>
-<td>兼容pascal语法，等同于}，可混用</td>
+<td>兼容 pascal 语法，等同于 }，可混用</td>
 <td markdown="1">
 ```c
 begin
@@ -568,7 +568,7 @@ $十六进制串
 </td>
 </tr>
 <tr>
-<td>"（或'）</td>
+<td>"（或 '）</td>
 <td>构成字符串表达式的边界</td>
 <td markdown="1">
 ```c

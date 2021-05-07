@@ -18,7 +18,7 @@ permalink: /tutorials/object/
 
 由于自带的变量数量众多，不在此一一列出，在各个章节中逐渐介绍。
 
-GM自带的变量会自动染上红色，切记自定义的变量名不能和自带变量的变量名冲突！
+GM 自带的变量会自动染上红色，切记自定义的变量名不能和自带变量的变量名冲突！
 
 # 对象实例的创建
 
@@ -26,30 +26,30 @@ GM自带的变量会自动染上红色，切记自定义的变量名不能和自
 
 这时我们可以用到这个函数：
 
-* `instance_create(x, y, obj)` 在房间的(x, y)的位置创造一个对象obj的实例，并返回这个实例的索引（ID）。
+* `instance_create(x, y, obj)` 在房间的 (x, y) 的位置创造一个对象 obj 的实例，并返回这个实例的索引（ID）。
 
 例子：
 
-新建对象objControl，objBullet。在对象objControl的create事件（创建事件）里写：
+新建对象 objControl，objBullet。在对象 objControl 的 create 事件（创建事件）里写：
 
 ```c
-alarm[0] = 50;    //这句话的意思是50步之后执行alarm0事件
+alarm[0] = 50;    //这句话的意思是 50 步之后执行 alarm 0 事件
 ```
 
-在对象objControl的alarm0事件（计时器0号事件）里写：
+在对象 objControl 的 alarm 0 事件（计时器 0 号事件）里写：
 
 ```c
 instance_create(100, 200, objBullet);
 alarm[0] = 50;
 ```
 
-给对象objBullet加上子弹的精灵（Sprite），然后在create事件里写上：
+给对象 objBullet 加上子弹的精灵（Sprite），然后在 create 事件里写上：
 
 ```c
 speed = 6;    //注意：speed默认方向为向右
 ```
 
-把对象Control摆在房间里，设置房间速度为50帧，运行游戏，就实现了每隔1秒钟在位置(100,200)创建一个向右的速度为6像素/步的子弹。
+把对象 Control 摆在房间里，设置房间速度为 50 帧，运行游戏，就实现了每隔 1 秒钟在位置 (100,200) 创建一个向右的速度为6像素/步的子弹。
 
 ![Example](/assets/images/object/example1.png)
 
@@ -69,13 +69,13 @@ speed = 6;    //注意：speed默认方向为向右
 
 也就是说，上面的例子中离开游戏窗口的子弹，实际上还是一直在向更右的右边运动。所以，在制作弹幕游戏时，若不清理掉离开了游戏窗口的实例，必然会导致游戏越玩越卡。
 
-所以我们应该在对象objBullet的**离开游戏房间事件**里写上：
+所以我们应该在对象 objBullet 的**离开游戏房间事件**里写上：
 
 ```c
 instance_destroy();
 ```
 
-这样objBullet的实例在超出房间边缘时会自我销毁：
+这样 objBullet 的实例在超出房间边缘时会自我销毁：
 
 ![Destroy](/assets/images/object/destroy1.png)
 

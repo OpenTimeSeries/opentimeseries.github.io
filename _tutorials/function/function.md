@@ -6,9 +6,9 @@ has_children: true
 permalink: /tutorials/function/
 ---
 
-GML汉化文档下载请点[这里](http://pan.baidu.com/s/1gfKRCd1)
+GML 汉化文档下载请点[这里](http://pan.baidu.com/s/1gfKRCd1)
 
-本教程不会解释所有的GM函数，因此请务必配合GML的文档一起学习。
+本教程不会解释所有的 GM 函数，因此请务必配合 GML 的文档一起学习。
 
 ---
 
@@ -18,7 +18,7 @@ GML汉化文档下载请点[这里](http://pan.baidu.com/s/1gfKRCd1)
 y = f(x)
 ```
 
-给定一个自变量x，能计算出一个因变量y。
+给定一个自变量 x，能计算出一个因变量 y。
 
 数学函数里也有：
 
@@ -33,19 +33,19 @@ y = f(a, b, c)
 
 当然，编程中的函数要复杂更多。函数本身也可以在给出返回值的同时实现一些功能，甚至也有函数不返回任何值，只执行特定功能。
 
-所有的函数，其作用，功能，参数要求，返回值等，在GML汉化文档中可以自行查阅。你也可以在GM8中按F1查看。
+所有的函数，其作用，功能，参数要求，返回值等，在GML汉化文档中可以自行查阅。你也可以在 GM8 中按 F1 查看。
 
 ---
 
-GM中函数的返回值可以赋值给变量，例如：
+GM 中函数的返回值可以赋值给变量，例如：
 
 ```c
 a = sin(2 * pi);
 ```
 
-*注意：GM中三角函数的参数都是弧度制，pi是GM的自带常量，值为圆周率π。*
+*注意：GM 中三角函数的参数都是弧度制，pi 是 GM 的自带常量，值为圆周率 π。*
 
-在这里`2 * pi`作为函数sin的参数，计算得到`sin(2π)`的值，并作为返回值赋给a。
+在这里 `2 * pi` 作为函数 sin 的参数，计算得到 `sin(2π)` 的值，并作为返回值赋给 a。
 
 ---
 
@@ -56,17 +56,17 @@ a = 16;
 b = sqrt(a);
 ```
 
-* `sqrt(x)` 返回x的开方，即根号x。x不能为负数。
+* `sqrt(x)` 返回 x 的开方，即根号 x。x 不能为负数。
 
 ---
 
 有的函数需要多个参数，例如：
 
 ```c
-a = power(3,4);
+a = power(3, 4);
 ```
 
-* `power(x, n)` 返回x的n次方。
+* `power(x, n)` 返回 x 的 n 次方。
 
 ---
 
@@ -86,7 +86,7 @@ time = date_current_time();
 ins = instance_create(120, 240, objBird);
 ```
 
-* `instance_create(x, y, obj)` 在房间的(x, y)位置创建一个对象objBird的实例，并且返回被创建的实例的索引。
+* `instance_create(x, y, obj)` 在房间的 (x, y) 位置创建一个对象 objBird 的实例，并且返回被创建的实例的索引。
 
 ---
 
@@ -96,4 +96,4 @@ ins = instance_create(120, 240, objBird);
 room_goto(rOption);
 ```
 
-* `room_goto(numb)` 进入索引为numb的房间。numb这个参数指房间的名称，比如例子中的rOption。
+* `room_goto(numb)` 进入索引为 numb 的房间。numb 这个参数指房间的名称，比如例子中的 rOption。

@@ -51,7 +51,7 @@ if (!_hvFree)
 
 ## 左右移动，空格跳跃
 
-create事件：
+create 事件：
 
 ```c
 //跳跃速度，请自己修改值
@@ -60,13 +60,13 @@ jumpSpeed = 12;
 grav = 0.6;
 //横向移动速度，请自己修改值
 Hspd = 4;
-//最大下落速度，填0表示不设置限制
+//最大下落速度，填 0 表示不设置限制
 maxVspd = 10;
 //初始化跳跃状态，无需修改
 jump = 0;
 ```
 
-step事件：
+step 事件：
 
 ```c
 var U, D, _S, _vFree, _hFree, _hvFree;
@@ -123,7 +123,7 @@ if (!_hvFree)
 
 ## 左右移动，空格二段跳
 
-create事件：
+create 事件：
 
 ```c
 //跳跃速度，请自己修改值
@@ -139,7 +139,7 @@ maxVspd = 10;
 jump = 0;
 ```
 
-step事件：
+step 事件：
 
 ```c
 var U, D, _S, isFirstJump, _vFree, _hFree, _hvFree;
