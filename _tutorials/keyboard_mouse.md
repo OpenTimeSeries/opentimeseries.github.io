@@ -22,7 +22,7 @@ nav_order: 12
 
 键盘事件没啥好讲的，因为键盘事件在处理玩家角色操作时非常无力，一般都用代码来控制玩家角色的操作。
 
-一般键盘事件更多用于全局的键盘操作，比如[按 R 键 restart]({{ site.baseurl }}{% link _tutorials/make_your_game/data.md %}#杀死玩家记录死亡数)，[按 backspace 键回到选关页]({{ site.baseurl }}{% link _tutorials/make_your_game/level_design.md %}#选关页)，[按 P 键暂停什么]({{ site.baseurl }}{% link _tutorials/make_your_game/pause.md %}#show_message法)的。
+一般键盘事件更多用于全局的键盘操作，比如[按 R 键 restart]({{ site.baseurl }}{% link _tutorials/make_your_game/data.md %}#杀死玩家记录死亡数)，[按 backspace 键回到选关页]({{ site.baseurl }}{% link _tutorials/make_your_game/level_design.md %}#选关页)，[按 P 键暂停什么]({{ site.baseurl }}{% link _tutorials/make_your_game/pause.md %}#show_message-法)的。
 
 # 鼠标事件
 

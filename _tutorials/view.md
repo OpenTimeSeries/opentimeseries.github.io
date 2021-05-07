@@ -98,6 +98,6 @@ GM8 有一个内置变量 `view_angle[..]` 用来控制视野的旋转，使用�
 
 # 常见误区与 view_current
 
-由于 view_系列变量不写数组符号也是可以正常运行的，比如：`view_xview = 0;` 是不会报错的，所以就有很多 GMer 会陷入一个误区，以为不带数组符号的 view_系列变量代表正在使用的视野，即，认为如果正在使用 View 3，那么 `view_xview` 等效于 `view_xview[3]`。但是这是一个天大的误解，之所以不写数组符号也不会出错，原理在我[数组]({{ site.baseurl }}{% link _tutorials/array/array.md %}#gm数组的特殊性)中提到过了，GM8 将一切变量与它的 0 号元素视为等效，即 `a` 与 `a[0]` 完全等效，因此，即使使用的是 View 3，`view_xview` 代表的还是 `view_xview[0]`。
+由于 view_系列变量不写数组符号也是可以正常运行的，比如：`view_xview = 0;` 是不会报错的，所以就有很多 GMer 会陷入一个误区，以为不带数组符号的 view_系列变量代表正在使用的视野，即，认为如果正在使用 View 3，那么 `view_xview` 等效于 `view_xview[3]`。但是这是一个天大的误解，之所以不写数组符号也不会出错，原理在我[数组]({{ site.baseurl }}{% link _tutorials/array/array.md %}#gm-数组的特殊性)中提到过了，GM8 将一切变量与它的 0 号元素视为等效，即 `a` 与 `a[0]` 完全等效，因此，即使使用的是 View 3，`view_xview` 代表的还是 `view_xview[0]`。
 
 `view_current` 返回当前正在使用的视野，不可改变，且只在**绘制事件**中有效，在其他事件中值都是 0。因为每一个视野都会调用一次绘制事件，所以可以用 `if(view_current == xx)` 实现在不同的视野中绘制出不同的图片或图案。

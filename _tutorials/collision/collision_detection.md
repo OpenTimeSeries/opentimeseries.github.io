@@ -43,7 +43,7 @@ with(other)
 
 other 就能胜任这一功能。
 
-这并不是第一次提到 other，在之前我们也有讲过，在 [with 结构]({{ site.baseurl }}{% link _tutorials/object/interaction.md %}#with语句)中，用 other 表示调用 with 的对象的实例：
+这并不是第一次提到 other，在之前我们也有讲过，在 [with 结构]({{ site.baseurl }}{% link _tutorials/object/interaction.md %}#with-语句)中，用 other 表示调用 with 的对象的实例：
 
 ```c
 xx = 55;
