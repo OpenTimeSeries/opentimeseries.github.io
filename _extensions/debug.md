@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Debug技巧
+title: Debug 技巧
 nav_order: 4
 ---
 

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: GM8与反编译与混淆
+title: GM8 与反编译与混淆
 nav_order: 2
 ---
 
