@@ -36,10 +36,10 @@ parent: Make Your Game!
 
 * `background_create_from_screen(x, y, w, h, transparent, smooth, preload)`  通过复制给定屏幕区域创建一个背景。这个函数可以用来创建任何你想用的背景。在屏幕上使用绘制函数绘制图像接着从中创建一个。（如果你不在绘制事件中使用，你恰好可以这样做，它不会刷新，所以在屏幕上不可见）其他参数和上面一样。函数返回新背景的索引。这儿必须要有一个操作警告。即使我们说到屏幕，实际是和绘制区域相关。事实是屏幕上有窗口，图像可能在窗口中缩放。
 
-官方文档讲的又臭又长，说白了，就是截屏，然后作为一张 background 使用。所以我们使用：
+官方文档讲的又臭又长，说白了，就是以当前视野左上角为原点截屏，然后作为一张 background 使用。所以我们使用：
 
 ```c
-backPause = background_create_from_screen(view_xview[0], view_yview[0], view_wview[0], view_hview[0], 0, 0);
+backPause = background_create_from_screen(0, 0, view_wview[0], view_hview[0], 0, 0);
 ```
 
 来储存当前屏幕的图像。
