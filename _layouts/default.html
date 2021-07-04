@@ -170,6 +170,26 @@ layout: table_wrappers
         {% endif %}
 
       </div>
+      
+      <hr>
+      {% if site.waline.enabled == true %}
+      <div id="waline"></div>
+      <script>
+          Waline({
+              el: '#waline',
+              serverURL: '{{ site.waline.server }}',
+              emoji: [
+                'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/qq',
+                'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/tieba',
+                'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/tw-emoji',
+                'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/bilibili',
+              ],
+              dark: 'html[data-theme="dark"]',
+              avatar: '{{ site.waline.avatar }}',
+              placeholder: '{{ site.waline.placeholder }}',
+          });
+      </script>
+      {% endif %}
     </div>
 
     {% if site.search_enabled != false %}
