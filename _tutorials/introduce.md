@@ -18,7 +18,7 @@ redirect_from:
 # 关于内容
 
 * 由于本教程时间跨度极长（从 2017 到 2019），因此前后风格差异极大。（前期主观意识较重）
-* 如果发现教程中出现任何错误，遗漏，歧义，或者改进的建议，可在 Heabot 对应帖子或 [Github Issues](https://github.com/NichtsHsu/gamemaker_8_0_tutorial/issues) 中留言，我会尽快根据你的建议修改教程内容。
+* 如果发现教程中出现任何错误，遗漏，歧义，或者改进的建议，可在评论区或者 Heabot 对应帖子中留言，我会尽快根据你的建议修改教程内容。
 * 教程中大量使用 I wanna 引擎作为举例，均为[果引擎](https://nikaple.github.io/iwbt-nikaple-engine-doc/#/)。
 * 教程中出现的~~删除线~~均为无关紧要的吐槽和抖机灵。
 
