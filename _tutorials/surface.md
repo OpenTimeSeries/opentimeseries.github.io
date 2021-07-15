@@ -480,7 +480,7 @@ if(surface_exists(surf2))
 Ro = Rs * As + Rd * (1 - As)
 Go = Gs * As + Gd * (1 - As)
 Bo = Bs * As + Bd * (1 - As)
-Ao = As * As + Bs * (1 - As)
+Ao = As * As + Ad * (1 - As)
 ```
 
 注意最后一行计算 Ao 时的公式。
