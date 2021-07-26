@@ -11,9 +11,9 @@ redirect_from:
 
 # 关于Heabot论坛
 
-* 本教程最早撰写于 [Heabot 论坛](https://www.heabot.cn/)，借由 Discuz 代码，更方便排版，并且帖子可以无限次数编辑，以方便纠错。对于访问 Github 困难的情况，建议阅览本教程的 [Heabot 版本](https://www.heabot.cn/thread-76-1-1.html)。
+* 本教程最早撰写于 Heabot 论坛，该论坛目前已关停。
 * Heabot 是非盈利性质的论坛，你只需要注册登录即可阅览所有内容。
-* 本教程仅有 [Heabot 版本](https://www.heabot.cn/thread-76-1-1.html)与 [Github 版本](https://gm8.nihil.cc/)，未在任何其他平台发布。
+* 本教程仅有 Heabot 版本（论坛已关停）与 [Github 版本](https://gm8.nihil.cc/)，未在任何其他平台发布。
 
 # 关于内容
 
