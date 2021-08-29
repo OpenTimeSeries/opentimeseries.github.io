@@ -12,8 +12,7 @@ redirect_from:
 # 关于Heabot论坛
 
 * 本教程最早撰写于 Heabot 论坛，该论坛目前已关停。
-* Heabot 是非盈利性质的论坛，你只需要注册登录即可阅览所有内容。
-* 本教程仅有 Heabot 版本（论坛已关停）与 [Github 版本](https://gm8.nihil.cc/)，未在任何其他平台发布。
+* Heabot 关停后，本教程目前仅有 [Github 版本](https://gm8.nihil.cc/)，未在任何其他平台发布。
 
 # 关于内容
 
