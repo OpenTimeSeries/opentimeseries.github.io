@@ -35,9 +35,12 @@ function initNav() {
     }
   });
 
-  const siteNav = document.getElementById('site-nav');
+  let siteNav = document.getElementById('site-nav');
   const mainHeader = document.getElementById('main-header');
   const menuButton = document.getElementById('menu-button');
+  const active_item = document.getElementsByClassName("nav-list-item active")[0];
+
+  siteNav.scrollTop = active_item.offsetTop - siteNav.offsetHeight / 2;
 
   jtd.addEvent(menuButton, 'click', function(e){
     e.preventDefault();
