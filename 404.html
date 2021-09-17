@@ -1,6 +1,7 @@
 ---
 permalink: /404.html
 layout: default
+type: 404
 ---
 
 <!DOCTYPE html>
@@ -111,10 +112,17 @@ layout: default
       background: #1a1a1a;
     }
 
+    img#site {
+      width: 174px;
+      height: 48px;
+      margin-top: 32px;
+
+    }
+
     .ErrorPage-container {
       display: flex;
       justify-content: center;
-      margin-top: 180px;
+      margin-top: 120px;
     }
 
     @media (max-width: 690px) {
@@ -241,6 +249,7 @@ layout: default
 </head>
 
 <body>
+  <a href="https://404.life/564.html" target="_blank" style="background-image: none"><img src="/assets/images/404/404 Template.png" id="site" /></a>
   <div class="ErrorPage">
     <div class="ErrorPage-container">
       <div class="ErrorPage-text">
@@ -292,7 +301,8 @@ layout: default
         </div>
       </div>
       <div class="ErrorPage-errorImageContainer">
-        <img class="ErrorPage-errorImage" src="{{ site.baseurl }}/assets/images/404/liukanshan_wire.svg" alt="page error" />
+        <img class="ErrorPage-errorImage" src="{{ site.baseurl }}/assets/images/404/liukanshan_wire.svg"
+          alt="page error" />
       </div>
     </div>
   </div>
