@@ -80,8 +80,9 @@ a:not([class]) {
 }
 
 code {
-  font-family: $mono-font-family;
-  font-size: 0.75em;
+  font-family: 'Fira Code', 'Noto Sans SC', monospace;
+  font-size: 0.85em;
+  font-variant-ligatures: none;
   line-height: $body-line-height;
 }
 

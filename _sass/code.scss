@@ -2,6 +2,7 @@
 // Code and syntax highlighting
 //
 // stylelint-disable selector-no-qualifying-type, declaration-block-semicolon-newline-after,declaration-block-single-line-max-declarations, selector-no-type, selector-max-type
+@import url(https://cdn.jsdelivr.net/gh/tonsky/FiraCode@5.2/distr/fira_code.css);
 
 code {
   padding: 0.2em 0.15em;
@@ -14,6 +15,13 @@ code {
 // Avoid appearance of dark border around visited code links in Safari
 a:visited code {
   border-color: $border-color;
+}
+
+code {
+  * {
+    font-family: 'Fira Code', 'Noto Sans SC', monospace;
+    font-variant-ligatures: none;
+  }
 }
 
 // Content structure for highlighted code blocks using fences or Liquid
@@ -113,37 +121,39 @@ figure.highlight {
   color: #586e75;
 } // comment //
 .highlight .err {
-  color: #93a1a1;
+  color: #555;
 } // error //
 .highlight .g {
   color: #93a1a1;
 } // generic //
 .highlight .k {
-  color: #859900;
+  color: #017d86;
 } // keyword //
 .highlight .l {
   color: #93a1a1;
 } // literal //
 .highlight .n {
-  color: #93a1a1;
+  color: #333;
 } // name //
 .highlight .o {
-  color: #859900;
+  color: #555;
+  font-weight: bold;
 } // operator //
 .highlight .x {
   color: #cb4b16;
 } // other //
 .highlight .p {
-  color: #93a1a1;
+  color: #555;
+  font-weight: bold;
 } // punctuation //
 .highlight .cm {
-  color: #586e75;
+  color: #998;
 } // comment.multiline //
 .highlight .cp {
   color: #859900;
 } // comment.preproc //
 .highlight .c1 {
-  color: #586e75;
+  color: #998;
 } // comment.single //
 .highlight .cs {
   color: #859900;
@@ -205,7 +215,7 @@ figure.highlight {
   color: #2aa198;
 } // literal.number //
 .highlight .s {
-  color: #2aa198;
+  color: #d01040;
 } // literal.string //
 .highlight .na {
   color: #555;
@@ -262,7 +272,7 @@ figure.highlight {
   color: #2aa198;
 } // literal.number.hex //
 .highlight .mi {
-  color: #2aa198;
+  color: #a12a9b;
 } // literal.number.integer //
 .highlight .mo {
   color: #2aa198;
