@@ -176,7 +176,13 @@ layout: table_wrappers
       {% if site.waline.enabled == true and page.type != 404 %}
       <div id="waline"></div>
       <script>
-          Waline({
+        function loadWaline() {
+          var s = document.createElement('script');
+          s.setAttribute('src', '//cdn.jsdelivr.net/npm/@waline/client');
+          s.async = false;
+          document.body.appendChild(s);
+          s.onload = () => {
+            var valine = Waline({
               el: '#waline',
               serverURL: '{{ site.waline.server }}',
               emoji: [
@@ -189,6 +195,22 @@ layout: table_wrappers
               avatar: '{{ site.waline.avatar }}',
               placeholder: '{{ site.waline.placeholder }}',
           });
+          };
+        };
+      
+        setTimeout(function () {
+          if ("IntersectionObserver" in window) {
+            var io = new IntersectionObserver(function (entries) {
+              if (entries[0].isIntersecting) {
+                loadWaline();
+                io.disconnect();
+              }
+            });
+            io.observe(document.getElementById('waline'));
+          } else {
+            loadWaline();
+          }
+        }, 1);
       </script>
       {% endif %}
     </div>
