@@ -17,7 +17,7 @@ $scrollbar-size: 7px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color:rgba(#7253ed, 0.3);
+  background-color:rgba(#7253ed, 0.5);
   border-radius: calc(#{$scrollbar-size} / 2);
 }
 
