@@ -16,12 +16,12 @@ nav_order: 31
 
 也许你没有听说过 GUI，但是你总该听说过**命令提示符**（Command Prompt），由于它的程序名叫做 cmd.exe，因此通常简称 **cmd**。cmd 是 Windows 下所保留的命令行界面，可以用它来处理几乎所有的 GUI 所提供的功能。**PowerShell** 则是 Windows 上的另一个命令行界面，通常 Windows10 系统中的默认命令行界面就是 PowerShell，它在一定程度上兼容命令提示符，另一方面，PowerShell 对接 .NET，提供了强大的脚本编写环境。
 
-![Command Prompt](/assets/images/command/cmd.png)
-
+> ![Command Prompt](/assets/images/command/cmd.png)
+>
 > cmd
 
-![PowerShell](/assets/images/command/powershell.png)
-
+> ![PowerShell](/assets/images/command/powershell.png)
+>
 > PowerShell
 
 在这里我们并不会去了解命令行界面的具体使用方式，我们只谈谈那些 GM8 中能用的上的部分。

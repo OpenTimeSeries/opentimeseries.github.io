@@ -11,12 +11,12 @@ parent: 碰撞
 
 我们知道，在一些游戏中（尤其是东方），判断玩家中弹（或其他伤害），或者判断敌方中弹，并不是简单地判断二者图像是否重叠。
 
-![Touhou](/assets/images/collision/touhou.jpg)
-
+> ![Touhou](/assets/images/collision/touhou.jpg)
+>
 > 取自《东方永夜抄》，自机（即玩家角色）只有中心很小的一个点与弹幕重合时才被系统认为中弹。
 
-![IWBTG](/assets/images/collision/iwbtg.png)
-
+> ![IWBTG](/assets/images/collision/iwbtg.png)
+>
 > 取自《I Wanna Be The Guy》，BOSS 只有拳套部分会杀死玩家角色。
 
 判定域，从字面上就可以理解，是指实际参与中弹判定、接触判定、阻碍判定等的区域。判定域有一个更为专业的称呼，Collision Box，常翻译为**碰撞盒**或者碰撞箱，在本教程中以“碰撞盒”作为译名。
