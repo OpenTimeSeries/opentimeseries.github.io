@@ -44,16 +44,16 @@ nav_order: 5
 ①：
 
 ```c
-if(instance_exists(ObjRayLoli))
+if (instance_exists(ObjRayLoli))
 {
     inst = instance_place(x, y, ObjRayLoli);
-    if(inst != noone)
+    if (inst != noone)
     {
         findRayLoli = true;
-        if(inst.isLoli == false)
+        if (inst.isLoli == false)
         {
             inst.isLoli = true;
-            if(inst.num < 10)
+            if (inst.num < 10)
             {
                 goodRay = true;
                 badRay = false;
@@ -62,7 +62,7 @@ if(instance_exists(ObjRayLoli))
             {
                 goodRay = false;
                 badRay = true;
-                with(inst)instance_destroy();
+                with (inst)instance_destroy();
             }
         }
         else
@@ -80,18 +80,18 @@ if(instance_exists(ObjRayLoli))
 ②：
 
 ```c
-if(!instance_exists(ObjRayLoli))
+if (!instance_exists(ObjRayLoli))
     exit;
 
 findRayLoli = true;
 inst = instance_place(x, y, ObjRayLoli);
-if(inst == noone)
+if (inst == noone)
 {
     findRayLoli = false;
     exit;
 }
 
-if(inst.isLoli == true)
+if (inst.isLoli == true)
 {
     goodRay = true;
     badRay = false;
@@ -99,11 +99,11 @@ if(inst.isLoli == true)
 }
 inst.isLoli = true;
 
-if(inst.number >= 10)
+if (inst.number >= 10)
 {
     goodRay = false;
     badRay = true;
-    with(inst)instance_destroy();
+    with (inst)instance_destroy();
     exit;
 }
 goodRay = true;

@@ -121,7 +121,7 @@ show_message("Their sum is " + string(a + b) + "!");
 一般这样用：
 
 ```c
-if(show_question("A question here"))
+if (show_question("A question here"))
 {
     xxxx;    // 玩家点 yes 后执行的代码
 }
@@ -135,7 +135,7 @@ else
 比如询问玩家是否退出游戏：
 
 ```c
-if(show_question("Exit game?"))
+if (show_question("Exit game?"))
 {
     game_end();   //game_end()函数用于结束游戏
 }

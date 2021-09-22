@@ -39,9 +39,9 @@ parent: 对象
 
 应用对象默认为自己（self），即代码是自身执行的。
 
-其他（other）在碰撞事件中起作用，等效于 `with(other){xxxxx;}`，暂且不讲。
+其他（other）在碰撞事件中起作用，等效于 `with (other){xxxxx;}`，暂且不讲。
 
-应用到对象即把这个代码框的所有代码都交由指定的 obj 执行，等效于 `with(obj){xxxxx;}`;
+应用到对象即把这个代码框的所有代码都交由指定的 obj 执行，等效于 `with (obj){xxxxx;}`;
 
 # 注释
 

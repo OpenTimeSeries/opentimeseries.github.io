@@ -64,7 +64,7 @@ alarm[0] = 50;
 如果我们不只是想让对象/实例之间进行数据的交流，而是想让某个对象/实例命令另一个对象/实例执行一个函数或者一段代码呢？
 
 ```c
-with(obj/ID)
+with (obj/ID)
 {
     xxxx;
     xxxxx;
@@ -74,52 +74,52 @@ with(obj/ID)
 作用是让括号里的对象/实例执行花括号里的代码。和 [if]({{ site.baseurl }}{% link _tutorials/logic/condition.md %}#if语句) 一样，如果只有一个语句可以不用花括号，形如：
 
 ```c
-with(obj/ID)
+with (obj/ID)
     xxxxx;
 ```
 
 像 if, while, for, with 等这类在花括号里的语句只有一句时，可以不写花括号。但是究竟是写在同一行里：
 
 ```c
-if(xxx)xxxx;
+if (xxx)xxxx;
 ```
 
 还是分开两行写：
 
 ```c
-if(xxx)
+if (xxx)
     xxxx;
 ```
 
 这个纯靠个人习惯。一般而言，整个语句较短就写同一行比较清晰，如：
 
 ```c
-if(x == y) z = x;
+if (x == y) z = x;
 ```
 
 比较长就分开写比较清晰，如：
 
 ```c
-if(objBlock.x < view_xview || objBlock.y < view_yview || move == 0)
+if (objBlock.x < view_xview || objBlock.y < view_yview || move == 0)
     instance_create(view_xview + 100, view_yview + 100, objBlockSlip);
 ```
 
 原则上怎么写更适合阅读就怎么写。
 
-for 语句通常不会写在同一行（因为 `for(xx1; xx2; xx3)` 本身就包含了三个语句，比较长）。
+for 语句通常不会写在同一行（因为 `for (xx1; xx2; xx3)` 本身就包含了三个语句，比较长）。
 
 ---
 
-注意：假设只有一个 objA 的实例和一个 objB 的实例。若在 objA 里写 `objB.xx = yy;`，这个 yy 是 **objA 的 yy**；若在 objA 里写 `with(objB) xx = yy;`，这个 yy 则是 **objB 的 yy**，等效于 `objB.xx = objB.yy;`。如果要在 `with(objB) {xxxxx;}` 的花括号里使用 objA 的值，得用 `objA.yy` 来调用。
+注意：假设只有一个 objA 的实例和一个 objB 的实例。若在 objA 里写 `objB.xx = yy;`，这个 yy 是 **objA 的 yy**；若在 objA 里写 `with (objB) xx = yy;`，这个 yy 则是 **objB 的 yy**，等效于 `objB.xx = objB.yy;`。如果要在 `with (objB) {xxxxx;}` 的花括号里使用 objA 的值，得用 `objA.yy` 来调用。
 
 但是有时候事情并没有这么简单。
 
-举个例子，屏幕里面有很多个 objA 的实例，每一个实例的 yy 的值都不一样。这时候其中一个 objA 的实例创建了一个 objB 的实例（即 `inst = instance_create(x, y, objB);`，用变量 inst 储存了这个 objB 的实例的索引），并且想在 `with(inst) {xxxxx;}` 里面使用自己的 yy 而不是其它 objA 的 yy，要怎么做？
+举个例子，屏幕里面有很多个 objA 的实例，每一个实例的 yy 的值都不一样。这时候其中一个 objA 的实例创建了一个 objB 的实例（即 `inst = instance_create(x, y, objB);`，用变量 inst 储存了这个 objB 的实例的索引），并且想在 `with (inst) {xxxxx;}` 里面使用自己的 yy 而不是其它 objA 的 yy，要怎么做？
 
 GML 中提供了关键字 **other** 来处理这个问题。只要在 with 里写 `other.yy`：
 
 ```c
-with(inst)
+with (inst)
 {
     xx = other.yy;
 }
@@ -134,7 +134,7 @@ with(inst)
 ```c
 inst = instance_create(此处省略...);
 inst.speed = 6;
-with(inst)
+with (inst)
 {
     xx = 15;
     inst = instace_create(此处省略...);   //此处的 inst 和上面的 inst 不是同一个
@@ -147,7 +147,7 @@ inst.yy = 6;
 提示：`instance_create` 函数的返回值可以作为成员运算符的前缀，那么也自然可以直接作为 with 的参数：
 
 ```c
-with(instance_create(x, y, obj))
+with (instance_create(x, y, obj))
 {
     xxx;
 }
@@ -170,7 +170,7 @@ objFruit.x += 12;
 一定要写成 with 结构：
 
 ```c
-with(objFruit) x += 12;
+with (objFruit) x += 12;
 ```
 
 在 GML 文档第 15 页有介绍，其原因是：
@@ -191,7 +191,7 @@ with(objFruit) x += 12;
 
 以 `global.xx` 的形式的变量即是全局变量，小数点是成员运算符，表示这个变量是属于 global 的。使用方法和正常的变量几乎没有区别，任何一个对象/实例可以访问/改变改变全局变量。
 
-扩展：`global` 可以视作是一个特殊的实例，它的索引是 -5。即，你可以使用 `(-5).xxx` 来调用全局变量。但是 `with(global)` 或者 `with(-5)` 是不行的，因为 global 本身不能执行代码。
+扩展：`global` 可以视作是一个特殊的实例，它的索引是 -5。即，你可以使用 `(-5).xxx` 来调用全局变量。但是 `with (global)` 或者 `with (-5)` 是不行的，因为 global 本身不能执行代码。
 
 ## globalvar
 
@@ -249,8 +249,8 @@ var 变量生存期间那么短，如何体现它的**全局性**？一般还是
 
 ```c
 var count;
-for(count = 0; count < 360; count += 20)
-    with(instance_create(200, 200, objBullet))
+for (count = 0; count < 360; count += 20)
+    with (instance_create(200, 200, objBullet))
     {
         speed = 6;
         direction = count;    //速度的方向，即运动方向，0 为右，90 为上，180 为左，270 为下

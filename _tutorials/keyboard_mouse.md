@@ -81,7 +81,7 @@ numb 只有四个参数可选：
 如果要检测字母键，以及字母键盘上方的数字键，应该使用 `ord('A')`，`ord('1')` 的形式，字母一定要大写，例如
 
 ```c
-if(keyboard_check(ord('W')))
+if (keyboard_check(ord('W')))
 * xxxxx;
 ```
 

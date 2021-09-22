@@ -7,7 +7,7 @@ parent: 碰撞
 
 我们很久以前就提到过，可以用 step 事件去取代别的事件，这样可以随心地自己掌控各个事件的执行顺序。比如，在碰撞事件中，如果一个实例有两个碰撞事件，并且在同一步内都触发了，那么哪个碰撞事件先执行？猜测 GM 的执行顺序是一件痛苦的事，所以不如由自己来掌控执行顺序。
 
-对于普通的非固体碰撞，在步事件里 `if(place_meeting(x, y, obj){ xxxxxx; }` 就能达成和碰撞事件一样的效果了，如果要模拟 other，可以用 `inst = instance_place(x, y, obj); if(inst) { xxxxxx; }`，通过 inst 来代替 other。
+对于普通的非固体碰撞，在步事件里 `if (place_meeting(x, y, obj){ xxxxxx; }` 就能达成和碰撞事件一样的效果了，如果要模拟 other，可以用 `inst = instance_place(x, y, obj); if (inst) { xxxxxx; }`，通过 inst 来代替 other。
 
 所以重点就是如何模拟并取代固体的碰撞。首先，我们要知道，固体碰撞实际上有很多的问题，最明显的问题就是当速度比较大的时候，容易出现下面这种情况：
 
@@ -30,7 +30,7 @@ if (!_vFree) {
 }
 
 _hFree = place_free(x + hspeed, y);
-if(!_hFree && _vFree)
+if (!_hFree && _vFree)
     _hFree = place_free(x + hspeed, y + vspeed + gravity);
 if (!_hFree) {
     if (hspeed <= 0)

@@ -111,7 +111,7 @@ sig = file_bin_read_byte(f);
 value = file_bin_read_byte(f) * 256 * 256;
 value += file_bin_read_byte(f) * 256;
 value += file_bin_read_byte(f);
-if(!sig)
+if (!sig)
 value = -value;
 
 file_bin_close(f);

@@ -49,24 +49,24 @@ backPause = background_create_from_screen(0, 0, view_wview[0], view_hview[0], 0,
 假设我们使用变量 pausing，首先先在 world 的 create 事件初始化 `pausing = 0;`，然后，暂停时令 `pausing = 1;`，解除暂停时令 `pausing = 0;`，最后把 world 的计时代码用
 
 ```c
-if(!pausing)
+if (!pausing)
 {
     计时的代码
 }
 ```
 
-包裹起来。同样的，凡是 world 不应该在暂停期间做的事情，一律使用 `if(!pausing)` 进行限制。
+包裹起来。同样的，凡是 world 不应该在暂停期间做的事情，一律使用 `if (!pausing)` 进行限制。
 
 现在，我们可以开始动工设计我们的暂停面板了。
 
-首先，为 world 创建 draw 事件，draw 事件是专门用来绘图的事件，与绘图相关的事件一般都放在 draw 事件中。在 draw 事件中，我们首先写上 `if(pausing){}`。
+首先，为 world 创建 draw 事件，draw 事件是专门用来绘图的事件，与绘图相关的事件一般都放在 draw 事件中。在 draw 事件中，我们首先写上 `if (pausing){}`。
 
 * `draw_background(back, x, y)` 绘制背景在坐标（x, y）。
 
 把我们之前保存下来的截屏图片画上去：
 
 ```c
-if(pausing)
+if (pausing)
 {
     draw_background(backPause, 0, 0);
 }
@@ -160,7 +160,7 @@ instance_destroy();
 
 `object_index` 是返回实例属于哪个对象。
 
-战斗房间如何设计就是各位自行发挥了，可以通过 `world.monster` 来读取是和哪个怪物发生了战斗，形如 `if(monster == objDragon){xxx;}`。
+战斗房间如何设计就是各位自行发挥了，可以通过 `world.monster` 来读取是和哪个怪物发生了战斗，形如 `if (monster == objDragon){xxx;}`。
 
 当战斗结束之后，应该让战斗房间的某个 obj 执行：
 

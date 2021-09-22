@@ -21,7 +21,7 @@ of Create Event
 for object objTest:
 
 Error in code at line 2:
-   if(a == b)
+   if (a == b)
            ^
 at position 10: Cannot compare arguments.
 ```
@@ -38,7 +38,7 @@ at position 10: Cannot compare arguments.
 
     ![Line](/assets/images/debug/line.png)
 
-5. 第七行 `if(a == b)` 是告诉我们出错的代码。
+5. 第七行 `if (a == b)` 是告诉我们出错的代码。
 6. 第八行有个 `^`，他指示了错误发生的位置。
 7. 第九行的前半段 “at position **10**” 和 `^` 作用相同，告诉我们错误发生的位置是从左数第 10 个字符处。注意空格也算字符。
 8. 第九行的后半段指示了错误发生的原因。在本例中，错误原因是 “**Cannot compare arguments**”，这个错误的发生原因是判等的两边类型不同，即 a 和 b 中有一个是实数，有一个是字符串，二者无法比较，因此会报此错误。
@@ -85,7 +85,7 @@ at position 10: Cannot compare arguments.
 
 这里介绍给大家一种很好用的思路：
 
-如果我们想知道实例 inst1 是否与另一个实例 inst2 发生了碰撞，我们想要监控 `place_meeting(x, y, inst2)` 是不可能的，监控列表并不知道这个函数要交给谁来执行。因此一种实现方式是，通过 Execute Code 执行 `with(inst1) isCollided = place_meeting(x, y, inst2);`，然后再监控 `inst1.isCollided` 即可。不过缺陷是不会自动刷新，需要再次 Execute Code 才会刷新值，因此更适合暂停游戏下使用。当然，这里只是提供一种可行的思路，希望各位能举一反三，发掘出更多用途。
+如果我们想知道实例 inst1 是否与另一个实例 inst2 发生了碰撞，我们想要监控 `place_meeting(x, y, inst2)` 是不可能的，监控列表并不知道这个函数要交给谁来执行。因此一种实现方式是，通过 Execute Code 执行 `with (inst1) isCollided = place_meeting(x, y, inst2);`，然后再监控 `inst1.isCollided` 即可。不过缺陷是不会自动刷新，需要再次 Execute Code 才会刷新值，因此更适合暂停游戏下使用。当然，这里只是提供一种可行的思路，希望各位能举一反三，发掘出更多用途。
 
 ## Set Speed
 
@@ -107,9 +107,9 @@ at position 10: Cannot compare arguments.
 
 如果你在代码中使用 `show_debug_message(str)`，那么 str 就会出现在 Show Messages 打开的窗口中。与 `show_messages(str)` 不同，`show_debug_message(str)` 不会主动弹窗阻拦游戏进程，因此更适合 debug 下使用。
 
-# if(debug_mode)
+# if (debug_mode)
 
-`debug_mode` 是 GM8 内置的常量，它在 Debug 模式下为 true，在普通游戏时为 false。因此我们可以通过 `if(debug_mode)` 增加许多调试工具，例如无敌模式，无限跳跃，鼠标移动角色位置，绘制判定域，等等，任何可能有助于调试的代码都可以考虑加在 `if(debug_mode)` 下，未来发布的时候也不用删除，直接发布就行，玩家那边是不会触发的。
+`debug_mode` 是 GM8 内置的常量，它在 Debug 模式下为 true，在普通游戏时为 false。因此我们可以通过 `if (debug_mode)` 增加许多调试工具，例如无敌模式，无限跳跃，鼠标移动角色位置，绘制判定域，等等，任何可能有助于调试的代码都可以考虑加在 `if (debug_mode)` 下，未来发布的时候也不用删除，直接发布就行，玩家那边是不会触发的。
 
 # 注释调试法
 

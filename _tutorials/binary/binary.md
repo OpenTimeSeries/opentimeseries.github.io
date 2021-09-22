@@ -60,12 +60,12 @@ c -- 1100    d -- 1101    e -- 1110    f -- 1111
     {
         _remain = _number mod 16;
         _number = _number div 16;
-        if(_remain < 10)
+        if (_remain < 10)
             _str = string(_remain) + _str;
         else
             _str = chr(ord('A') + _remain - 10) + _str;
     }
-    until(_number == 0);
+    until (_number == 0);
 
     return _str;
 }

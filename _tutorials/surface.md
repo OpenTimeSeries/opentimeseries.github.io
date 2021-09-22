@@ -81,7 +81,7 @@ surf = surface_create(room_width, room_height);
 
 ```c
 // 有时候 GM 可能会无缘无故地销毁一个表面，保险起见先判断一下。
-if(!surface_exists(surf))
+if (!surface_exists(surf))
     surf = surface_create(room_width, room_height);
 // 将绘制目标转移到表面上。
 surface_set_target(surf);
@@ -101,7 +101,7 @@ draw_surface(surf, 0, 0);
 在 Destroy（销毁）事件中：
 ```c
 // 当被销毁时释放表面
-if(surface_exists(surf))
+if (surface_exists(surf))
     surface_free(surf);
 ```
 
@@ -139,8 +139,8 @@ screen_redraw();
 ---
 
 ```c
-with(all)
-    if(sprite_index != -1)
+with (all)
+    if (sprite_index != -1)
         drawSelf();
 ```
 
@@ -151,12 +151,12 @@ with(all)
 如果要剔除调用者本身，则可以使用：
 
 ```c
-with(all)
-    if(id != other.id && sprite_index != -1)
+with (all)
+    if (id != other.id && sprite_index != -1)
         drawSelf();
 ```
 
-同样的，你也可以 `with(objxxx) drawSelf();` 将特定的 obj 的实例绘制到表面上。这在处理混色时很有作用。
+同样的，你也可以 `with (objxxx) drawSelf();` 将特定的 obj 的实例绘制到表面上。这在处理混色时很有作用。
 
 ---
 
@@ -191,7 +191,7 @@ surf = surface_create(room_width, room_height);
 End Step（步结束）事件中：
 
 ```c
-if(!surface_exists(surf))
+if (!surface_exists(surf))
     surf = surface_create(room_width, room_height);
 surface_set_target(surf);
 draw_clear(c_black);
@@ -200,9 +200,9 @@ draw_set_blend_mode(bm_subtract);
 draw_set_color(c_white);
 draw_set_alpha(1);
 //下面两个 with 修改为你要在周围绘制光圈的 obj，绘制圆也可以换成绘制任何图案
-with(player)
+with (player)
     draw_circle(x, y, 150, 0);
-with(savePoint)
+with (savePoint)
     draw_circle(x, y, 100, 0);
 draw_set_blend_mode(bm_normal);
 surface_reset_target();
@@ -217,13 +217,13 @@ draw_surface(surf, 0, 0);
 Destroy（销毁）事件中：
 
 ```c
-if(surface_exists(surf))
+if (surface_exists(surf))
     surface_free(surf);
 ```
 
 ## 电磁波干扰
 
-同样，绘制表面的实例深度应该最低。注意，isRedraw 的目的是阻止表面在 `screen_redraw()` 时重绘，如果 draw 事件有其他与表面无关的代码，应该放在 `if(!isRedraw)` 外。
+同样，绘制表面的实例深度应该最低。注意，isRedraw 的目的是阻止表面在 `screen_redraw()` 时重绘，如果 draw 事件有其他与表面无关的代码，应该放在 `if (!isRedraw)` 外。
 
 ![Example](/assets/images/surface/example2.gif)
 
@@ -237,7 +237,7 @@ isRedraw = false;
 End Step（步结束）事件：
 
 ```c
-if(!surface_exists(surf))
+if (!surface_exists(surf))
     surf = surface_create(room_width, room_height);
 surface_set_target(surf);
 draw_clear_alpha(c_black, 0);
@@ -251,10 +251,10 @@ Draw（绘制）事件：
 
 ```c
 var i;
-if(!isRedraw)
+if (!isRedraw)
 {
     draw_set_blend_mode_ext(bm_one, bm_zero);
-    for(i = 0;i < room_width;i += 2)
+    for (i = 0;i < room_width;i += 2)
         draw_surface_part(surf, i * 2, 0, 2, room_height, i * 2, random_range(-5,5));
     draw_set_blend_mode(bm_normal);
 }
@@ -263,7 +263,7 @@ if(!isRedraw)
 Destroy（销毁）事件中：
 
 ```c
-if(surface_exists(surf))
+if (surface_exists(surf))
     surface_free(surf);
 ```
 
@@ -271,10 +271,10 @@ if(surface_exists(surf))
 
 ```c
 var i;
-if(!isRedraw)
+if (!isRedraw)
 {
     draw_set_blend_mode_ext(bm_one, bm_zero);
-    for(i = 0;i < room_height;i += 2)
+    for (i = 0;i < room_height;i += 2)
         draw_surface_part(surf, 0, i * 2, room_width, 2, random_range(-5,5), i * 2);
     draw_set_blend_mode(bm_normal);
 }
@@ -308,16 +308,16 @@ surf2 = surface_create(room_width, room_height);
 End Step（步结束）事件：
 
 ```c
-if(!surface_exists(surf1))
+if (!surface_exists(surf1))
     surf1 = surface_create(room_width, room_height);
-if(!surface_exists(surf2))
+if (!surface_exists(surf2))
     surf2 = surface_create(room_width, room_height);
 surface_set_target(surf1);
 draw_clear_alpha(c_black, 0);
 //下面的 with 改成要被图像覆盖的 obj
-with(block)
+with (block)
     drawSelf();
-with(playerKiller)
+with (playerKiller)
     drawSelf();
 surface_set_target(surf2);
 draw_clear_alpha(c_black, 0);
@@ -338,9 +338,9 @@ draw_surface(surf2, 0, 0);
 Destroy（销毁）事件中：
 
 ```c
-if(surface_exists(surf1))
+if (surface_exists(surf1))
     surface_free(surf1);
-if(surface_exists(surf2))
+if (surface_exists(surf2))
     surface_free(surf2);
 ```
 
@@ -365,9 +365,9 @@ radius = 100;
 End Step（步结束）事件：
 
 ```c
-if(!surface_exists(surf1))
+if (!surface_exists(surf1))
     surf1 = surface_create(room_width, room_height);
-if(!surface_exists(surf2))
+if (!surface_exists(surf2))
     surf1 = surface_create(room_width, room_height);
 
 surface_set_target(surf1);
@@ -394,16 +394,16 @@ surface_reset_target();
 Draw（绘制）事件：
 
 ```c
-if(!isRedraw)
+if (!isRedraw)
     draw_surface_ext(surf2, mouse_x * (1 - scale), mouse_y * (1 - scale), scale, scale, 0, c_white, 1);
 ```
 
 Destroy（销毁）事件：
 
 ```c
-if(surface_exists(surf1))
+if (surface_exists(surf1))
     surface_free(surf1);
-if(surface_exists(surf2))
+if (surface_exists(surf2))
     surface_free(surf2);
 ```
 
@@ -427,9 +427,9 @@ surf2 = surface_create(room_width, room_height);
 End Step（步结束）事件：
 
 ```c
-if(!surface_exists(surf1))
+if (!surface_exists(surf1))
     surf1 = surface_create(room_width, room_height);
-if(!surface_exists(surf2))
+if (!surface_exists(surf2))
     surf1 = surface_create(room_width, room_height);
 
 surface_set_target(surf1);
@@ -466,9 +466,9 @@ draw_surface(surf1, 0, 0);
 Destroy（销毁）事件：
 
 ```c
-if(surface_exists(surf1))
+if (surface_exists(surf1))
     surface_free(surf1);
-if(surface_exists(surf2))
+if (surface_exists(surf2))
     surface_free(surf2);
 ```
 

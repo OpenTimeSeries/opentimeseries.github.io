@@ -160,7 +160,7 @@ IDirect3DDevice8 *device;
 texture->GetDevice(&device);
 IDirect3DSurface8 *surface, *surfaceTemp;
 // 创建 textureTemp，width 和 height 可以指定为 gm::surface_get_width(surfid) 和 gm::surface_get_height(surfid)，考虑到效率也可以设置为全局变量。其中第五个变量就是与 GM8 的材质不同的点，GM8 的材质该参数是 D3DPOOL_DEFAULT。
-if(textureTemp == nullptr)
+if (textureTemp == nullptr)
     device->CreateTexture(width, height, 0, D3DUSAGE_DYNAMIC, D3DFMT_A8R8G8B8, D3DPOOL_SYSTEMMEM, &textureTemp);
 texture->GetSurfaceLevel(0, &surface);
 textureTemp->GetSurfaceLevel(0, &surfaceTemp);

@@ -31,7 +31,7 @@ if (!_vFree) {
 }
 
 _hFree = place_free(x + hspeed, y);
-if(!_hFree && _vFree)
+if (!_hFree && _vFree)
     _hFree = place_free(x + hspeed, y + vspeed + gravity);
 if (!_hFree) {
     if (hspeed <= 0)
@@ -78,19 +78,19 @@ hspeed = Hspd * (R - L);
 //检测角色脚下是不是地面，是就可以跳跃。
 jump = place_free(x, y + 1);
 //这里是处理跳跃的代码。
-if(_S && !jump)
+if (_S && !jump)
 {
     //sound_play(sndJump)是播放音效，括号内请填写自己的音效名。如果没有，请删除这一句。
     sound_play(sndJump);
     vspeed = -jumpSpeed;
 }
 //这里是处理重力的代码
-if(vspeed == 0 && !place_free(x, y + grav))
+if (vspeed == 0 && !place_free(x, y + grav))
     gravity = 0;
 else
     gravity = grav;
 //这里是限制下落速度的代码
-if(maxVspd && vspeed > maxVspd)
+if (maxVspd && vspeed > maxVspd)
     vspeed = maxVspd;
 //这里是处理固体碰撞的代码
 _vFree = place_free(x, y + vspeed + gravity) || place_free(x + hspeed, y + vspeed + gravity);
@@ -105,7 +105,7 @@ if (!_vFree) {
 }
 
 _hFree = place_free(x + hspeed, y);
-if(!_hFree && _vFree)
+if (!_hFree && _vFree)
     _hFree = place_free(x + hspeed, y + vspeed + gravity);
 if (!_hFree) {
     if (hspeed <= 0)
@@ -150,28 +150,28 @@ _S = keyboard_check_pressed(vk_space);
 hspeed = Hspd * (R - L);
 //检测角色脚下是不是地面，是就可以一段跳。
 isFirstJump = !place_free(x, y + 1);
-if(isFirstJump)
+if (isFirstJump)
     jump = 0;
-else if(!jump)
+else if (!jump)
     jump = 1;
 //这里是处理跳跃的代码。
-if(_S && jump < 2)
+if (_S && jump < 2)
 {
     //sound_play(sndJump)是播放音效，括号内请填写自己的音效名。如果没有，请删除这一句。
     sound_play(sndJump);
-    if(isFirstJump)
+    if (isFirstJump)
         vspeed = -jumpSpeed[1];
     else
         vspeed = -jumpSpeed[2];
     jump += 1;
 }
 //这里是处理重力的代码
-if(vspeed == 0 && !place_free(x, y + grav))
+if (vspeed == 0 && !place_free(x, y + grav))
     gravity = 0;
 else
     gravity = grav;
 //这里是限制下落速度的代码
-if(maxVspd && vspeed > maxVspd)
+if (maxVspd && vspeed > maxVspd)
     vspeed = maxVspd;
 //这里是处理固体碰撞的代码
 _vFree = place_free(x, y + vspeed + gravity) || place_free(x + hspeed, y + vspeed + gravity);
@@ -186,7 +186,7 @@ if (!_vFree) {
 }
 
 _hFree = place_free(x + hspeed, y);
-if(!_hFree && _vFree)
+if (!_hFree && _vFree)
     _hFree = place_free(x + hspeed, y + vspeed + gravity);
 if (!_hFree) {
     if (hspeed <= 0)

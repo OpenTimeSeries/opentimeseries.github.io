@@ -28,7 +28,7 @@ alarm[irandom(4)] = 10;
 上面的代码 10 步之后随机执行 alarm 0~4 号事件。
 
 ```c
-for(i = 0;i < 3;i += 1)
+for (i = 0;i < 3;i += 1)
     alarm[i] = i * 10;
 ```
 

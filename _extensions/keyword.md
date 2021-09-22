@@ -37,7 +37,7 @@ redirect_from:
 <td>基于条件的分支结构</td>
 <td markdown="1">
 ```c
-if(条件)
+if (条件)
     语句;
 ```
 </td>
@@ -47,7 +47,7 @@ if(条件)
 <td>作为当 if 结构中条件为 false 时的分支</td>
 <td markdown="1">
 ```c
-if(条件)
+if (条件)
     语句;
 else
     语句;
@@ -97,7 +97,7 @@ switch (表达式)
 <td>最简单的循环结构</td>
 <td markdown="1">
 ```c
-repeat(次数)
+repeat (次数)
     语句;
 ```
 </td>
@@ -107,7 +107,7 @@ repeat(次数)
 <td>基于条件的循环结构</td>
 <td markdown="1">
 ```c
-while(条件)
+while (条件)
     语句;
 ```
 </td>
@@ -117,7 +117,7 @@ while(条件)
 <td>将初始化语句，循环条件，变量自增整合在一起的循环结构</td>
 <td markdown="1">
 ```c
-for(初始化语句; 循环条件; 变量自增)
+for (初始化语句; 循环条件; 变量自增)
     语句;
 ```
 </td>
@@ -129,7 +129,7 @@ for(初始化语句; 循环条件; 变量自增)
 ```c
 do
     语句;
-until(条件);
+until (条件);
 ```
 </td>
 </tr>
@@ -140,7 +140,7 @@ until(条件);
 ```c
 do
     语句;
-until(条件);
+until (条件);
 ```
 </td>
 </tr>
@@ -149,7 +149,7 @@ until(条件);
 <td>令其他实例运行一段代码，也属于循环结构的一种</td>
 <td markdown="1">
 ```c
-with(对象/实例)
+with (对象/实例)
     语句;
 ```
 </td>

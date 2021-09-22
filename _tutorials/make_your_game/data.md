@@ -24,7 +24,7 @@ parent: Make Your Game!
 在新的代码框里，我们写这样一段代码：
 
 ```c
-if(place_meeting(x, y, killerParent))
+if (place_meeting(x, y, killerParent))
 {
     //播放死亡音效，如果没有，请删除这句。
     sound_play(sndDeath);
@@ -32,7 +32,7 @@ if(place_meeting(x, y, killerParent))
     //view_xview + view_wview / 2和view_yview + view_hview / 2是确保在游戏窗口的正中间创建对象，如果不需要可以改成别的坐标。
     instance_create(view_xview + view_wview / 2, view_yview + view_hview / 2, objGameOver);
     //确保如果屏幕里有多个 objPlayer，也都会被销毁。如果不需要这个效果，直接改成 instance_destroy(); 即可。
-    with(objPlayer) instance_destroy();
+    with (objPlayer) instance_destroy();
     //增加死亡数。
     world.death += 1;
     //保存死亡数及时间。
@@ -61,7 +61,7 @@ loadGame();
 
 房间中，能杀死角色的实例可能是多种多样的，但是它们的形状也可能是各种各样的，所以并不能效仿 objBlock 一样使用贴图来解决这一问题。这次我们只能给每一种能杀死角色的东西都新建一个对象了。
 
-但是问题又来了。我们判断角色死亡，用的是 `if(place_meeting(x, y, killerParent))`，如果创建多个对象的话，又要面临 `if(place_meeting(x, y, objBullet) || place_meeting(x, y, objSpike) || place_meeting(x, y, objThunder)...)` 的窘境了。要知道，GM 只有固体和非固体两种实例，固体属性已经被我们拿去做地面和墙壁了，我们总不能把所有非固体都作为 killer 吧？
+但是问题又来了。我们判断角色死亡，用的是 `if (place_meeting(x, y, killerParent))`，如果创建多个对象的话，又要面临 `if (place_meeting(x, y, objBullet) || place_meeting(x, y, objSpike) || place_meeting(x, y, objThunder)...)` 的窘境了。要知道，GM 只有固体和非固体两种实例，固体属性已经被我们拿去做地面和墙壁了，我们总不能把所有非固体都作为 killer 吧？
 
 这时候，另一个在[浅谈对象]({{ site.baseurl }}{% link _tutorials/start/object.md %})中被我们跳过的属性站了出来，他就是**父对**（Parent）。
 
@@ -99,10 +99,10 @@ loadGame();
 
 ```c
 //你需要把一切不应该记录游戏时间的房间写在这里。
-if(room != rTitle && room != rStageSelect)
+if (room != rTitle && room != rStageSelect)
 {
     //当角色死亡时不记录游戏时间，你也可以删除这句。
-    if(!instance_exists(objPlayer))
+    if (!instance_exists(objPlayer))
     // 60 是游戏帧数，非 60 帧游戏请改动
         time += 1 / 60;
 }
@@ -137,7 +137,7 @@ room_caption = "你的游戏名";
 room_caption = "你的游戏名";
 //注意下面开始使用+=而不是=
 //此处应该去掉不应该显示死亡数和游戏时间的房间，例如游戏封面
-if(room != rTitle)
+if (room != rTitle)
 {
     //添加死亡数
     room_caption += " --death :" + string(death);

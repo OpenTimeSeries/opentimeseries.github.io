@@ -56,7 +56,7 @@ SuperSound 只支持 wav 和 ogg 是它的一大缺陷，但也可以说是一�
 
 建议新建一个脚本（假设叫 musicInit），将所有载入音乐全部放在这个脚本里，然后在游戏最开始调用一次 `musicInit();`，比如在对象 [world]({{ site.baseurl }}{% link _tutorials/make_your_game/level_design.md %}#全局控制) 的 create 事件。
 
-注意，当音乐文件成功读取时，该函数会返回一个很大整数，如果读取失败，则会返回字符串 `"No"`，因此可以通过 `if(is_real(global.BGM_BadApple))` 来判断是否读取成功。
+注意，当音乐文件成功读取时，该函数会返回一个很大整数，如果读取失败，则会返回字符串 `"No"`，因此可以通过 `if (is_real(global.BGM_BadApple))` 来判断是否读取成功。
 
 ## 释放音频
 
@@ -72,7 +72,7 @@ SuperSound 只支持 wav 和 ogg 是它的一大缺陷，但也可以说是一�
 
 ## 调整音量
 
-* `SS_SetSoundVol(snd, volumn)` 设置某个音频的播放音量。参数 snd 为音频索引。参数 volumn 为音量，可取值为 0\~10000，但是实际上在 5000 左右的时候就基本上没有声音了，因此，如果假设一个变量 `global.volumn` 控制音量在 0\~100 之间，那么最好将 `5000 + 50 * global.volumn` 传递给函数 `SS_SetSoundVol`，为了保险起见，在 `if(global.volumn == 0)` 时传递 0 给 `SS_SetSoundVol`。
+* `SS_SetSoundVol(snd, volumn)` 设置某个音频的播放音量。参数 snd 为音频索引。参数 volumn 为音量，可取值为 0\~10000，但是实际上在 5000 左右的时候就基本上没有声音了，因此，如果假设一个变量 `global.volumn` 控制音量在 0\~100 之间，那么最好将 `5000 + 50 * global.volumn` 传递给函数 `SS_SetSoundVol`，为了保险起见，在 `if (global.volumn == 0)` 时传递 0 给 `SS_SetSoundVol`。
 * `SS_GetSoundVol(snd)` 获取指定音频的音量。
 
 ## 判断状态

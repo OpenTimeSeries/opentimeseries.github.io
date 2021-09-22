@@ -108,7 +108,7 @@ working_directory + "\Data\save.dat"
 然后在 objPlayer 的 create 事件里加上这些代码：
 
 ```c
-if(world.loadx || world.loady)
+if (world.loadx || world.loady)
 {
     x = world.loadx;
     y = world.loady;
@@ -125,8 +125,8 @@ if(world.loadx || world.loady)
 
 ```c
 ...省略其他部分
-with(objPlayer) instance_destroy();
-with(instance_create(0, 0, objPlayer))
+with (objPlayer) instance_destroy();
+with (instance_create(0, 0, objPlayer))
 {
     persistent = 1;
     //key参数根据实际情况修改
@@ -139,7 +139,7 @@ with(instance_create(0, 0, objPlayer))
 objPlayer 的 create 事件添加（如果 alarm 0 事件已被占用，换成其他 alarm 事件）：
 
 ```c
-if(instance_number(object_index) > 1)
+if (instance_number(object_index) > 1)
     instance_destroy();
 alarm[0] = 1;
 ```

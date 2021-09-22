@@ -129,29 +129,29 @@ status &= ~(ATK | DEF);
 判断是否处于某种状态我们使用：
 
 ```c
-if(status & RECOV)
+if (status & RECOV)
 ```
 
 判断是否同时处于多种状态我们使用：
 
 ```c
-if(status == status | (BURN | FROZE))
+if (status == status | (BURN | FROZE))
 ```
 
 判断是否处于任意一种状态我们使用：
 
 ```c
-if(status & (BURN | FROZE))
+if (status & (BURN | FROZE))
 ```
 
 判断处于且只处于某种状态我们使用：
 
 ```c
-if(status == ATK)
+if (status == ATK)
 ```
 
 判断同时处于且只处于多种状态我们使用：
 
 ```c
-if(status == (ATK | DEF))
+if (status == (ATK | DEF))
 ```

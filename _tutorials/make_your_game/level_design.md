@@ -47,7 +47,7 @@ parent: Make Your Game!
 在里面写上：
 
 ```c
-if(go)
+if (go)
     room_goto(go);
 ```
 
@@ -83,7 +83,7 @@ if(go)
 
 ```c
 // room != rTitle是判断现在所在的房间是不是游戏封面。rTitle的名字应根据实际情况修改。
-if(room != rTitle)
+if (room != rTitle)
         room_goto(rStageSelect);
 ```
 
@@ -121,7 +121,7 @@ if(room != rTitle)
 
 运行游戏，由于 objBlock 勾选不可见，所以它的半透明精灵不会被看到。
 
-这样做的好处不仅是方便你不用创建大量对象，而且在复杂的游戏中易于维护。比如有什么地方必须要判定 `if(xxxx(objBlock))` 的话，如果大量创建不同的砖块对象，就得不停地加入 `if(xxxx(objBlock01) || xxxx(objBlock02) || xxxx(objBlock03)....)`。
+这样做的好处不仅是方便你不用创建大量对象，而且在复杂的游戏中易于维护。比如有什么地方必须要判定 `if (xxxx(objBlock))` 的话，如果大量创建不同的砖块对象，就得不停地加入 `if (xxxx(objBlock01) || xxxx(objBlock02) || xxxx(objBlock03)....)`。
 
 # 简单的音乐播放
 
@@ -141,7 +141,7 @@ if(room != rTitle)
 现在我们新建一个对象 **objMusic** 来进行音乐播放。首先给它一个音符的精灵以便于识别，然后取消勾选可见（不能给玩家看到）。在它的 step 事件中写上：
 
 ```c
-if(!sound_isplaying(music))
+if (!sound_isplaying(music))
     sound_loop(music);
 ```
 

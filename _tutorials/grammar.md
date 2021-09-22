@@ -25,7 +25,7 @@ nav_order: 16
 其二、**成为父对的实例**。具体来说：
 
 1. **响应父对的成员运算符操作**。例如，对象 objSlipBlock 的父对为 blockParent，那么在调用 `blockParent.speed = 5;` 时，对象 objSlipBlock 的实例也会响应这个调用，从而执行 `speed = 5;`.
-2. **响应父对的 with 结构**。例如，对象 objSlipBlock 的父对为 blockParent，那么在调用`with(blockParent){}`时，对象 objSlipBlock 的实例也会响应这个 with 从而执行其中的代码。
+2. **响应父对的 with 结构**。例如，对象 objSlipBlock 的父对为 blockParent，那么在调用`with (blockParent){}`时，对象 objSlipBlock 的实例也会响应这个 with 从而执行其中的代码。
 3. **响应父对的被碰撞事件以及被碰撞函数检测**。这在[杀死玩家，记录死亡数]({{ site.baseurl }}{% link _tutorials/make_your_game/data.md %}#杀死玩家记录死亡数)中已经讲解过。
 4. **会被 `instance_number(父对)` 以及其他与实例相关的函数所统计**。
 
@@ -34,9 +34,9 @@ nav_order: 16
 break 语句除了中断循环和 switch 以外，还有一个我们没有提到过的功能：**中断 with 结构**。如：
 
 ```c
-with(objBow)
+with (objBow)
 {
-    if(other.x > 400) break;
+    if (other.x > 400) break;
     image_xscale = -1;
 }
 ```
@@ -50,10 +50,10 @@ continue 在 with 中的作用为**跳到下一个实例**。
 怎么理解呢？例如：
 
 ```c
-with(objBow)
+with (objBow)
 {
     move_towards_point(other.x, other.y, 5);
-    if(x > 400) continue;
+    if (x > 400) continue;
     image_xscale = -1;
 }
 ```
@@ -63,10 +63,10 @@ with(objBow)
 等等，这和 break 有啥区别？如果我改成：
 
 ```c
-with(objBow)
+with (objBow)
 {
     move_towards_point(other.x, other.y, 5);
-    if(x > 400) break;
+    if (x > 400) break;
     image_xscale = -1;
 }
 ```
@@ -75,19 +75,19 @@ with(objBow)
 
 我们知道，每一个对象的实例都有自己独有的 **id** 值。GM 只能一条条地执行代码，所以不能同时把 objBow 的所有实例都设置为 `move_towards_point(other.x, other.y, 5);`，它必然是一个一个实例地按顺序实现的。
 
-为了好理解，我们现在*假设*所有 objBow 的实例的 id 是连续的，是从 1000200 到 1000299 的 100 个 id 值。那么，with(objBow) 的结构实际上等效于：
+为了好理解，我们现在*假设*所有 objBow 的实例的 id 是连续的，是从 1000200 到 1000299 的 100 个 id 值。那么，with (objBow) 的结构实际上等效于：
 
 ```c
-for(i = 1000200;i <= 1000299;i += 1)
+for (i = 1000200;i <= 1000299;i += 1)
 {
-    with(i)
+    with (i)
     {
         move_towards_point(other.x, other.y, 5);
     }
 
-    if(i.x > 400) continue;     //或者 if(i.x > 400) break;
+    if (i.x > 400) continue;     //或者 if (i.x > 400) break;
 
-    with(i)
+    with (i)
     {
         image_xscale = -1;
     }

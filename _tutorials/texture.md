@@ -129,7 +129,7 @@ draw_primitive_end();
 * `texture_set_priority(texid, prio)` 当显存不够用时，会移除优先度较低的纹理图像。默认所有纹理图像的优先级都是 0，你可以使用该函数改变其优先级（使用正数）。
 * `texture_set_interpolation(linear)` 设置是否使用线性插值（true）或选择就近像素（false）。线性插值使纹理更加顺畅，但也会有点模糊，有时候会增加额外的时间成本。此设定也会影响到绘制精灵和背景。默认值是 false。
 * `texture_set_blending(blend)` 设置是否使用混色和透明度。设置为 false 在旧硬件上更快。此设定也影响到绘制精灵和背景。默认是 true。
-* `texture_set_repeat(repeat)` 设置当纹理坐标大于 1 时的行为。设置为 false 时不绘制纹理坐标超出 1 的像素。设置为 true 时，会将图像不断重复扩展到 1 以外的坐标，比如在这种情况下纹理坐标 (1.5, 2.3) 实际上和 (0.5, 0.3) 是一样的。默认值是 false。注意，当绘制精灵和背景时，这个值会被强制重置为 0，因为绘制精灵和背景总是不重复的，因此它并不是个永久性的设置。
+* `texture_set_repeat (repeat)` 设置当纹理坐标大于 1 时的行为。设置为 false 时不绘制纹理坐标超出 1 的像素。设置为 true 时，会将图像不断重复扩展到 1 以外的坐标，比如在这种情况下纹理坐标 (1.5, 2.3) 实际上和 (0.5, 0.3) 是一样的。默认值是 false。注意，当绘制精灵和背景时，这个值会被强制重置为 0，因为绘制精灵和背景总是不重复的，因此它并不是个永久性的设置。
 
 # 范例
 
@@ -154,7 +154,7 @@ texture_set_interpolation(true);
 步结束（End Step）事件：
 
 ```c
-if(!surface_exists(surf))
+if (!surface_exists(surf))
 {
     surf = surface_create(room_width, room_height);
     texid = surface_get_texture(surf);
@@ -171,7 +171,7 @@ surface_reset_target();
 绘制（Draw）事件：
 
 ```c
-if(!isRedraw)
+if (!isRedraw)
 {
     draw_set_color(c_white);
     draw_set_alpha(1);
@@ -179,7 +179,7 @@ if(!isRedraw)
 
     draw_primitive_begin_texture(pr_trianglefan, texid);
     draw_vertex_texture(mouse_x, mouse_y, mouse_x / room_width, mouse_y / room_height);
-    for(i = 0; i <= 360; i += 6)
+    for (i = 0; i <= 360; i += 6)
         draw_vertex_texture(mouse_x + lengthdir_x(radius, i), mouse_y + lengthdir_y(radius, i),
             (mouse_x + lengthdir_x(radius / scale, i)) / room_width,
             (mouse_y + lengthdir_y(radius / scale, i)) / room_height);
@@ -192,6 +192,6 @@ if(!isRedraw)
 销毁（Destroy）事件：
 
 ```c
-if(surface_exists(surf))
+if (surface_exists(surf))
     surface_free(surf);
 ```

@@ -68,7 +68,7 @@ nav_order: 15
 * `string_count(substr, str)` 返回子串 substr 在字符串 str 中出现的次数。
 * `string_lower(str)` 返回小写格式的字符串 str。
 * `string_upper(str)` 返回大写格式的字符串 str。
-* `string_repeat(str, count)` 返回由 count 个字符串 str 组成的新字符串 str。
+* `string_repeat (str, count)` 返回由 count 个字符串 str 组成的新字符串 str。
 * `string_letters(str)` 返回只包含字母的字符串 str。
 * `string_digits(str)` 返回只包含数字的字符串 str。
 * `string_lettersdigits(str)` 返回包含字母和数字的字符串 str。
@@ -93,7 +93,7 @@ execute_string("a = 5;");
 例如，你要设计一个可以更换风格的游戏，于是你准备了三套 spr，分别对应命名，比如 sprGrass1，sprGrass2，sprGrass3 来代表三种风格中草的 spr，那么你就可以通过 `execute_string()` 快速的更换画风（假设 `global.style` 变量用来储存画风的编号）：
 
 ```c
-with(all)
+with (all)
 {
     var spr;
     spr = string_delete(sprite_get_name(sprite_index), string_length(sprite_get_name(sprite_index)), 1) + string(global.style);

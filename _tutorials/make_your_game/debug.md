@@ -73,7 +73,7 @@ GM 为我们测试游戏提供了两种方式：
 这个变量不可被修改，他只和游戏本身的运行方式有关。在正常运行游戏的时候，`debug_mode` 的值为 0，而在调试模式下运行游戏时，`debug_mode` 的值为 1。即：
 
 ```c
-if(debug_mode)
+if (debug_mode)
 {
     xxxx;
 }
@@ -84,11 +84,11 @@ if(debug_mode)
 举个例子，我不想每次调试的时候都一关一关打，这样太浪费时间，所以我在 world 的 step 里写：
 
 ```c
-if(debug_mode)
+if (debug_mode)
 {
-    if(keyboard_check_press(ord('K')))
+    if (keyboard_check_press(ord('K')))
         room_goto_next();    //跳到下一个房间
-    if(keyboard_check_press(ord('J')))
+    if (keyboard_check_press(ord('J')))
         room_goto_previous();    //跳到上一个房间
 }
 ```
@@ -98,9 +98,9 @@ if(debug_mode)
 但是这样总感觉不够，于是我又写下了下面这个代码：
 
 ```c
-if(debug_mode)
+if (debug_mode)
 {
-    if(mouse_check_button_press(mb_left))
+    if (mouse_check_button_press(mb_left))
     {
         objPlayer.x = mouse_x;
         objPlayer.y = mouse_y;
@@ -110,4 +110,4 @@ if(debug_mode)
 
 这样，只要我点击屏幕某个位置，角色就会被传送过去，更方便了调试。
 
-`if(debug_mode)` 下的代码只有在调试模式下执行，所以当你要发布你的游戏时，你不需要把这些代码删掉，因为它们根本不会执行。
+`if (debug_mode)` 下的代码只有在调试模式下执行，所以当你要发布你的游戏时，你不需要把这些代码删掉，因为它们根本不会执行。
