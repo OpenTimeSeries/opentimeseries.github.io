@@ -4,7 +4,7 @@ title: 混色
 nav_order: 20
 ---
 
-本章内容魔改 ray 神的帖子，原贴地址：[混合模式详解](https://www.heabot.cn/thread-32-1-1.html)
+本章内容魔改 Ray 神的帖子，原贴已随 Heabot 的关闭而石沉大海，若 Ray 神未来补档，则会在此处贴出链接。
 
 # 颜色的混合
 
