@@ -82,7 +82,7 @@ numb 只有四个参数可选：
 
 ```c
 if (keyboard_check(ord('W')))
-* xxxxx;
+  xxxxx;
 ```
 
 ---

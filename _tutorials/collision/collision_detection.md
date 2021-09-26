@@ -48,14 +48,14 @@ other 就能胜任这一功能。
 ```c
 xx = 55;
 with (objHat)
-* xx = other.xx;
+  xx = other.xx;
 ```
 
 因此，在碰撞事件中，你可以有这样的操作：
 
 ```c
 with (other)
-* xx = other.xx;
+  xx = other.xx;
 ```
 
 要分清楚这两个 other 的区别，`with (other)` 的 other 指被碰撞的实例，`other.xx` 的 other 则指执行碰撞事件的实例。
@@ -64,7 +64,7 @@ with (other)
 
 ```c
 with (-2)
-* xx = (-2).xx;
+  xx = (-2).xx;
 ```
 
 # 固体属性
