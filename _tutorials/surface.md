@@ -60,7 +60,7 @@ GM中有着**绘图目标**（drawing target）这一概念。绘制目标可以
 
 ## 绘制表面
 
-* `draw_surface(id, x, y)` 将索引为id的表面的内容绘制在 (x, y) 的位置，表面的左上角与 (x, y) 重合。正如上所说，表面之间也可以随便转移内容，因此你可以把绘制目标设置在表面 2 上，然后 `draw_surface(表面 1)` 也是可以的。
+* `draw_surface(id, x, y)` 将索引为id的表面的内容绘制在 (x, y) 的位置，表面的左上角与 (x, y) 重合。正如上所说，表面之间也可以随便转移内容，因此你可以把绘制目标设置在表面 2 上，然后 `draw_surface(表面 1, x, y)` 也是可以的。
 * `draw_surface_part(id, left, top, width, height, x, y)` 将索引为 id 的表面的部分内容，左上角为 (left, top)，右下角为 (left + width, top + height) 之间的矩形部分绘制在 (x, y) 坐标处，左上角与 (x, y) 重合。
 
 上述两个函数如果绘制在屏幕上，只能写在绘制事件，如果绘制在其他表面上，则可以写在任意事件。事实上，`draw_sprite_xxx` 的函数 `draw_surface_xxx` 几乎都有对应的函数，函数作用和参数也几乎是一样的，因此不再重复赘述。
