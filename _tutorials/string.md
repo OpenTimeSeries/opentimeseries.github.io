@@ -12,7 +12,7 @@ nav_order: 15
 
 在双引号中使用单引号，是不会被视作字符串标记符号的。如：`"I'm a man"` 中出现了单引号，但是字符串会把这个单引号也视为普通的字符，而不是当成字符串的标记符号。反过来也同理，在单引号字符串中出现双引号也会被视为普通字符：
 
-```c
+```python
 'As the saying goes :"Where there is a will, there is a way."'
 ```
 

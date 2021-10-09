@@ -131,7 +131,7 @@ GM_String base64_encode(GM_String str)
     }
 
     char *output = new char[strEncode.size() + 1];
-    memset(output, '\x000', strEncode.size() + 1);
+    memset(output, '\x00', strEncode.size() + 1);
     strEncode.copy(output, strEncode.size());
 
     return output;
@@ -174,7 +174,7 @@ GM_String base64_decode(GM_String str)
     }
 
     char *output = new char[strDecode.size() + 1];
-    memset(output, '\x000', strDecode.size() + 1);
+    memset(output, '\x00', strDecode.size() + 1);
     strDecode.copy(output, strDecode.size());
 
     return output;

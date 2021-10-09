@@ -19,7 +19,7 @@ a:visited code {
 
 code {
   * {
-    font-family: 'Fira Code', 'Noto Sans SC', monospace;
+    font-family: 'Fira Code', 'Microsoft Yahei', monospace;
     font-variant-ligatures: none;
   }
 }
@@ -147,16 +147,16 @@ figure.highlight {
   font-weight: bold;
 } // punctuation //
 .highlight .cm {
-  color: #998;
+  color: rgb(58, 129, 10);
 } // comment.multiline //
 .highlight .cp {
-  color: #859900;
+  color: rgb(134, 134, 134);
 } // comment.preproc //
 .highlight .c1 {
-  color: #998;
+  color: rgb(58, 129, 10);
 } // comment.single //
 .highlight .cs {
-  color: #859900;
+  color: rgb(58, 129, 10);
 } // comment.special //
 .highlight .gd {
   color: #2aa198;
@@ -194,19 +194,19 @@ figure.highlight {
   color: #cb4b16;
 } // keyword.constant //
 .highlight .kd {
-  color: #268bd2;
+  color: #017d86;
 } // keyword.declaration //
 .highlight .kn {
-  color: #859900;
+  color: #017d86;
 } // keyword.namespace //
 .highlight .kp {
-  color: #859900;
+  color: #017d86;
 } // keyword.pseudo //
 .highlight .kr {
-  color: #268bd2;
+  color: #017d86;
 } // keyword.reserved //
 .highlight .kt {
-  color: #dc322f;
+  color: #017d86;
 } // keyword.type //
 .highlight .ld {
   color: #93a1a1;
@@ -221,7 +221,7 @@ figure.highlight {
   color: #555;
 } // name.attribute //
 .highlight .nb {
-  color: #b58900;
+  color: #0012b5;
 } // name.builtin //
 .highlight .nc {
   color: #268bd2;
@@ -266,22 +266,22 @@ figure.highlight {
   color: #93a1a1;
 } // text.whitespace //
 .highlight .mf {
-  color: #2aa198;
+  color: #a12a9b;
 } // literal.number.float //
 .highlight .mh {
-  color: #2aa198;
+  color: #a12a9b;
 } // literal.number.hex //
 .highlight .mi {
   color: #a12a9b;
 } // literal.number.integer //
 .highlight .mo {
-  color: #2aa198;
+  color: #a12a9b;
 } // literal.number.oct //
 .highlight .sb {
   color: #586e75;
 } // literal.string.backtick //
 .highlight .sc {
-  color: #2aa198;
+  color: #f3a600;
 } // literal.string.char //
 .highlight .sd {
   color: #93a1a1;
@@ -290,25 +290,25 @@ figure.highlight {
   color: #2aa198;
 } // literal.string.double //
 .highlight .se {
-  color: #cb4b16;
+  color: #f3a600;
 } // literal.string.escape //
 .highlight .sh {
-  color: #93a1a1;
+  color: #dc322f;
 } // literal.string.heredoc //
 .highlight .si {
-  color: #2aa198;
+  color: #dc322f;
 } // literal.string.interpol //
 .highlight .sx {
-  color: #2aa198;
+  color: #dc322f;
 } // literal.string.other //
 .highlight .sr {
   color: #dc322f;
 } // literal.string.regex //
 .highlight .s1 {
-  color: #2aa198;
+  color: #dc322f;
 } // literal.string.single //
 .highlight .ss {
-  color: #2aa198;
+  color: #dc322f;
 } // literal.string.symbol //
 .highlight .bp {
   color: #268bd2;
