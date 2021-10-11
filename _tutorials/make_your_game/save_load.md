@@ -90,7 +90,7 @@ working_directory + "\Data\save.dat"
     world.time = ds_map_find_value(_map, "time");
     world.score= ds_map_find_value(_map, "score");
 
-    //此处的 room_goto(_room); 根据需求保留，如果你并不需要储存 room，就不需要 room_goto，同样的，var 后面也要删掉 _room。
+    // 此处的 room_goto(_room); 根据需求保留，如果你并不需要储存 room，就不需要 room_goto，同样的，var 后面也要删掉 _room。
     room_goto(_room);
     ds_map_destroy(_map);
     file_text_close(_file);
@@ -129,7 +129,7 @@ with (objPlayer) instance_destroy();
 with (instance_create(0, 0, objPlayer))
 {
     persistent = 1;
-    //key参数根据实际情况修改
+    // key参数根据实际情况修改
     x = ds_map_find_value(_map, "x");
     y = ds_map_find_value(_map, "y");
 }

@@ -154,7 +154,7 @@ room_persistent = 0;
 world.goBackMap = room;
 world.monster = object_index;
 world.alarm[0] = 1;
-//如果不摧毁怪物，就会无限触发战斗。
+// 如果不摧毁怪物，就会无限触发战斗。
 instance_destroy();
 ```
 
@@ -165,7 +165,7 @@ instance_destroy();
 当战斗结束之后，应该让战斗房间的某个 obj 执行：
 
 ```c
-//此处填1有可能发生bug，故填2。
+// 此处填1有可能发生bug，故填2。
 world.alarm[1] = 2;
 room_goto(world.goBackMap);
 ```

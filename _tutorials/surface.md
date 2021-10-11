@@ -196,10 +196,10 @@ if (!surface_exists(surf))
 surface_set_target(surf);
 draw_clear(c_black);
 draw_set_blend_mode(bm_subtract);
-//不必是白色，是什么颜色都行，此处只是个人习惯
+// 不必是白色，是什么颜色都行，此处只是个人习惯
 draw_set_color(c_white);
 draw_set_alpha(1);
-//下面两个 with 修改为你要在周围绘制光圈的 obj，绘制圆也可以换成绘制任何图案
+// 下面两个 with 修改为你要在周围绘制光圈的 obj，绘制圆也可以换成绘制任何图案
 with (player)
     draw_circle(x, y, 150, 0);
 with (savePoint)
@@ -314,14 +314,14 @@ if (!surface_exists(surf2))
     surf2 = surface_create(room_width, room_height);
 surface_set_target(surf1);
 draw_clear_alpha(c_black, 0);
-//下面的 with 改成要被图像覆盖的 obj
+// 下面的 with 改成要被图像覆盖的 obj
 with (block)
     drawSelf();
 with (playerKiller)
     drawSelf();
 surface_set_target(surf2);
 draw_clear_alpha(c_black, 0);
-//下面的这个函数改成绘制你的图像，不限于绘制 background，可以绘制 sprite，绘制形状，甚至绘制其他表面
+// 下面的这个函数改成绘制你的图像，不限于绘制 background，可以绘制 sprite，绘制形状，甚至绘制其他表面
 draw_background(backRay, 0, 0);
 draw_set_blend_mode_ext(bm_zero, bm_src_alpha);
 draw_surface(surf1, 0, 0);

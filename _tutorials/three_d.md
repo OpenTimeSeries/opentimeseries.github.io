@@ -76,12 +76,12 @@ d3d_primitive_end();
 下面我们就来尝试绘制一个 3D 的正方体框。创建一个物体，在 **Draw 事件**添加代码如下：
 
 ```c
-//设置透视投影方式
+// 设置透视投影方式
 d3d_set_projection_perspective(0, 0, room_width, room_height, 0);
 
-//拓扑结构：线列表（忘了的去复习）
+// 拓扑结构：线列表（忘了的去复习）
 d3d_primitive_begin(pr_linelist);
-//顶面
+// 顶面
 d3d_vertex(0, 0, 0);
 d3d_vertex(100, 0, 0);
 d3d_vertex(100, 0, 0);
@@ -91,7 +91,7 @@ d3d_vertex(0, 100, 0);
 d3d_vertex(0, 100, 0);
 d3d_vertex(0, 0, 0);
 
-//侧面
+// 侧面
 d3d_vertex(0, 0, 0);
 d3d_vertex(0, 0, 100);
 d3d_vertex(100, 0, 0);
@@ -101,7 +101,7 @@ d3d_vertex(100, 100, 100);
 d3d_vertex(0, 100, 0);
 d3d_vertex(0, 100, 100);
 
-//底面
+// 底面
 d3d_vertex(0, 0, 100);
 d3d_vertex(100, 0, 100);
 d3d_vertex(100, 0, 100);
@@ -112,7 +112,7 @@ d3d_vertex(0, 100, 100);
 d3d_vertex(0, 0, 100);
 d3d_primitive_end();
 
-//把投影方式设置回去
+// 把投影方式设置回去
 d3d_set_projection_ortho(0, 0, room_width, room_height, 0);
 ```
 

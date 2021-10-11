@@ -48,7 +48,7 @@ GM8 的文本文件流可以说是差到令人失望，标准的文本文件流�
 为了方便阅读，我将当时写的 `saveGame()` 脚本与 `loadGame()` 脚本全部搬过来：
 
 ```c
-//saveGame();
+// saveGame();
 {
     var _file, _map;
     _file = file_text_open_write(working_directory + "\save.dat");
@@ -66,7 +66,7 @@ GM8 的文本文件流可以说是差到令人失望，标准的文本文件流�
 ```
 
 ```c
-//loadGame();
+// loadGame();
 {
     var _file, _map, _room;
     _file = file_text_open_read(working_directory + "\save.dat");

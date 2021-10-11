@@ -87,9 +87,9 @@ if (debug_mode)
 if (debug_mode)
 {
     if (keyboard_check_press(ord('K')))
-        room_goto_next();    //跳到下一个房间
+        room_goto_next();    // 跳到下一个房间
     if (keyboard_check_press(ord('J')))
-        room_goto_previous();    //跳到上一个房间
+        room_goto_previous();    // 跳到上一个房间
 }
 ```
 

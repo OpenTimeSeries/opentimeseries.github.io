@@ -84,7 +84,7 @@ do
     i += 1;
 
 }
-until (i > 100);    //此处条件与 while 相反
+until (i > 100);    // 此处条件与 while 相反
 show_message(string(s));
 ```
 

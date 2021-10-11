@@ -137,6 +137,6 @@ else
 ```c
 if (show_question("Exit game?"))
 {
-    game_end();   //game_end()函数用于结束游戏
+    game_end();   // game_end()函数用于结束游戏
 }
 ```

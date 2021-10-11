@@ -33,7 +33,7 @@ GM 自带的变量会自动染上红色，切记自定义的变量名不能和�
 新建对象 objControl，objBullet。在对象 objControl 的 create 事件（创建事件）里写：
 
 ```c
-alarm[0] = 50;    //这句话的意思是 50 步之后执行 alarm 0 事件
+alarm[0] = 50;    // 这句话的意思是 50 步之后执行 alarm 0 事件
 ```
 
 在对象 objControl 的 alarm 0 事件（计时器 0 号事件）里写：
@@ -46,7 +46,7 @@ alarm[0] = 50;
 给对象 objBullet 加上子弹的精灵（Sprite），然后在 create 事件里写上：
 
 ```c
-speed = 6;    //注意：speed默认方向为向右
+speed = 6;    // 注意：speed默认方向为向右
 ```
 
 把对象 Control 摆在房间里，设置房间速度为 50 帧，运行游戏，就实现了每隔 1 秒钟在位置 (100,200) 创建一个向右的速度为6像素/步的子弹。

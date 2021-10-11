@@ -135,7 +135,7 @@ bm_add 的混色会自动帮你去除黑色底色：
 draw_set_blend_mode_ext(bm_inv_dest_color, bm_zero);
 draw_set_color(c_white);
 draw_set_alpha(1);
-draw_rectangle(200, 200, 400, 400, false);     //这里可以改成绘制任何纯白色的图案或精灵
+draw_rectangle(200, 200, 400, 400, false);     // 这里可以改成绘制任何纯白色的图案或精灵
 draw_set_blend_mode(bm_normal);
 ```
 
@@ -175,7 +175,7 @@ Go和Bo同理，不赘述。
 Ro = Rs * Rd
 Go = Gs * Gd
 Bo = Bs * Bd
-Ao = As * Ad  //实际上强制设置为1
+Ao = As * Ad  // 实际上强制设置为1
 ```
 
 我们现在来验证一下，验证代码为：

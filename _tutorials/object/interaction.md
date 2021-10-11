@@ -40,7 +40,7 @@ alarm[0] = 50;
 由于 `instance_create` 函数直接返回实例的索引，所以上述例子可以直接写成：
 
 ```c
-(instance_create(100, 200, objBullet)).speed = random_range(2, 8);    //函数 instance_create 一定要用括号括起来
+(instance_create(100, 200, objBullet)).speed = random_range(2, 8);    // 函数 instance_create 一定要用括号括起来
 ```
 
 从而不使用变量去储存索引也是可以的。但是这样每个新的实例就只能被改变一个值了（可用 `with` 解决）。
@@ -56,7 +56,7 @@ alarm[0] = 50;
 例如，上图中实例的索引为 100012，我们让别的对象/实例改变它的速度，就可以写：
 
 ```c
-(100012).speed = 12;    //注意索引一定要用括号括起来
+(100012).speed = 12;    // 注意索引一定要用括号括起来
 ```
 
 # with 语句
@@ -137,7 +137,7 @@ inst.speed = 6;
 with (inst)
 {
     xx = 15;
-    inst = instace_create(此处省略...);   //此处的 inst 和上面的 inst 不是同一个
+    inst = instace_create(此处省略...);   // 此处的 inst 和上面的 inst 不是同一个
 }
 inst.yy = 6;
 ```
@@ -253,7 +253,7 @@ for (count = 0; count < 360; count += 20)
     with (instance_create(200, 200, objBullet))
     {
         speed = 6;
-        direction = count;    //速度的方向，即运动方向，0 为右，90 为上，180 为左，270 为下
+        direction = count;    // 速度的方向，即运动方向，0 为右，90 为上，180 为左，270 为下
     }
 ```
 

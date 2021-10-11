@@ -26,16 +26,16 @@ parent: Make Your Game!
 ```c
 if (place_meeting(x, y, killerParent))
 {
-    //播放死亡音效，如果没有，请删除这句。
+    // 播放死亡音效，如果没有，请删除这句。
     sound_play(sndDeath);
-    //用来控制死亡效果的对象。
-    //view_xview + view_wview / 2和view_yview + view_hview / 2是确保在游戏窗口的正中间创建对象，如果不需要可以改成别的坐标。
+    // 用来控制死亡效果的对象。
+    // view_xview + view_wview / 2和view_yview + view_hview / 2是确保在游戏窗口的正中间创建对象，如果不需要可以改成别的坐标。
     instance_create(view_xview + view_wview / 2, view_yview + view_hview / 2, objGameOver);
-    //确保如果屏幕里有多个 objPlayer，也都会被销毁。如果不需要这个效果，直接改成 instance_destroy(); 即可。
+    // 确保如果屏幕里有多个 objPlayer，也都会被销毁。如果不需要这个效果，直接改成 instance_destroy(); 即可。
     with (objPlayer) instance_destroy();
-    //增加死亡数。
+    // 增加死亡数。
     world.death += 1;
-    //保存死亡数及时间。
+    // 保存死亡数及时间。
     saveDeathTime();
 }
 ```
@@ -51,9 +51,9 @@ if (place_meeting(x, y, killerParent))
 接着回到 world，创建一个按下R键事件（随便什么键都行）用来 restart：
 
 ```c
-//停止播放死亡音效。如果没有请删除。
+// 停止播放死亡音效。如果没有请删除。
 sound_stop(sndDeath);
-//读取存档
+// 读取存档
 loadGame();
 ```
 
@@ -98,10 +98,10 @@ loadGame();
 首先先在 world 的 create 事件里初始化一个变量 `time = 0;`，然后在 world 的 step 变量里写入如下代码：
 
 ```c
-//你需要把一切不应该记录游戏时间的房间写在这里。
+// 你需要把一切不应该记录游戏时间的房间写在这里。
 if (room != rTitle && room != rStageSelect)
 {
-    //当角色死亡时不记录游戏时间，你也可以删除这句。
+    // 当角色死亡时不记录游戏时间，你也可以删除这句。
     if (!instance_exists(objPlayer))
     // 60 是游戏帧数，非 60 帧游戏请改动
         time += 1 / 60;
@@ -135,20 +135,20 @@ room_caption = "你的游戏名";
 
 ```c
 room_caption = "你的游戏名";
-//注意下面开始使用+=而不是=
-//此处应该去掉不应该显示死亡数和游戏时间的房间，例如游戏封面
+// 注意下面开始使用+=而不是=
+// 此处应该去掉不应该显示死亡数和游戏时间的房间，例如游戏封面
 if (room != rTitle)
 {
-    //添加死亡数
+    // 添加死亡数
     room_caption += " --death :" + string(death);
-    //添加游戏时间
+    // 添加游戏时间
     hours = time div 3600;
     minutes = (time mod 3600) div 60;
     seconds = (time mod 3600) mod 60;
     mseconds = frac(time);
     room_caption += " --time :" + string(hours) + ":" + string(minutes) + ":" + string(seconds) + "." + string(mseconds);
 }
-//添加帧数
+// 添加帧数
 room_caption += " --fps :" + string(fps);
 ```
 

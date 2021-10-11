@@ -85,7 +85,7 @@ for (i = 1000200;i <= 1000299;i += 1)
         move_towards_point(other.x, other.y, 5);
     }
 
-    if (i.x > 400) continue;     //或者 if (i.x > 400) break;
+    if (i.x > 400) continue;     // 或者 if (i.x > 400) break;
 
     with (i)
     {

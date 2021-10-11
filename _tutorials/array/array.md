@@ -69,9 +69,9 @@ instance_create(xx[1], 100, objBullet);
 ## 作为脚本的返回值
 
 ```c
-//这是一个脚本
+// 这是一个脚本
 {
-    var _array;    //声明临时的数组，只需要声明数组名
+    var _array;    // 声明临时的数组，只需要声明数组名
     _array[0] = argument0;
     _array[1] = argument1;
     _array[2] = _array[0] + _array[1];
@@ -83,9 +83,9 @@ instance_create(xx[1], 100, objBullet);
 
 ```c
 global.BOSS[0] = 1;
-globalvar BOSS;    //同样只需要声明数组名
-BOSS[0] = 0;       //global.BOSS[0] 和 BOSS[0] 是同一个数组元素
-show_message(string(global.BOSS[0]));   //此时输出 0 而不是 1
+globalvar BOSS;    // 同样只需要声明数组名
+BOSS[0] = 0;       // global.BOSS[0] 和 BOSS[0] 是同一个数组元素
+show_message(string(global.BOSS[0]));   // 此时输出 0 而不是 1
 ```
 
 # 数组元素的特殊性
@@ -128,7 +128,7 @@ for (i = 0; i < 6; i += 1)
 
 ```c
 {
-    var a = argument0;    //假设 argument0 传递的是一个数组
+    var a = argument0;    // 假设 argument0 传递的是一个数组
     a[@ 0] = 5;
     a[@ 1] = 6;
 }
