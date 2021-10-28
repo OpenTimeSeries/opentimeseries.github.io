@@ -4,7 +4,7 @@ title: 参考与鸣谢
 nav_order: 35
 ---
 
-* [Ray](https://github.com/Reclair)
+* [Ray](https://github.com/Raynirs)
   * 混色（链接已失效）
   * [斜向等速移动]({{ site.baseurl }}{% link _tutorials/keyboard_mouse.md %}#人物的移动)
 * [魔方 12139](https://github.com/mcube-12139)
