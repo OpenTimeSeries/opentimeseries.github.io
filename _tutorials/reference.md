@@ -5,7 +5,7 @@ nav_order: 35
 ---
 
 * [Ray](https://github.com/Reclair)
-  * [混色](https://www.heabot.cn/thread-32-1-1.html)
+  * 混色（链接已失效）
   * [斜向等速移动]({{ site.baseurl }}{% link _tutorials/keyboard_mouse.md %}#人物的移动)
 * [魔方 12139](https://github.com/mcube-12139)
   * [3D 绘制]({{ site.baseurl }}{% link _tutorials/three_d.md %})
