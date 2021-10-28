@@ -18,6 +18,8 @@ GM8 的代码和资源是毫无加密地封装进 exe 中的，因此通过反�
 
 一个反反编译器：[GameMaker Anti-Decompiler](https://iwbte-nikaple-edition-1255674901.cos.ap-guangzhou.myqcloud.com/engine/anti-decompiler.zip)
 
+PS: 目前 Rust 版本的反编译器也有能力反拆许多主流的加壳程序，包括上面给出的反反编译器。
+
 # 混淆
 
 只要 exe 仍然包含原本的所有信息，那么无论怎么加密都只能阻挡 99.9% 的人，对于 0.1% 的高手而言都是白纸，这一点在我混迹 I Wanna 圈的时候深刻的理解到了。
@@ -45,3 +47,5 @@ java -jar "GM Obfuscator 030.jar"
 ```
 
 来运行。
+
+PS：虽然 Rust 版本的反编译器有提供反混淆功能，但实际上只是：代码格式化、资源和变量重命名（`field1`, `field2`, `object1`, `object2`），代码的可读性仍然可以说是没有。
