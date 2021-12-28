@@ -48,7 +48,7 @@ SuperSound 只支持 wav 和 ogg 是它的一大缺陷，但也可以说是一�
 
 ## 载入音频
 
-* SS_LoadSound(path, stream) 该函数载入一个外置音频，并且返回该音频的索引。
+* `SS_LoadSound(path, stream)` 该函数载入一个外置音频，并且返回该音频的索引。
 
 参数 path 填写文件路径，比如上图中，我要载入 `Bad Apple!! piano ver.ogg`，那么参数path就应该填写 `working_directory + "\Data\Music\Bad Apple!! piano ver.ogg"`。参数 stream 填写 true 或 false ，表示是否流式读取音频，由于 SuperSound 对流式音频处理十分烂，所以建议填写 false 。这个函数的返回值需要用在播放音乐当中，所以需要用一个全局变量去接收，因此它的完整调用形式是：
 
