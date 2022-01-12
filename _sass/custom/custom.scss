@@ -2,7 +2,7 @@ $body-font-family: "Source Sans Pro", "Microsoft Yahei", sans-serif;
 $mono-font-family: "Source Sans Pro", "Microsoft Yahei", sans-serif;
 
 * {
-    font-family: $body-font-family;
+  font-family: $body-font-family;
 }
 
 $scrollbar-size: 7px;
@@ -13,26 +13,10 @@ $scrollbar-size: 7px;
 }
 
 ::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(#7253ed, 0.3);
+  box-shadow: inset 0 0 6px rgba(#7253ed, 0.3);
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color:rgba(#7253ed, 0.5);
+  background-color: rgba(#7253ed, 0.5);
   border-radius: calc(#{$scrollbar-size} / 2);
-}
-
-
-blockquote, 
-details > div {
-    border-radius: 0.5rem;
-    border: solid #333333;
-    margin: 1.25rem 0;
-    padding: 0 1.25rem;
-}
-
-details > div.highlighter-rouge {
-    border-radius: 0.5rem;
-    border: solid #333333;
-    margin-top: 0.25rem;
-    padding-top: 0rem;
 }

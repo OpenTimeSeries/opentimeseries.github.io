@@ -80,7 +80,7 @@ a:not([class]) {
 }
 
 code {
-  font-family: 'Fira Code', 'Microsoft Yahei', monospace;
+  font-family: "Fira Code", "Microsoft Yahei", monospace;
   font-size: 0.85em;
   font-variant-ligatures: none;
   line-height: $body-line-height;
@@ -106,4 +106,27 @@ hr {
   margin: $sp-6 0;
   background-color: $border-color;
   border: 0;
+}
+
+blockquote {
+  padding: 0 1.25rem;
+  margin: 1.25rem 0;
+  border: solid #333;
+  border-radius: 0.5rem;
+}
+
+details {
+  > div {
+    padding: 0 1.25rem;
+    margin: 1.25rem 0;
+    border: solid #333;
+    border-radius: 0.5rem;
+  }
+
+  > .highlighter-rouge {
+    padding-top: 0;
+    margin-top: 0.25rem;
+    border: solid #333;
+    border-radius: 0.5rem;
+  }
 }
