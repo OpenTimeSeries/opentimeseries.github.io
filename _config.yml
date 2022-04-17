@@ -115,6 +115,7 @@ plugins:
   - jekyll-seo-tag
   - jekyll-feed
   - jekyll-redirect-from
+  - jekyll-sitemap
 
 kramdown:
   syntax_highlighter_opts:
