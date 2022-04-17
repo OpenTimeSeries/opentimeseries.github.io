@@ -2,9 +2,8 @@
 layout: default
 title: 前言
 nav_order: 1
+description: "GameMaker 8.0 从入门到入土"
 permalink: /
-redirect_from:
-  - /tutorials/
 ---
 
 ## [< 回到博客](https://nihil.cc)
