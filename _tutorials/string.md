@@ -6,7 +6,7 @@ nav_order: 15
 
 # 字符串
 
-我们曾经提到过，**字符串**（String）指的是以双引号包裹的一种常量。形如 `"Punishment this world!"`，`"153.66"`，`"tan(pi/2) is invalid"` 等都是字符串。
+我们曾经提到过，**字符串**（String）指的是以双引号包裹的一种常量。形如 `"Vanishment this world!"`，`"153.66"`，`"tan(pi/2) is invalid"` 等都是字符串。
 
 在 GM8.0 中，使用单引号和双引号都被视作字符串，即，`'abc'` 和 `"abc"` 是等效的。
 
