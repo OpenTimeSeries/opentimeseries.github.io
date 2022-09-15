@@ -1,4 +1,3 @@
-//
 // Code and syntax highlighting
 //
 // stylelint-disable selector-no-qualifying-type, declaration-block-semicolon-newline-after,declaration-block-single-line-max-declarations, selector-no-type, selector-max-type
@@ -42,6 +41,9 @@ a:visited code {
 //   > td.gutter.gl > pre.lineno
 //   | td.code > pre
 //
+// ----...---- (AsciiDoc)
+//   div.listingblock > div.content > pre.rouge.highlight
+//
 // fix_linenos removes the outermost pre when it encloses table.rouge-table
 //
 // See docs/index-test.md for some tests.
@@ -50,7 +52,8 @@ a:visited code {
 // Kramdown line_numbers = true: fences have a wider gutter than with Liquid?
 
 // ```[LANG]...```
-div.highlighter-rouge {
+div.highlighter-rouge,
+div.listingblock > div.content {
   padding: $sp-3;
   margin-top: 0;
   margin-bottom: $sp-3;
@@ -75,6 +78,7 @@ figure.highlight {
   padding: $sp-3;
   margin-top: 0;
   margin-bottom: $sp-3;
+  overflow-x: auto;
   background-color: $code-background-color;
   border-radius: $border-radius;
   box-shadow: none;
@@ -99,6 +103,7 @@ figure.highlight {
   td,
   pre {
     @include fs-2;
+
     min-width: 0;
     padding: 0;
     background-color: $code-background-color;
@@ -328,7 +333,8 @@ figure.highlight {
 // Code examples (rendered)
 //
 
-.code-example {
+.code-example,
+.listingblock > .title {
   padding: $sp-3;
   margin-bottom: $sp-3;
   overflow: auto;
@@ -336,6 +342,8 @@ figure.highlight {
   border-radius: $border-radius;
 
   + .highlighter-rouge,
+  + .sectionbody .listingblock,
+  + .content,
   + figure.highlight {
     position: relative;
     margin-top: -$sp-4;
@@ -345,4 +353,11 @@ figure.highlight {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
   }
+}
+
+// Mermaid diagram code blocks should be left unstyled.
+code.language-mermaid {
+  padding: 0;
+  background-color: inherit;
+  border: 0;
 }
