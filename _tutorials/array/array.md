@@ -100,7 +100,7 @@ for (i = 0; i < 10; i += 1)
 根据 for 语句的效果，将在房间中创建 10 个 objBullet 的实例，并且这十个实例的索引（ID）分别被储存在 `inst[0]` 到 `inst[9]` 中，这样就可以分别控制十个实例。例如：
 
 ```c
-for (j = 0; j < 3; j +=1)
+for (j = 0; j < 3; j += 1)
     inst[j + 2].speed = 6;
 ```
 
@@ -112,7 +112,7 @@ for (j = 0; j < 3; j +=1)
 
 ```c
 for (i = 0; i < 6; i += 1)
-    for (j = 0; j < 6; j 6= 1)
+    for (j = 0; j < 6; j += 1)
         inst[i, j] = instance_create(i * 100, j * 100, objBullet);
 ```
 
