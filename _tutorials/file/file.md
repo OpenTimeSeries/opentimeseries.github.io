@@ -81,7 +81,7 @@ else
 
 值得注意的是，如果用文本文件流处理**非 ASCII 文件**（包括其他编码的文本文件，以及二进制文件）时，由于非 ASCII 文件有可能会储存 `11111111` 这个二进制数据，因此，当处理到这个字节时，即使离文件流结束还有十万八千里，eof 函数也会返回 true，故而，用文本文件流打开二进制文件并不是一个好的选择。
 
-关于**补码**（two's complement）的知识请参考[二进制]({{ site.baseurl }}{% link _tutorials/binary/binary.md %})。
+关于**补码**（two\'s complement）的知识请参考[二进制]({{ site.baseurl }}{% link _tutorials/binary/binary.md %})。
 
 # 基本流程
 
