@@ -25,7 +25,7 @@ lang: zh-CN
 # Use waline comments system.
 waline:
   enabled: true
-  server: https://gm8-tutorials-waline.vercel.app/
+  server: https://walinegm8.nihil.cc/
   placeholder: 说点什么吧！
   avatar: mp
 
