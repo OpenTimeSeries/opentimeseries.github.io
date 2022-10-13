@@ -26,7 +26,7 @@ lang: zh-CN
 waline:
   enabled: true
   server: https://walinegm8.nihil.cc/
-  placeholder: 说点什么吧！
+  placeholder: 说点什么吧！填入邮箱可以收到回复提醒哦~
   avatar: mp
 
 # Regression tests
