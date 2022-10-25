@@ -4,7 +4,7 @@ title: 语法补充
 nav_order: 16
 ---
 
-# exit 语句
+## exit 语句
 
 我们在之前学到了三种能够中断部分代码执行的语句：
 
@@ -14,7 +14,7 @@ nav_order: 16
 
 **exit** 既可以写在脚本里，也可以写在对象的事件里。如果写在脚本里，它的意义是**中断脚本**，相当于一个劣质的 return，因为 exit 不能返回一个值。如果写在事件里，它的意义是**中断当前代码框的执行**。*注意，exit 只退出一个代码框而不是整个事件，当前事件的其他代码框还会正常执行。*
 
-# 父对
+## 父对
 
 在[杀死玩家，记录死亡数]({{ site.baseurl }}{% link _tutorials/make_your_game/data.md %}#杀死玩家记录死亡数)中，我们提到了父对的作用之一，那就是对象会**响应父对的被碰撞检测**。这个被碰撞检测可以是碰撞事件或者碰撞检测函数。
 
@@ -29,7 +29,7 @@ nav_order: 16
 3. **响应父对的被碰撞事件以及被碰撞函数检测**。这在[杀死玩家，记录死亡数]({{ site.baseurl }}{% link _tutorials/make_your_game/data.md %}#杀死玩家记录死亡数)中已经讲解过。
 4. **会被 `instance_number(父对)` 以及其他与实例相关的函数所统计**。
 
-# break 与 with
+## break 与 with
 
 break 语句除了中断循环和 switch 以外，还有一个我们没有提到过的功能：**中断 with 结构**。如：
 
@@ -43,7 +43,7 @@ with (objBow)
 
 如果 `other.x > 400` 成立，那么执行 break 跳出 with，不会执行后面的 `image_xscale = -1;`。break 在 with 结构中**几乎不使用**，请参考下一小节理解。
 
-# continue 与 with
+## continue 与 with
 
 continue 在 with 中的作用为**跳到下一个实例**。
 

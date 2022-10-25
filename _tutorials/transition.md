@@ -4,7 +4,7 @@ title: 房间过渡
 nav_order: 30
 ---
 
-# 内置过渡方式
+## 内置过渡方式
 
 默认情况下，使用 `room_goto()` 函数切换房间时，GM8 是直接切换画面的。如果你觉得这种切换太生硬，GM8 提供房间过渡的功能。
 
@@ -65,7 +65,7 @@ GM8 提供 21 种过渡方式（不计为 0 时的无过渡）：
 
 ![Example](/assets/images/transition/example7.gif)
 
-# 自定义过渡方式
+## 自定义过渡方式
 
 * `transition_define(kind, name)` 注册一个新的房间过渡方式。参数 kind 是用来提供给 `transition_kind` 的值，重复定义可以覆盖掉原有效果。参数 name 是自定义过渡方式的脚本名，注意脚本名要使用双引号包起，以字符串方式传递。
 

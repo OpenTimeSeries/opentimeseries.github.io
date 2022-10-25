@@ -4,7 +4,7 @@ title: 键盘与鼠标
 nav_order: 12
 ---
 
-# 键盘事件
+## 键盘事件
 
 键盘事件分为三类，**键盘事件**（Keyboard Event），**按下键盘事件**（Keyboard Press Event），**放开键盘事件**（Keyboard Release Event）。
 
@@ -24,7 +24,7 @@ nav_order: 12
 
 一般键盘事件更多用于全局的键盘操作，比如[按 R 键 restart]({{ site.baseurl }}{% link _tutorials/make_your_game/data.md %}#杀死玩家记录死亡数)，[按 backspace 键回到选关页]({{ site.baseurl }}{% link _tutorials/make_your_game/level_design.md %}#选关页)，[按 P 键暂停什么]({{ site.baseurl }}{% link _tutorials/make_your_game/pause.md %}#show_message-法)的。
 
-# 鼠标事件
+## 鼠标事件
 
 ![Mouse Event](/assets/images/keyboard_mouse/mouse_event.png)
 
@@ -36,7 +36,7 @@ nav_order: 12
 
 这里提一下**鼠标靠近事件**（Mouse Enter Event）和**鼠标离开事件**（Mouse Leave Event），事实上前者我认为翻译为鼠标进入事件更为准确。鼠标靠近事件发生在鼠标从实例的碰撞盒外进入到实例的碰撞盒内部这一步，鼠标离开事件发生在鼠标从实例的碰撞盒内移到实例的碰撞盒之外的这一步。
 
-# 跟随鼠标
+## 跟随鼠标
 
 GM内置了两个变量来接受鼠标的位置：`mouse_x`，`mouse_y`，分别代表鼠标相对于游戏窗口的坐标。注意，这两个值只能读取，不能修改。
 
@@ -49,7 +49,7 @@ y = mouse_y;
 
 由于 GM 对鼠标位置的读取是发生在一步的最开始，而绘制在一步的末尾，所以跟随鼠标的实例看起来无论如何都会落后鼠标光标一步。
 
-# 光标
+## 光标
 
 本节内容位于 GML 汉化文档 56-57 页。
 
@@ -57,7 +57,7 @@ y = mouse_y;
 * `window_get_cursor()` 返回当前使用的光标类型。
 * `cursor_sprite` GM 内置变量，可以用精灵给它赋值，GM 会用这个精灵来替代光标图案。赋值 -1 则可以返回系统默认光标。
 
-# 鼠标检测
+## 鼠标检测
 
 本节内容位于 GML 汉化文档 40 页。
 
@@ -72,7 +72,7 @@ numb 只有四个参数可选：
 * `mb_middle` 鼠标中键
 * `mb_right` 鼠标右键
 
-# 键盘检测
+## 键盘检测
 
 `keyboard_check(key)`，`keyboard_check_pressed(key)`，`keyboard_check_released(key)` 这三个函数分别用来检测某个键是否按住、按下、松开，与三种键盘事件相对应，返回值为 1 或者 0。
 
@@ -100,7 +100,7 @@ if (keyboard_check(ord('W')))
 
 除此之外，`keyboard_check` 不能在游戏失焦时判断某个键是否按注，但是 `keyboard_check_direct` 在游戏失焦时仍然能判断某个键是否按住。另外，`keyboard_check` 会在房间变换后中断检测，如果你一直按着右键，然后角色向右移动进入了传送门，之后切换房间到下一个关卡，但是这个过程中你的右键一直没有松开的话，在新的房间里，角色并不会继续向右移动，你要松开右键，重新按下右键才能被 `keyboard_check` 识别，而 `keyboard_check_direct` 则不会，切换房间之后角色仍然保持向右运动。
 
-# 人物的移动
+## 人物的移动
 
 现在我们来讲一讲为什么键盘事件不适合用来做玩家角色操作。（嫌啰嗦可以直接跳过，无碍）
 

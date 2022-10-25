@@ -16,17 +16,17 @@ GM8 的音频系统可以说一团糟糕，因此，GMer 多是选择使用音�
 
 *注：本教程只讲常用函数，那些比较深层或者不常用的内容不会出现在本教程中。*
 
-# SS vs MM
+## SS vs MM
 
 SuperSound 只支持 wav 和 ogg 的音频格式，而 MaizeMusic 支持 mp3，wav，ogg，ma，m4a，ot，mod 等等多格式，且功能也比 SuperSound 更加全面（虽然基本上用不上），但是目前在国外 GM 圈要么就是用 SuperSound 要么就是用 FMOD，几乎不见使用 MaizeMusic（我怀疑是因为玉米懒得写英文文档），因此如果你有需要与国外大佬合作的话，建议使用 SuperSound 或者更为复杂的 FMOD，否则建议使用 MaizeMusic。
 
-# SuperSound
+## SuperSound
 
 在使用 SuperSound 之前，你需要准备一个 [GoldWave](https://www.goldwave.com/) 来转换音频格式为**ogg**。
 
 SuperSound 只支持 wav 和 ogg 是它的一大缺陷，但也可以说是一大优点，因为 ogg 格式的音频文件比 mp3 要小很多，音质却完全不输于 mp3，有助于减小游戏整体的大小。
 
-## 转换格式
+### 转换格式
 
 下载并打开 GoldWave，将音频文件拖入其中，GoldWave 会显示它的频率波形图：
 
@@ -46,7 +46,7 @@ SuperSound 只支持 wav 和 ogg 是它的一大缺陷，但也可以说是一�
 
 ![Gold Wave](/assets/images/music/goldwave4.png)
 
-## 载入音频
+### 载入音频
 
 * `SS_LoadSound(path, stream)` 该函数载入一个外置音频，并且返回该音频的索引。
 
@@ -58,11 +58,11 @@ SuperSound 只支持 wav 和 ogg 是它的一大缺陷，但也可以说是一�
 
 注意，当音乐文件成功读取时，该函数会返回一个很大整数，如果读取失败，则会返回字符串 `"No"`，因此可以通过 `if (is_real(global.BGM_BadApple))` 来判断是否读取成功。
 
-## 释放音频
+### 释放音频
 
 * `SS_FreeSound(snd)` 当不需要一个音频时，应当释放它的内存。参数填写需要释放的音频的索引，即 `SS_LoadSound` 的返回值。
 
-## 播放与停止
+### 播放与停止
 
 * `SS_PlaySound(snd)` 播放指定的音频，只播放一次，参数 snd 填写音频索引。
 * `SS_LoopSound(snd)` 循环播放指定的音频。
@@ -70,18 +70,18 @@ SuperSound 只支持 wav 和 ogg 是它的一大缺陷，但也可以说是一�
 * `SS_PauseSound(snd)` 暂停播放指定的音频。
 * `SS_ResumeSound(snd)` 从暂停处继续播放指定的音频。
 
-## 调整音量
+### 调整音量
 
 * `SS_SetSoundVol(snd, volumn)` 设置某个音频的播放音量。参数 snd 为音频索引。参数 volumn 为音量，可取值为 0\~10000，但是实际上在 5000 左右的时候就基本上没有声音了，因此，如果假设一个变量 `global.volumn` 控制音量在 0\~100 之间，那么最好将 `5000 + 50 * global.volumn` 传递给函数 `SS_SetSoundVol`，为了保险起见，在 `if (global.volumn == 0)` 时传递 0 给 `SS_SetSoundVol`。
 * `SS_GetSoundVol(snd)` 获取指定音频的音量。
 
-## 判断状态
+### 判断状态
 
 * `SS_IsSoundPlaying(snd)` 返回指定音频是否处于播放状态。
 * `SS_IsSoundLooping(snd)` 返回指定音频是否处于循环播放状态。
 * `SS_IsSoundPaused(snd)` 返回指定音频是否处于暂停状态。
 
-## 控制播放位置
+### 控制播放位置
 
 如果你在 `SS_LoadSound` 中使用了**流式**音频，则以下函数全部报废。
 
@@ -98,18 +98,18 @@ SS_SetSoundPosition(global.BGM_BadApple, (46 / 219) * SS_GetSoundLength(global.B
 
 因为音频长度是以 byte 来计数的，所以你可以精确到毫秒来控制播放位置。
 
-# MaizeMusic
+## MaizeMusic
 
-## 载入音频
+### 载入音频
 
 * `mm_music_load(path, loop)` 载入音频。参数 path 请参考 SuperSound 中的 `SS_LoadSound(path, stream)`。参数 loop 指定该音频是否需要循环播放。该函数返回音频的索引，请用全局变量储存，参考 SuperSound 中的 `SS_LoadSound(path, stream)`。读取音乐文件失败时返回 0。
 * `mm_music_load_url(url)` 载入网络音频。参数 url 为字符串，填写网络音频的直接文件地址（不是音频的播放页面）。返回值为音频的索引。
 
-## 释放音乐
+### 释放音乐
 
 * `mm_music_free(snd)` 当不需要某个音频时，应当释放它的内存。参数 snd 填写音频索引，即 `mm_music_load` 的返回值。
 
-## 播放与停止
+### 播放与停止
 
 * `mm_play(snd)` 播放指定的音频，参数 snd 填写音频索引。
 * `mm_stop(snd)` 停止播放指定的音频。
@@ -117,7 +117,7 @@ SS_SetSoundPosition(global.BGM_BadApple, (46 / 219) * SS_GetSoundLength(global.B
 * `mm_pause(snd)` 暂停播放指定的音频。
 * `mm_resume(snd)` 从暂停处继续播放指定的音频。
 
-## 调整音量
+### 调整音量
 
 * `mm_set_volume(snd, volumn)` 设置指定音频的音量，参数 volumn 范围为 0~1。
 * `mm_slider_volume(snd, volumn, time)` 缓动指定音频的音量。有些时候，你需要让音量渐渐增大，或者渐渐减小，而不是突兀地变化，此时你需要`mm_slider_volume`，相比于上一个函数多了参数 time ，单位为步（或帧），控制音频经过多少时间变化到 volumn 。
@@ -125,20 +125,20 @@ SS_SetSoundPosition(global.BGM_BadApple, (46 / 219) * SS_GetSoundLength(global.B
 * `mm_get_volume(snd)` 获取指定音频的音量
 * `mm_get_global_volume()` 获取操作系统的音量。
 
-## 播放速度
+### 播放速度
 
 * `mm_set_speed(snd, spd)` 设置指定音频的播放速度，参数 spd 为播放速度，1表示常速。
 
-## 循环片段
+### 循环片段
 
 * `mm_set_music_loop_section(snd, begin, end)` 设置指定音频的循环片段，begin 和 end 单位为秒，可以使用小数，用来指定循环片段的首尾。
 * `mm_remove_music_loop_section(snd)` 取消指定音频的循环片段。
 
-## 获取状态
+### 获取状态
 
 * `mm_get_active(snd)` 返回指定音频的状态。返回 0 为停止，1 为正在播放，2 为正在缓冲，3 为暂停。
 
-## 音效
+### 音效
 
 * `mm_effect_set(snd, effect)` 设置指定音频的音效。音效可以叠加。effect 的可选值为：
   * `se_chorus` 合唱
@@ -151,7 +151,7 @@ SS_SetSoundPosition(global.BGM_BadApple, (46 / 219) * SS_GetSoundLength(global.B
 * `mm_effect_remove(snd, effect)` 去除指定音频的指定音效。
 * `mm_effect_reset(snd)` 去除指定音频的所有音效。
 
-## 控制播放位置
+### 控制播放位置
 
 * `mm_get_length(snd)` 返回指定音频的长度，单位为秒。
 * `mm_get_position(snd)` 返回指定音频播放到的位置，单位为秒。
@@ -166,7 +166,7 @@ mm_set_position(global.BGM_BadApple, 46);
 
 显然，MM 在控制音频播放位置方面远比 SS 方便。
 
-## 录音
+### 录音
 
 * `mm_record_start()` 开始录音。返回值为本次录音的音频索引，可以用在 `mm_play` 等函数中。
 * `mm_record_stop()` 停止录音。

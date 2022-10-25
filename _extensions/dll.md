@@ -4,13 +4,13 @@ title: 使用 C++ 为 GM8 生成 dll
 nav_order: 2
 ---
 
-# 环境
+## 环境
 
 [Visual Studio 2019 Community](https://visualstudio.microsoft.com/zh-hans/vs/community/)（下称 VS），需要安装“使用 C++ 的桌面开发”组件。
 
 ![VS](/assets/images/dll/vs.png)
 
-# 生成 dll
+## 生成 dll
 
 首先，打开 VS，新建一个“具有导出项的动态链接库”项目，我们以生成一个 base64 的 dll 为例：
 
@@ -191,7 +191,7 @@ GM_String base64_decode(GM_String str)
 
 ![File](/assets/images/dll/file.png)
 
-# 调用 dll
+## 调用 dll
 
 打开 gmk，我们要为每一个 dll 中的函数声明一个脚本来调用。
 
@@ -254,7 +254,7 @@ base64_free();
 
 ![Result](/assets/images/dll/result2.png)
 
-# 句柄
+## 句柄
 
 如果你想用 WinAPI 开发更强大的 dll，那么你大概很需要知道 GameMaker 游戏的主窗口句柄。
 

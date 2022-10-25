@@ -171,9 +171,15 @@ plugins:
   - jekyll-sitemap
 
 kramdown:
-  syntax_highlighter_opts:
-    block:
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:   # Rouge 设置 › https://github.com/jneen/rouge#full-options
+    css_class: highlight
+    # default_lang: console
+    span:
       line_numbers: false
+    block:
+      line_numbers: true
+      start_line: 1
 
 compress_html:
   clippings: all

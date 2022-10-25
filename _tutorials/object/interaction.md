@@ -5,7 +5,7 @@ nav_order: 1
 parent: 对象
 ---
 
-# 成员运算符
+## 成员运算符
 
 两个对象之间要如何实现数据的交流？方法之一就是使用成员运算符 `.`。对的，就是一个小数点。他可以在一个对象里使用/改变另一个对象的变量。
 
@@ -13,7 +13,7 @@ parent: 对象
 
 只要在 objControl 的 alarm 0（计时器 0）事件中加上 `objBullet.speed = 6;` 即可。这句代码要放在 `instance_create(100, 200, objBullet);` 的后面，至于放在 `alarm[0] = 50;` 的前面还是后面可以随意。
 
-## 进阶：对单个实例的数据交流
+### 进阶：对单个实例的数据交流
 
 以 `对象名.变量名` 的形式进行数据交流时，如果此时房间中有多个该对象的实例，譬如上一个例子中，房间中有多个 objBullet 的实例，`objBullet.speed = 6;` 实际上是对所有的 objBullet 的实例发出了指令。而如果以 `spd = objBullet.speed;` 来获取数据的话，获得的是游戏中现存的最早被创造的那个 objBullet 的实例的 speed。
 
@@ -59,7 +59,7 @@ alarm[0] = 50;
 (100012).speed = 12;    // 注意索引一定要用括号括起来
 ```
 
-# with 语句
+## with 语句
 
 如果我们不只是想让对象/实例之间进行数据的交流，而是想让某个对象/实例命令另一个对象/实例执行一个函数或者一段代码呢？
 
@@ -179,7 +179,7 @@ with (objFruit) x += 12;
 
 例如，objFruit 有三个实例，ID 分别是 100315，100368，100396，他们的 x 分别是100，200，300，在执行了 `objFruit.x = objFruit.x + 12;` 之后，三个 objFruit 都会跳到 x 为 112 的位置，因为 ID 100315 最小，它的 x 值 100 会被作为 `objFruit.x` 的值被调用。而 `objFruit.x += 12;` 仅仅只是 `objFruit.x = objFruit.x + 12;` 的缩写而已，并不会导致结果不同。
 
-# 全局变量
+## 全局变量
 
 全局（global），即指整个游戏，或者说整个程序。
 
@@ -187,13 +187,13 @@ with (objFruit) x += 12;
 
 而**全局变量（global variable）**，不属于某一个实例，而是属于整个游戏的，不会因为实例的销毁或者房间的结束而销毁。基于这个特性，全局变量可以用于对象/实例之间的数据交流，尤其是**跨房间的数据交流**。
 
-## global
+### global
 
 以 `global.xx` 的形式的变量即是全局变量，小数点是成员运算符，表示这个变量是属于 global 的。使用方法和正常的变量几乎没有区别，任何一个对象/实例可以访问/改变改变全局变量。
 
 扩展：`global` 可以视作是一个特殊的实例，它的索引是 -5。即，你可以使用 `(-5).xxx` 来调用全局变量。但是 `with (global)` 或者 `with (-5)` 是不行的，因为 global 本身不能执行代码。
 
-## globalvar
+### globalvar
 
 此方法为全局变量的声明式写法。如果无法理解，请跳过，和 global 并没有本质上的区别。
 
@@ -231,7 +231,7 @@ show_message(string(NEXT) + " " + string(global.NEXT));
 
 但是在只声明 `global.NEXT` 的情况下并不能使用 `NEXT` 作为 globalvar 的变量。这也就是所谓的单向互通，只有 `global.` 共享 `globalvar` 的变量，而 `globalvar` 并不共享 `global.` 的变量。
 
-## 临时全局变量：var
+### 临时全局变量：var
 
 这个 var 正是[脚本]({{ site.baseurl }}{% link _tutorials/function/script.md %})一节的 var。
 

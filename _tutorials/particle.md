@@ -8,7 +8,7 @@ nav_order: 26
 
 而**粒子**（particle）就是在这种时候用来取代实例的。粒子可以看做一种极简化的实例，他也有各种各样的属性，如精灵，运动速度，方向，重力，混色，透明度等等，但是与实例不同的是，粒子没有索引，没有事件，不能执行代码，不会响应碰撞，没有父对。因此，相较于创建大量的实例而言，创建大量的粒子既能节省许多内存，也减少了计算的开销，特效不会轻易卡顿。当然，粒子也不是可以无限生成的，粒子数量多到一定程度也会变得卡顿掉帧。
 
-# 层次
+## 层次
 
 一个粒子特效可以分为三个层次：
 
@@ -16,7 +16,7 @@ nav_order: 26
 * 第二层是一些功能性组件，包含**发射器**（emitter，不断地产生粒子），**吸引器**（attractor，对粒子产生引力或斥力），**破坏器**（destroyer，将进入范围内的粒子摧毁），**偏转器**（deflector，偏转粒子运动方向）和**转换器**（changer，将进入范围内的一种粒子转换为另一种粒子）。
 * 最高层是**粒子系统**（particle system），粒子系统 A 的功能性组件只会影响粒子系统 A 内的粒子，不会对另一个粒子系统 B 内的粒子造成影响。*每个粒子特效都要创建自己的粒子系统，即避免影响其他粒子特效，也避免被其他粒子特效所影响。*
 
-# 简单粒子特效
+## 简单粒子特效
 
 由于制作一个粒子特效需要建立三个层次，过程十分麻烦，因此 GM8 提供了一些函数用来生成一些很简单的粒子特效，下面的函数会包办创建三个层次的所有过程：
 
@@ -36,7 +36,7 @@ nav_order: 26
   * `ef_rain` 雨水
   * `ef_snow` 雪花
 
-# 创建粒子系统
+## 创建粒子系统
 
 制作粒子特效的第一步，先创建一个粒子系统：
 
@@ -58,7 +58,7 @@ nav_order: 26
 * `part_system_automatic_draw(ind, automatic)` 设置粒子系统是否自动绘制。默认值为 true。如果你要将其画在表面上，就要设置为 false。
 * `part_system_drawit(ind)` 立即绘制索引为 ind 的粒子系统。当你使用 `surface_set_target` 指向表面后，调用该函数把粒子系统画在表面上。你只能在 `part_system_automatic_draw` 设置为 false 时使用该函数。
 
-# 创建粒子类型
+## 创建粒子类型
 
 如果把粒子比作实例，那么粒子类型就是对象。粒子系统以粒子类型为模板创建粒子。我们可以为一个粒子系统设计多个不同的粒子类型。注意，虽然不同的粒子系统之间不能共享粒子，但是**粒子系统不占有粒子类型**，同一个粒子类型可以供给多个不同的粒子系统使用。同样的，粒子系统销毁时虽然会销毁其中的粒子，但是不会销毁粒子类型。
 
@@ -123,7 +123,7 @@ nav_order: 26
 * `part_type_direction(ind, dir_min, dir_max, dir_incr, dir_wiggle)` 为索引为 ind 的粒子类型设置运动方向。粒子的初始运动方向将在 [dir_min, dir_max] 之间随机选取（默认运动方向为 0），之后，粒子运动方向每一步都会增加 [dir_incr - dir_wiggle, dir_incr + dir_wiggle] 之间随机的一个数值。
 * `part_type_gravity(ind, grav_amount, grav_dir)` 为索引为 ind 的粒子类型设置重力。参数 grav_amount 是重力的大小，参数 grav_dir 是重力的方向（向下为 270）。
 
-# 直接创建粒子
+## 直接创建粒子
 
 为粒子系统创建粒子有两种方式，一种是通过**发射器**，另一种就**是直接创建粒子**：
 
@@ -132,7 +132,7 @@ nav_order: 26
 * `part_particles_clear(ind)` 销毁索引为 ind 的粒子系统中所有的粒子。包括直接创建的粒子和发射器创建的粒子。
 * `part_particles_count(ind)` 返回索引为 ind 的粒子系统中粒子的数量。包括直接创建的粒子和发射器创建的粒子。
 
-# 发射器
+## 发射器
 
 **发射器**（emitter）有两种：一种是**爆发型发射器**，仅在一瞬间创建大量粒子，之后不再创建粒子；另一种是**持续型发射器**，会源源不断地生成粒子。一个粒子系统可以包含多个发射器。
 
@@ -145,7 +145,7 @@ nav_order: 26
 * `part_emitter_burst(ps, ind, parttype, number)` 指定索引为 ps 的粒子系统中索引为 ind 的发射器爆发式生成粒子。参数 parttype 是生成的粒子类型，参数 number 是生成的粒子数量。发射器将在函数调用的一瞬间生成粒子，并且可以多次调用函数多次爆发式生成粒子。
 * `part_emitter_stream(ps, ind, parttype, number)` 指定索引为 ps 的粒子系统中索引为 ind 的发射器连续不断地生成粒子。参数 parttype 是生成的粒子类型，参数 number 是每一步生成的粒子数量，同样的，number 可以为负数，代表每一步有 -1/number 的概率生成一个粒子。该函数只需调用一次就会让发射器源源不断地生成粒子。
 
-# 吸引器
+## 吸引器
 
 **吸引器**（attractor）会对粒子产生吸引力或者排斥力，以此改变粒子的行动轨迹。注意吸引器的处理速度较慢，不宜大量放置。
 
@@ -157,7 +157,7 @@ nav_order: 26
 * `part_attractor_position(ps, ind, x, y)` 设置索引为 ps 的粒子系统中索引为 ind 的吸引器的位置为 (x, y)。该位置不是房间位置，而是相对粒子系统的位置。
 * `part_attractor_force(ps, ind, force, dist, kind, aditive)` 设置索引为 ps 的粒子系统中索引为 ind 的吸引器的吸引力大小为 force（负数为排斥力），参数 dist 设置有效距离，只有离吸引器的距离小于 dist 的粒子才会受到作用，参数 kind 设置吸引器的类型，可选 `ps_force_constant`（吸引力大小为固定常量），`ps_force_linear`（距离越近吸引力越大，吸引力呈现线性增长，距离为 dist 的粒子受到的吸引力刚好为 0，距离为 0 的粒子受到的吸引力刚好为 force），`ps_force_quadratic`（距离越近吸引力越大，吸引力呈现二次曲线增长，距离为 dist 的粒子受到的吸引力刚好为 0，距离为 0 的粒子受到的吸引力刚好为 force），参数 additive 指定是否将吸引力叠加到粒子的速度和运动方向上（true）还是仅仅只改变粒子的位置（false）。
 
-# 破坏器
+## 破坏器
 
 **破坏器**（destroyer）会销毁进入区域内的粒子。一个粒子系统可以有多个破坏器。常见的方式是在房间外侧布置一圈破坏器，用来销毁超出房间范围的粒子。
 
@@ -168,7 +168,7 @@ nav_order: 26
 * `part_destroyer_clear(ps, ind)` 将索引为 ps 的粒子系统中索引为 ind 的破坏器重置到默认设置。
 * `part_destroyer_region(ps, ind, xmin, xmax, ymin, ymax, shape)` 设置索引为 ps 的粒子系统中索引为 ind 的破坏器的作用域。作用域范围由 (xmin, ymin) 和 (xmax, ymax) 决定，作用域的形状 shape 可选值有 `ps_shape_rectangle`（矩形），`ps_shape_ellipse`（椭圆形），`ps_shape_diamond`（菱形）。
 
-# 偏转器
+## 偏转器
 
 **偏转器**（deflector）使进入作用域的粒子发生偏转。更准确的说，偏转器类似于 `move_bounce_all`，真正有用的是偏转器的边界，他会将触碰到边界的粒子反弹。偏转器有水平偏转和垂直偏转两种，通常对应垂直墙壁和水平墙壁。如果从一个水平偏转器的上方触碰到偏转器，粒子会进入偏转器内不断地每一步都偏转其水平速度，就会变得非常鬼畜，直到粒子离开偏转器为止。因此，设置偏转器的作用范围要注意不要让粒子从不应该进入的方向进入到偏转器内部。
 
@@ -181,7 +181,7 @@ nav_order: 26
 * `part_deflector_kind(ps, ind, kind)` 设置索引为 ps 的粒子系统中索引为 ind 的偏转器的类型。 kind 可选值有：`ps_deflect_horizontal`（粒子偏转水平速度），`ps_deflect_vertical`（粒子偏转垂直速度）。
 * `part_deflector_friction(ps, ind, friction)` 设置索引为 ps 的粒子系统中索引为 ind 的偏转器的阻力大小，偏转器偏转粒子之后会令其减速 friction 值，以显得更加真实。
 
-# 转换器
+## 转换器
 
 **转换器**（changer）使进入范围内的某种粒子转换为另一种粒子。同样，一个粒子系统可以有多个转换器。
 
@@ -194,7 +194,7 @@ nav_order: 26
 * `part_changer_types(ps, ind, parttype1, parttype2)` 设置索引为 ps 的粒子系统中索引为 ind 的转换器将粒子类型为 parttype1 的粒子转换为 parttype2。
 * `part_changer_kind(ps, ind, kind)` 设置转换器的种类。参数 kind 的可选值有：`ps_change_motion`（仅转换运动状态），`ps_change_shape`（仅转换形状），`ps_change_all`（完全转换）。
 
-# Particle Designer
+## Particle Designer
 
 设计一个粒子特效是件很复杂又头疼的事情，因为你通常要使用大量的函数，设置大量的参数，甚至会感到一丝代码密集恐惧症。另一方面，粒子特效的参数设置不直观，设置一个参数需要反复地运行游戏才能调整好。
 

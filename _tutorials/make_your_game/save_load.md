@@ -37,7 +37,7 @@ working_directory + "\Data\save.dat"
 
 请记住你的路径名，本节中一律使用 `working_directory + "\save.dat"` 来讲解，你应当把代码中所有这个路径改成自己的路径。
 
-# saveGame
+## saveGame
 
 现在，打开你的 saveGame，写上：
 
@@ -62,7 +62,7 @@ working_directory + "\Data\save.dat"
 
 第二部分就是我们所需要修改的地方了，这个部分所用到的只有一个函数：`ds_map_add(id, key, value)`，这个函数需要三个参数，其中 **id 填 _map** 就行，无需改动。**value 填所需要储存的数据**，上述例子中用了四个数据作了示范，实际使用请根据自身需求。而**参数 key，可以理解为是一种记号**，比如，我给 `world.death` 标注一个记号 "death"，那么我在存档文件中寻找 "death" 这个记号时，存档文件就会把储存的 `world.death` 的值输出给我，所以，**绝对不能出现相同的记号**（即 key）。但是，记号用啥是随意的，你想用啥就用啥，你可以用 "a" 对应 `room`，"b" 对应 `world.death` 等，只要不重复就没问题。但是，从使用的角度来看，还是建议按对应关系来标记。
 
-# loadGame
+## loadGame
 
 接下来打开我们的 loadGame。
 
@@ -72,7 +72,7 @@ working_directory + "\Data\save.dat"
 
 现在有这么几种解决方法：
 
-## 规避问题
+### 规避问题
 
 即，让每一个房间只有一个存档，并且存档就在 objPlayer 的初始位置。这样就没必要去储存 objPlayer 的坐标，只需要储存 room 就行了，因而避开了这个问题。这可能是最简单粗暴的解决方案了。
 
@@ -101,7 +101,7 @@ working_directory + "\Data\save.dat"
 
 在第二部分，我们使用了函数 `ds_map_find_value(id, key)`，同样的，**参数 id 只需要填 _map** 就行。而**参数 key，则是和 saveGame 互相对应**。也就是说，saveGame 的格式是：`ds_map_add(_map, 标记, 变量名);`，那么在 loadGame 的格式则是：`变量名 = ds_map_find_value(_map, 标记);`。例如 saveGame 中写 `ds_map_add(_map, "death", world.death);`，那么 loadGame 中写 `world.death = ds_map_find_value(_map, "death");`。值得注意的是，由于 `room` 是不可改变的自带变量，所以我们只能用一个其他变量来接受数据，比如例子中的 `_room`，然后用 `room_goto(_room);` 切换房间。
 
-## world 跨房间传递数据
+### world 跨房间传递数据
 
 首先在 **world** 的 create 事件中初始化两个变量，本节中假设为 `loadx` 和 `loady`，然后初始化为 0（因为 objPlayer 一般不可能出现在 (0, 0) 位置）。在脚本 loadGame 中，用 `world.loadx` 和 `world.loady` 来分别接收存档中 objPlayer 的 x 和 y。
 
@@ -117,7 +117,7 @@ if (world.loadx || world.loady)
 }
 ```
 
-## player 临时持续法
+### player 临时持续法
 
 方法和之前所讲的 room 持续大同小异，让 player 仅在读档的时候持续，读完档便不再持续。
 
@@ -154,7 +154,7 @@ persistent = 0;
 
 方法还有很多，考虑到本节字数关系，就讲这三种。
 
-# saveDeathTime
+## saveDeathTime
 
 最后，我们看到我们的 saveDeathTime 脚本。这个脚本的目的是学会如何**部分存档**，并不是一定要单独储存 death 和 time，根据实际情况决定。
 

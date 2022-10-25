@@ -5,7 +5,7 @@ nav_order: 3
 parent: Make Your Game!
 ---
 
-# 杀死玩家，记录死亡数
+## 杀死玩家，记录死亡数
 
 首先，我们要有一个能稳定记录死亡数的办法，所以要么保存存在 global 里，要么保存在 world 里。这里讲解保存在 world 里的方法，毕竟 world 本来就是全局控制的实例嘛。所以我们先在 world 的 create 事件里初始化一个死亡数变量：
 
@@ -91,7 +91,7 @@ loadGame();
 
 当然，[父对的意义不止于此，还有别的作用]({{ site.baseurl }}{% link _tutorials/grammar.md %}#父对)，比如子对继承父对的事件，子对响应父对的 with 等。正因如此，作为父对的对象，本身不应该有额外的代码（并不是说不能有代码），并且不应当作为实例出现在房间中。
 
-# 记录游戏时间
+## 记录游戏时间
 
 有了记录死亡数的经验，记录游戏时间就简单了很多，所以我就不配图了。
 
@@ -110,7 +110,7 @@ if (room != rTitle && room != rStageSelect)
 
 time 一次增加 `1 / fps`，刚好每一秒（60 步）增加 1。
 
-# room_caption
+## room_caption
 
 现在我们的游戏窗口的标题栏还是空的。
 
@@ -127,7 +127,6 @@ room_caption = "你的游戏名";
 就可以在游戏的标题栏显示你的游戏名了：
 
 ![Caption](/assets/images/make_your_game/caption.png)
-
 
 当然，你也可以在标题栏添加更多的玩意，别忘了字符串允许使用加号运算。
 

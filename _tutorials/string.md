@@ -4,7 +4,7 @@ title: 字符串处理
 nav_order: 15
 ---
 
-# 字符串
+## 字符串
 
 我们曾经提到过，**字符串**（String）指的是以双引号包裹的一种常量。形如 `"Vanishment this world!"`，`"153.66"`，`"tan(pi/2) is invalid"` 等都是字符串。
 
@@ -20,7 +20,7 @@ nav_order: 15
 
 另外，字符中有一个特殊的标记符号 `#`，它代表换行，比如：`"First#Second"`，当使用 `show_message` 或者后面讲到的其他输出函数时，读取到 `#` 就会换行，但是 `#` 本身不会被输出。如果你想要直接输出 `#`，那么要使用 `\#` 来代替，它代表正常输出 `#` 而不是作为换行符号来使用。例如 `"First\#Second"` 输出的是 `First#Second`。
 
-# ASCII 与 ANSI 与 Unicode
+## ASCII 与 ANSI 与 Unicode
 
 我们在第十章的时候讲过，电脑以[二进制]({{ site.baseurl }}{% link _tutorials/binary/binary.md %})运行，所以实质上只能储存整数数据，电脑要储存别的类型的数据就必须先把它转换为整数。
 
@@ -46,7 +46,7 @@ nav_order: 15
 
 所以使用中文需慎重，最好使用世界通用语言英语。为什么使用英语不会产生乱码问题呢？因为后期诞生的编码方式，基本上都向 ASCII 兼容，即前 127 位保持和 ASCII 完全一样，往后面再加自己的字符。这样，不管系统使用什么编码方式，都能正常读取英文字符。
 
-# 字符串的处理
+## 字符串的处理
 
 本节位于 GML 汉化文档第 18 页。
 
@@ -76,7 +76,7 @@ nav_order: 15
 * `clipboard_get_text()` 返回当前剪贴板内文本内容。
 * `clipboard_set_text(str)` 将字符串 str 送入剪贴板。
 
-# execute_string
+## execute_string
 
 GM8 专属函数，GMS2 已删除。作用是将字符串作为**代码**执行。
 

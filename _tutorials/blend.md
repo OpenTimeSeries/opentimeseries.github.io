@@ -6,7 +6,7 @@ nav_order: 20
 
 本章内容魔改 Ray 神的帖子，原贴已随 Heabot 的关闭而石沉大海，若 Ray 神未来补档，则会在此处贴出链接。
 
-# 颜色的混合
+## 颜色的混合
 
 细心的 GMer 可能已经发现，在 GM8 的图像编辑器中，有“**颜色模式**”一选项，可选择“**混合**”或是“**替换**”。
 
@@ -23,9 +23,9 @@ nav_order: 20
 然后，我们要规定一下符号，**s** 代表 source，即**你要画上去的颜色**，**d** 代表 destination，即**原本的颜色**，**o** 代表 output，**最终得到的颜色**，**R** 代表 Red，**G** 代表 Green，**B** 代表 Blue，**A** 代表 Alpha。将一个大写字母和一个小写字母组合，如 Rs，代表要画上去的颜色的 Red 的值。为了更好的理解，我们将上面举的例子用符号来表示出来：
 
 > Rd = 1, Gd = 0, Bd = 0, Ad = 0.47,
-> 
+>
 > Rs = 0, Gs = 0, Bs = 0.47, As = 0.47,
-> 
+>
 > Ro = 0.34, Go = 0, Bo = 0.65, Ao = 0.72
 
 请一定要记住这十二个符号所代表的含义，因为我们后面都将用这十二个符号来讲解混色。
@@ -41,7 +41,7 @@ Bo = (Bs * As + Bd * Ad * (1 - As)) / Ao
 
 可以自己做做实验算一算，看看是不是这样。
 
-# 混合因素
+## 混合因素
 
 混色的计算方式可以有很多种，并非只有上面所讲的那种。只要输入一中 source 的颜色和一种 destination 的颜色，经过一定的计算得到 output 的过程，都可以称之为混色。事实上，所有的**混色**计算都可以总结为下面一个公式：
 
@@ -72,7 +72,7 @@ GM8所提供的混合因素有：
 
 *注意：虽然有些混合因素的名字带了 src 或者 dest 的字样，但是这并不代表只有 source 能使用带有 src 的混合因素或者只有 destination 能使用带有 dest 的混合因素，所有因素都是 source 和 destination 共用的。*
 
-# 设置混色模式
+## 设置混色模式
 
 * `draw_set_blend_mode_ext(src, dest)` 这个函数用来设置混色模式。参数 src 填写 source 的混合因素，参数 dest 填写 destination 的混合因素。
 
@@ -91,11 +91,11 @@ GM8所提供的混合因素有：
 * `bm_subtract` 对应 `(bm_zero, bm_inv_src_color)`
 * `bm_max` 对应 `(bm_src_alpha, bm_inv_src_color)`
 
-## bm_normal
+### bm_normal
 
 `bm_normal` 就是常规状态下，不设置混色模式时 GM8 的默认混合因素。
 
-## bm_add
+### bm_add
 
 `bm_add` 是对颜色的加强，通常用于暗色调下去除黑色背景。比如你看中了一张素材图片，但是它的黑色底色很难去除：
 
@@ -117,11 +117,11 @@ bm_add 的混色会自动帮你去除黑色底色：
 
 由于 bm_add 属于叠加型混色，在亮色背景的情况下大概率会叠加到白色，因此只适合于暗色的背景。在制作弹幕游戏的时候，给弹幕用上 `bm_add`，就能让弹幕看起来非常炫丽（只适用于黑色或偏暗的背景色）。在用圆球 spr 组成文字的时候，`bm_add` 能消除圆球 spr 的重叠，视觉效果更好。总之，`bm_add` 是混色中最常用的一种模式，经常活跃在各种特效之中。例如：<https://www.bilibili.com/video/av3877543/>
 
-## bm_subtract
+### bm_subtract
 
 `bm_subtract` 多用于表面（surface）之中，可以在表面上“挖洞”，这个我们日后再说。
 
-## bm_max
+### bm_max
 
 `bm_max` 和 `bm_add` 效果比较接近，混合因素稍有不同，destination 的权重相比 `bm_add` 更低，因此单纯从去除黑色底色的功能来讲大概是要比 `bm_add` 更好一点点的（如下图所示），但是感觉大部分人似乎都更喜欢用 `bm_add`？不过 `bm_max` 仍然是不适合用在亮色背景下的。
 
@@ -129,7 +129,7 @@ bm_add 的混色会自动帮你去除黑色底色：
 
 ---
 
-## 区域反色效果
+### 区域反色效果
 
 ```c
 draw_set_blend_mode_ext(bm_inv_dest_color, bm_zero);
@@ -159,7 +159,7 @@ Go和Bo同理，不赘述。
 
 上面说过，由于 GM8 的窗口不能半透明，所以实际上 Ao 总是强制设置为 1，因此，直接使用混色能实现的功能比较有限。要想真正发挥混色的能力，那么就要用到可以储存 Ao 值的**表面**（surface），表面就是我们下一章所要的内容。可以说，表面 + 混色是 GM8 高端特效的绝对主力，在 GMS1/2 中则引入了更加高端的 **shader**（同时也更加复杂难懂）来实现特效。
 
-# 绘制函数中的混色
+## 绘制函数中的混色
 
 有些绘制函数中有混色的参数，例如 `draw_sprite_ext(sprite, subimg, x, y, xscale, yscale, rot, color, alpha)` 中的 color 参数，再比如 `draw_sprite_general(sprite, subimg, left, top, width, height, x, y, xscale, yscale, rot, c1, c2, c3, c4, alpha)` 提供了 c1~c4 四个参数，代表左上角，右上角，右下角，左下角的渐变混色。
 

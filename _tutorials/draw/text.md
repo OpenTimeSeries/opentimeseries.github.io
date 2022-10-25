@@ -7,7 +7,7 @@ parent: 绘制
 
 绘制文本的基础就是函数 `draw_text(x, y, string);`，该函数在 (x, y) 位置绘制字符串 string。注意：该函数只支持英文字符。绘制文本应当写在 **draw 事件**中（同样，surface 除外）
 
-# 全局设定
+## 全局设定
 
 GM8 中有许多用来设置 `draw_text` 文本样式的函数。注意这些函数是**全局设定**，一旦设定，整个游戏都会使用该设置。
 
@@ -27,7 +27,7 @@ GM8 中有许多用来设置 `draw_text` 文本样式的函数。注意这些函
 
 `draw_set_halign` 和 `draw_set_valign` 决定了绘制的字符串与 `draw_text(x, y, string)`中 (x, y) 的关系。设置为 `fa_left` 和 `fa_top` 时，绘制的字符串的左上角为 (x, y)，设置为 `fa_center` 和 `fa_middle` 时，绘制的字符串中心位置为 (x, y)。
 
-# 扩展函数
+## 扩展函数
 
 基于 `draw_text`，GM 又给出了一些扩展的文本绘制函数。
 
@@ -39,7 +39,7 @@ GM8 中有许多用来设置 `draw_text` 文本样式的函数。注意这些函
 * `draw_text_transformed_color(x, y, string, xscale, yscale, angle, c1, c2, c3, c4, alpha)` 与 `draw_text_transformed()` 相同，但是多了颜色渐变。
 * `draw_text_ext_transformed_color(x, y, string, sep, w, xscale, yscale, angle, c1, c2, c3, c4, alpha)` 与 `draw_text_ext_transformed()` 相同，但是多了颜色渐变。
 
-# FoxWriting
+## FoxWriting
 
 GM8 作为古老的游戏制作引擎，很多功能都十分落后。为了拯救 GM8，许多大佬们便站出来为 GM8 制作了一些扩展插件。本节所讲的就是由 Noisyfox 大佬所制作的插件 FoxWriting，该插件弥补了 GM8 不能绘制中文的缺陷。
 
@@ -57,16 +57,16 @@ GM8 作为古老的游戏制作引擎，很多功能都十分落后。为了拯�
 
 ![Install](/assets/images/draw/install.png)
 
-## 载入字体
+### 载入字体
 
 * `fw_add_font(name, size, bold, italic, stroke)` 载入一个系统字体，name 填写系统字体名，可用字体名参见控制面板->字体，如"华文中宋"，"等线"等。注意在控制面板->字体中的字体名，后面的"常规"，"斜体"，"粗体"等均不属于字体名，字体名应当去除这一部分。size 是字体大小，单位为磅。bold 为是否使用粗体，填 true 或者 false 。italic 为是否使用斜体，填 true 或 false 。stroke 为是否描边，即是否在字体周围增加一像素的黑色描边，填 true 或者 false 。该函数返回新增字体的索引，建议使用 `global` 变量来储存，如果增加字体失败会返回 -1。
 * `fw_add_font_from_file(ttf, size, bold, italic, stroke)` 同上，只不过第一个变量变成了字体文件（通常为 xxx.ttf）的路径。通常在游戏本体（即 .exe）同文件夹下创建 Data 文件夹，下面再细分 Musics，Savedatas，Plugins，Fonts 文件夹等，发布游戏时将本体连同 Data 文件夹一起发布。假设在 Data\Fonts 下有一个字体文件"宋体.ttf"，那么 `fw_add_font_from_file` 载入这个字体的第一个参数应该填写 `working_directory + "\Data\Font\宋体.ttf"`。其中 `working_directory` 是 GM8 内置变量，值为游戏本体（即 .exe）所在的文件夹的完整路径，不包含 exe 本身名字和最后的反斜杠。
 
-## 释放字体
+### 释放字体
 
 * `fw_delete_font(font)` 将已经载入的字体销毁，释放内存空间，参数 font 为字体索引号（即 `fw_add_font` 和 `fw_add_font_from_file` 的返回值），返回是否成功。在不需要中文绘制或者游戏结束之前，请记住要释放掉所有字体的内存。
 
-## 全局设定
+### 全局设定
 
 FoxWriting响应 `draw_set_color` 和 `draw_set_alpha`。
 
@@ -74,7 +74,7 @@ FoxWriting响应 `draw_set_color` 和 `draw_set_alpha`。
 * `fw_draw_set_halign(halign)`，`fw_draw_set_valign(valign)`，与 `draw_set_halign`，`draw_set_valign` 参数相同，作用相同，但是前者影响 `fw_draw_text`，后者影响 `draw_text`。
 * `fw_draw_set_line_spacing(sep)` 设定绘制多行文本时的行间距。
 
-## 绘制文本
+### 绘制文本
 
 几乎GM有的文本绘制函数 FoxWriting 都有，对应的函数就是在 GM 函数前加上 fw_，例如 `draw_text` 对应 `fw_draw_text`，`draw_text_color` 对应 `fw_draw_text_color`。有区别的地方是，FoxWriting 的渐变色只能是双色上下渐变，也就是说，GM8 文本绘制函数中 (c1, c2, c3, c4) 的位置，fw 只填写两个参数 (c1, c2)，分别代表上，下的颜色。
 

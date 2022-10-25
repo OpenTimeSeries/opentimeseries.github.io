@@ -4,13 +4,13 @@ title: GM8 与反编译与混淆
 nav_order: 2
 ---
 
-# 反编译
+## 反编译
 
 GM8 的代码和资源是毫无加密地封装进 exe 中的，因此通过反向推导 exe 的封装逻辑，就可以通过 exe 复现出 gmk，即**反编译**（Decompile），俗称“**拆**”。由于 exe 不再储存资源的结构层次，因此反编译唯一丢失的 gmk 信息就是资源结构层次。
 
 最早的 GM8 反编译器（Decompiler）用 C++ 写的，GitHub 地址为：[GameMaker 8.1 Decompiler](https://github.com/WastedMeerkat/gm81decompiler)。该版本存在一些 bug，并且多年来无人维护。近段时间有大佬使用 Rust 重写了反编译器，Github 地址：[GM8Decompiler](https://github.com/OpenGM8/GM8Decompiler)。
 
-# 反反编译
+## 反反编译
 
 虽然有些作者并不是很在意自己的游戏被拆，但是也有作者并不希望自己的游戏被拆。自然，也就会有人去研究**反反编译**（Anti-Decompile）和反反编译器（Anti-Decompiler）。
 
@@ -20,7 +20,7 @@ GM8 的代码和资源是毫无加密地封装进 exe 中的，因此通过反�
 
 PS: 目前 Rust 版本的反编译器也有能力反拆许多主流的加壳程序，包括上面给出的反反编译器。
 
-# 混淆
+## 混淆
 
 只要 exe 仍然包含原本的所有信息，那么无论怎么加密都只能阻挡 99.9% 的人，对于 0.1% 的高手而言都是白纸，这一点在我混迹 I Wanna 圈的时候深刻的理解到了。
 

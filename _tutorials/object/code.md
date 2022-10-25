@@ -5,15 +5,15 @@ nav_order: 2
 parent: 对象
 ---
 
-# 代码框
+## 代码框
 
-## 搜索与替换
+### 搜索与替换
 
 ![Search And Replace](/assets/images/object/search_and_replace1.png)
 
 ![Search And Replace](/assets/images/object/search_and_replace2.png)
 
-## 信息与状态
+### 信息与状态
 
 ![Status](/assets/images/object/status.png)
 
@@ -33,7 +33,7 @@ parent: 对象
 
 ![Overlay](/assets/images/object/overlay.png)
 
-## 应用对象
+### 应用对象
 
 ![Target](/assets/images/object/target.png)
 
@@ -43,7 +43,7 @@ parent: 对象
 
 应用到对象即把这个代码框的所有代码都交由指定的 obj 执行，等效于 `with (obj){xxxxx;}`;
 
-# 注释
+## 注释
 
 **注释（Comment）**指的是不被程序执行，而是用来解释某段代码功能或用法的语句。
 

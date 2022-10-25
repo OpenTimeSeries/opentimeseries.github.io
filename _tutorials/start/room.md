@@ -9,7 +9,7 @@ parent: 初识GameMaker
 
 **房间（Rooms）**和**对象（Objects）**是依存关系，没有房间，对象无法将自己展现给玩家；没有对象，房间只是一个空壳。
 
-# 设定（Settings）
+## 设定（Settings）
 
 ![Room Properties](/assets/images/start/room_properties.png)
 
@@ -29,7 +29,7 @@ parent: 初识GameMaker
 
 **RCC（Room\'s Creation Code）**：写入 RCC 里的代码将会在进入房间的那一步执行一次，优先级高于 Objects 的事件。
 
-# 背景图片（Backgrounds）
+## 背景图片（Backgrounds）
 
 ![Background](/assets/images/start/background.png)
 
@@ -49,7 +49,7 @@ parent: 初识GameMaker
 
 **水平速度（Horizontal rolling speed）**和**垂直速度（Vitical rolling speed）**：如果你的背景图片左右可以连接，或者上下可以连接，你可以给定一个水平速度或垂直速度，背景图片就会运动起来。
 
-# 视野（Views）
+## 视野（Views）
 
 ![View](/assets/images/start/view.png)
 
@@ -65,7 +65,7 @@ parent: 初识GameMaker
 
 **视野跟随**：即房间视野始终跟随房间内某一个对象，而不是固定不动。Hbor 指当该对象离视野的左右边缘还有多少像素时开始跟随，Vbor 同理。Hsp 指视野在跟随对象时的水平最大移动速度，单位是**像素/步**，Vsp 则指垂直最大移动速度。一般 Hsp 和 Vsp 要大于跟随对象的速度。
 
-# 贴图（Tiles）
+## 贴图（Tiles）
 
 贴图的使用因人而异，有人喜欢用贴图，而有人则从不使用贴图。
 
@@ -99,7 +99,7 @@ GM的房间操作：
 
 其中删除所有（Delete All）指删除当前位置的所有贴图/对象，而不是指整个房间的所有贴图/对象。贴图锁定（Lock）后不能被删除，不能被移动。
 
-# 对象（Objects）
+## 对象（Objects）
 
 将对象放到房间内的操作和贴图（Tiles）同理。
 
@@ -111,7 +111,7 @@ GM的房间操作：
 
 **创建时执行代码（Instance Creation Code, ICC）**：对象被创建时仅执行一次的代码。优先级低于 RCC，高于对象的 create 事件。
 
-# 对象（Object）与实例（Instance）
+## 对象（Object）与实例（Instance）
 
 **对象**指的是在 Objects 目录下的一种资源文件，而**实例**是指对象在游戏（房间）中的具体体现。
 

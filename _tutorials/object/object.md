@@ -6,7 +6,7 @@ has_children: true
 permalink: /tutorials/object/
 ---
 
-# 对象的自带变量
+## 对象的自带变量
 
 对象自身会带有一些变量，这些变量通常与对象自身的状态、属性、行为相关。例：
 
@@ -20,7 +20,7 @@ permalink: /tutorials/object/
 
 GM 自带的变量会自动染上红色，切记自定义的变量名不能和自带变量的变量名冲突！
 
-# 对象实例的创建
+## 对象实例的创建
 
 正如[浅谈房间]({{ site.baseurl }}{% link _tutorials/start/room.md %}#对象objects)所说，我们可以通过直接在房间里面放置对象（Objects）来创造它的实例（Instances）。但是有的时候，我们并不想让他们在房间开始的时候就创建，例如射击游戏中，子弹的实例应该在射击时才被创建。
 

@@ -6,7 +6,7 @@ nav_order: 14
 
 本章内容位于 GML 汉化文档 21-26
 
-# 运动函数
+## 运动函数
 
 在[运动初步]({{ site.baseurl }}{% link _tutorials/move.md %}#最基本的运动函数)中，我们介绍了最基本的运动函数 `move_towards_point(x, y, speed)`，现在我们将学习与它共处于 GML 汉化文档 21-22 页的其他运动函数。（只选取重要的以及难理解的讲解，并不是全讲）
 
@@ -37,7 +37,7 @@ nav_order: 14
 * `move_outside_solid(dir, maxdist)` 与 `move_contact_solid` 相反，这个函数是向方向 dir 运动直到离开固体实例为止。如果最开始执行这个函数的时候实例就不与任何固体实例重叠，则实例不会运动。根据官方文档的建议，一般用于分离重叠的实例。
 * `move_outside_all(dir, maxdist)` 与上一个函数类似，这个函数是离开任何实例都会停止。
 
-# 路径
+## 路径
 
 **路径**（Paths）是 GM 的一种游戏资源，保存在 Paths 文件夹下。
 
@@ -61,7 +61,7 @@ nav_order: 14
 
 ![Example](/assets/images/path_move/example.png)
 
-# 路径函数与变量
+## 路径函数与变量
 
 * `path_start(path, speed, endaction, absolute)` 为当前实例开始一段路径。参数 path 是你想开始的路径名。参数 speed 是跟随路径的速度。负的 speed 意味着实例沿着路径往回移动。参数 edaction 是设定当实例到达路径的终点时发生的事件。有以下几个值可供使用:
 
@@ -83,7 +83,7 @@ nav_order: 14
 * `path_scale` 这个变量可以让你放大/缩小路径。
 * `path_endaction` 改变或返回路径的 endaction。
 
-# 运动设计
+## 运动设计
 
 虽然它在 GML 的汉化文档里有这——么长：
 

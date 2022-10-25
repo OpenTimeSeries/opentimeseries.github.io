@@ -5,7 +5,7 @@ nav_order: 2
 has_children: true
 permalink: /tutorials/start/
 ---
-# 术语介绍
+## 术语介绍
 
 * **GM8** 是 ~~GayMaker~~ **GameMaker8.0** 的缩写。顾名思义，GM8 是一款专门针对**制作游戏**而开发的编程工具。
 * **GM8.1/GM81** 是 GameMaker8.1 的缩写，GM8 的底层实现是 Delphi，而 GM8.1 的底层实现是 C++，由于 bug 众多为人诟病。总的来说 GM8.1 是 GMS 的试验品，不建议使用。
@@ -13,11 +13,11 @@ permalink: /tutorials/start/
 * **GML** 是 **GameMaker Language** 的缩写，为 GM 系列所使用的编程语言。由于 GMS2 中对 GML 的改动越来越大，近年来也出现了 GMSL（即GameMaker Studio Language）的说法来称呼 GMS2 中的 GML。
 * **gmk** 是指 GameMaker8.0 的工程文件，即源文件。
 
-# 下载地址
+## 下载地址
 
 我知道你们懒得找，[下载地址戳这](https://down.magecorn.com/s/gm8)（~~正版是不存在的~~）
 
-# 打开高级模式
+## 打开高级模式
 
 第一次打开 GM8，如果出现一个弹窗提示（不好意思我找不到图），询问你是否开启 **Advanced Mode（高级模式）**，请点 **yes**。
 
@@ -25,7 +25,7 @@ permalink: /tutorials/start/
 
 ![Advanced Mode](/assets/images/start/advanced_mode.png)
 
-# 资源文件夹
+## 资源文件夹
 
 做完上面的事之后，我们可以看到，在左边的框框里有一竖的文件夹，如图所示：
 
@@ -53,7 +53,7 @@ Backgrounds 顾名思义，是用来存放背景图片的文件夹，放在这�
 
 其他资源：Paths（路径），Scripts（脚本），Fonts（字体），Time Lines（时间轴）。
 
-# 功能栏
+## 功能栏
 
 位于屏幕的上方，如图所示：
 
@@ -61,21 +61,16 @@ Backgrounds 顾名思义，是用来存放背景图片的文件夹，放在这�
 
 从左到右分别是：
 
-**新建一个工程文件、打开一个现有的工程文件、保存当前工程文件**
-
-**生成 exe、上传游戏到网络**
-
-**运行游戏、以调试模式（Debug Mode）运行游戏**
-
-**创建一个 Sprite/Sound/Background/Path/Script/Font/Timeline/Object/Room 资源**
-
-**更改游戏信息、游戏全局设定、添加扩展包**
-
-**帮助**
+* 新建一个工程文件、打开一个现有的工程文件、保存当前工程文件
+* 生成 exe、上传游戏到网络
+* 运行游戏、以调试模式（Debug Mode）运行游戏
+* 创建一个 Sprite/Sound/Background/Path/Script/Font/Timeline/Object/Room 资源
+* 更改游戏信息、游戏全局设定、添加扩展包
+* 帮助
 
 有些看不懂没关系，以后会详讲。
 
-# 全局游戏设定（Global Game Settings）
+## 全局游戏设定（Global Game Settings）
 
 通过**功能栏倒数第三个按钮**，或者在 Rooms 文件夹下面的 **Global Game Settings** 双击可进入。里面的内容根据需要勾选即可。
 
@@ -89,7 +84,7 @@ Backgrounds 顾名思义，是用来存放背景图片的文件夹，放在这�
 
 其他---按 F5 和 F6 分别保存和载入游戏（后期会教你如何自己写代码[存档读档]({{ site.baseurl }}{% link _tutorials/make_your_game/save_load.md %})，自带的实在太废了）
 
-# 工程文件
+## 工程文件
 
 GM8 的工程文件是指以 **.gmk** 作为后缀的文件。
 

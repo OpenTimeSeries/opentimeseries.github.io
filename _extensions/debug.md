@@ -8,7 +8,7 @@ nav_order: 4
 
 很遗憾的是，*编程语言并非 AI*，他无法参透使用者的意图，几乎不可能给出准确的 bug 原因。但是，任何一个 IDE，都或多或少提供了一些调试信息和调试手段，这将是我们定位和解决 bug 的重要途径。
 
-# 看懂报错
+## 看懂报错
 
 如果我们的游戏出现了代码上的逻辑错误，例如非法的语法，不正确的参数量等，GM8 就会给我们一个 **Error Messages**，例如：
 
@@ -43,27 +43,27 @@ at position 10: Cannot compare arguments.
 7. 第九行的前半段 “at position **10**” 和 `^` 作用相同，告诉我们错误发生的位置是从左数第 10 个字符处。注意空格也算字符。
 8. 第九行的后半段指示了错误发生的原因。在本例中，错误原因是 “**Cannot compare arguments**”，这个错误的发生原因是判等的两边类型不同，即 a 和 b 中有一个是实数，有一个是字符串，二者无法比较，因此会报此错误。
 
-# 一些令人摸不着头脑的报错
+## 一些令人摸不着头脑的报错
 
-## 位于事件 Trigger Event: \<Deleted\>
+### 位于事件 Trigger Event: \<Deleted\>
 
 ![Trigger](/assets/images/debug/trigger.png)
 
 这是 GM8 本身的一个 bug，所谓的 Trigger Event: \<Deleted\> 其实是 **ICC**（instance creation code）或者 **RCC**（room creation code）。
 
-## Error defining an external function
+### Error defining an external function
 
 ![External](/assets/images/debug/external.png)
 
 这是指的是 `external_define` 这个函数执行失败了。要么就是 exe 目录下缺少了 dll，要么就是 `external_define` 定义的函数与 dll 内实际函数不同。
 
-## Unexpected error occured when running the game
+### Unexpected error occured when running the game
 
 ![Unexpected](/assets/images/debug/unexpected.png)
 
 这种已经不是报错了，而是游戏崩溃了。通常来说，游戏崩溃的原因可能是使用了一个非常大的整数，超出了GM8能承受的界限。或者游戏使用了一张非常大的图像，导致游戏运行时没能成功加载图像。
 
-# 了解调试信息窗口
+## 了解调试信息窗口
 
 通常，我们面临第二种 bug，即游戏运行的实际效果不符合设想的情况要远远多于报错的情况，并且调试难度高不少。要寻找代码可能出现问题的位置，我们需要学会如何使用调试信息窗口。
 
@@ -79,7 +79,7 @@ at position 10: Cannot compare arguments.
 
 ![Tools](/assets/images/debug/tools.png)
 
-## Execute Code
+### Execute Code
 
 立刻执行一段代码。这是一个非常好用的功能，能够随时随地执行任意代码，如果有语法错误，只是提示 “Compile Error”，并不会终止游戏。
 
@@ -87,35 +87,35 @@ at position 10: Cannot compare arguments.
 
 如果我们想知道实例 inst1 是否与另一个实例 inst2 发生了碰撞，我们想要监控 `place_meeting(x, y, inst2)` 是不可能的，监控列表并不知道这个函数要交给谁来执行。因此一种实现方式是，通过 Execute Code 执行 `with (inst1) isCollided = place_meeting(x, y, inst2);`，然后再监控 `inst1.isCollided` 即可。不过缺陷是不会自动刷新，需要再次 Execute Code 才会刷新值，因此更适合暂停游戏下使用。当然，这里只是提供一种可行的思路，希望各位能举一反三，发掘出更多用途。
 
-## Set Speed
+### Set Speed
 
 设置游戏运行帧率。
 
-## Show Global Variables
+### Show Global Variables
 
 显示所有的全局变量及其值。
 
-## Show Local Varivales
+### Show Local Varivales
 
 显示某个实例所有的变量及其值。
 
-## Show Instances
+### Show Instances
 
 显示所有实例的 id 及其对象名。
 
-## Show Messages
+### Show Messages
 
 如果你在代码中使用 `show_debug_message(str)`，那么 str 就会出现在 Show Messages 打开的窗口中。与 `show_messages(str)` 不同，`show_debug_message(str)` 不会主动弹窗阻拦游戏进程，因此更适合 debug 下使用。
 
-# if (debug_mode)
+## if (debug_mode)
 
 `debug_mode` 是 GM8 内置的常量，它在 Debug 模式下为 true，在普通游戏时为 false。因此我们可以通过 `if (debug_mode)` 增加许多调试工具，例如无敌模式，无限跳跃，鼠标移动角色位置，绘制判定域，等等，任何可能有助于调试的代码都可以考虑加在 `if (debug_mode)` 下，未来发布的时候也不用删除，直接发布就行，玩家那边是不会触发的。
 
-# 注释调试法
+## 注释调试法
 
 当你无法定位一个 bug 的所在位置时，最好的办法莫过于注释调试法。即将大部分代码都注释掉，仅留下一部分代码，运行检测其正确性，如果没问题，就从注释中解除一部分代码，继续测试其正确性，以此类推，直到找到不正确的位置。
 
-# 资源重名
+## 资源重名
 
 资源重名会引起串位，我们知道，GM8 中任何资源名其本质就是一个整数，如果一个精灵和一个对象重名，那么在 `instance_create` 时，传递给函数的很可能就是精灵的索引而不是对象的索引，这样 `instance_create` 就会去找另一个相同索引的对象，造成一些莫名其妙的 bug。要检测工程内是否有重名资源，可以使用**脚本**->**检查资源名称**。
 
@@ -123,12 +123,12 @@ at position 10: Cannot compare arguments.
 
 资源重名还有另一种情况，就是**资源名和变量名重名**。由于资源名有绝对的优先级，因此 GM8 不会将其视为变量。不过这个 bug 很好找，资源名都是黄色的，你看到变量里有个黄色的变量那肯定是重名了。
 
-# 未初始化
+## 未初始化
 
 我们知道，资源索引都是从 0 开始的。而 GM8 提供一个功能，将未初始化的变量赋值为 0，他可以关闭，但是由于 GM8 的设计缺陷我们很难不使用这个功能。
 
 由此会引发另一种看起来很莫名其妙的 bug。假如你代码中有类似于：`speed = inst.speed`，但是此时实例并没有初始化 inst 这个值，那么 GM8 会给 inst 赋值为 0，这句代码就成了 `speed = (0).speed`，也就是将索引为 0 的对象的速度赋值到当前实例的速度，再比如 `sprite_index = spr`，但是 spr 未初始化，那么实例就会以索引为 0 的精灵作为其精灵。当然，不仅仅是赋值，任何一个使用资源索引的地方都可能会出现这个问题。通常，我们不会不去初始化一个变量，但是我们可能会被 GM8 的事件顺序坑，也就是我们原本以为是赋值再调用，但是 GM8 实际的运行逻辑可能就是先调用再赋值了。
 
-# 良好的编程习惯
+## 良好的编程习惯
 
 [良好的编程习惯]({{ site.baseurl }}{% link _extensions/programming.md %})一方面（缩进，换行，空格等）有助于提高代码的阅读性，让你能快速看懂每个部分是在做什么，另一方面（高内聚，低耦合等）有助于快速定位 bug 的所在位置。

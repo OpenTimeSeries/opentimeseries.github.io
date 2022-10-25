@@ -39,26 +39,26 @@ GM中有着**绘图目标**（drawing target）这一概念。绘制目标可以
 
 第三，**表面的像素透明度可以为任意值**。注意了，这里才是大头戏。我们知道，GM 窗口锁定透明度为 1（即完全不透明），因此，我们在使用混色时，完全不考虑透明度的问题，最终 Ao 总是强制设置为 1。但是表面是可以储存透明度的，这就意味着混色在表面中可以得到最好的体现。
 
-# 表面基础
+## 表面基础
 
-## 创建表面
+### 创建表面
 
 * `surface_create(w, h)` 创建一个宽为 w 像素，高为 h 像素的表面。该函数返回被创建的表面的索引（id），请务必保存好该索引。若返回 -1，则表面创建失败。注意：索引是从 0 开始的，因此，你在初始化用来储存索引的变量时，请初始化为 -1 而不是 0。
 
-## 销毁表面
+### 销毁表面
 
 * `surface_free(id)` 销毁索引为 id 的表面。正如上所说，表面不会因为房间变换而消失或改变，因此，切记要自己销毁表面。
 
-## 检测表面
+### 检测表面
 
 * `surface_exists(id)` 检测索引为 id 的表面是否存在。再次强调，请将储存索引的变量初始化为 -1，因为 `surface_exists(0)` 可能是 true。
 
-## 设置绘制目标
+### 设置绘制目标
 
 * `surface_set_target(id)` 将绘制目标设置到索引为 id 的表面上，此后所有 draw_系列函数均绘制到这个表面上。
 * `surface_reset_target()` 将绘制目标重新设置回屏幕上。
 
-## 绘制表面
+### 绘制表面
 
 * `draw_surface(id, x, y)` 将索引为id的表面的内容绘制在 (x, y) 的位置，表面的左上角与 (x, y) 重合。正如上所说，表面之间也可以随便转移内容，因此你可以把绘制目标设置在表面 2 上，然后 `draw_surface(表面 1, x, y)` 也是可以的。
 * `draw_surface_part(id, left, top, width, height, x, y)` 将索引为 id 的表面的部分内容，左上角为 (left, top)，右下角为 (left + width, top + height) 之间的矩形部分绘制在 (x, y) 坐标处，左上角与 (x, y) 重合。
@@ -68,7 +68,7 @@ GM中有着**绘图目标**（drawing target）这一概念。绘制目标可以
 * `surface_copy(destination, x, y, source)` 除了先 `surface_set_target` 再 `draw_surface` 外，你也可以用这个函数将索引为 source 的表面内容绘制在索引为 destination 的表面的 (x, y) 处，无需改变当前绘制目标。
 * `surface_copy_part(destination, x, y, source, xs, ys, ws, hs)` 同上，将索引为 source 的表面的部分内容，左上角为 (xs, ys)，右下角为 (xs + ws, ys + hs) 的矩形部分绘制在索引为 destination 的 (x, y) 坐标处，左上角与 (x, y) 重合。
 
-## 使用表面的一般流程
+### 使用表面的一般流程
 
 在 Create（创建）事件：
 
@@ -99,13 +99,14 @@ draw_surface(surf, 0, 0);
 ```
 
 在 Destroy（销毁）事件中：
+
 ```c
 // 当被销毁时释放表面
 if (surface_exists(surf))
     surface_free(surf);
 ```
 
-# 表面高级
+## 表面高级
 
 ```c
 draw_clear_alpha(c_black, 0);
@@ -174,9 +175,9 @@ draw_set_blend_mode_ext(bm_zero, bm_src_alpha);
 
 与挖洞相反，这个混色模式会让表面只保留与绘制图案重叠的部分，其他部分则清空为透明。需要注意的是，其清空透明的原理是使用了 source 的透明部分，因此要确保让 source 的大小能够完全覆盖 destination。
 
-# 表面范例
+## 表面范例
 
-## 视野光圈限制
+### 视野光圈限制
 
 *注意：该实例深度应该最小，建议设置为负数，以免其他实例绘制在表面的上面。*
 
@@ -221,7 +222,7 @@ if (surface_exists(surf))
     surface_free(surf);
 ```
 
-## 电磁波干扰
+### 电磁波干扰
 
 同样，绘制表面的实例深度应该最低。注意，isRedraw 的目的是阻止表面在 `screen_redraw()` 时重绘，如果 draw 事件有其他与表面无关的代码，应该放在 `if (!isRedraw)` 外。
 
@@ -280,7 +281,7 @@ if (!isRedraw)
 }
 ```
 
-## 化零为整
+### 化零为整
 
 同样，绘制表面的实例深度应该最低。
 
@@ -344,7 +345,7 @@ if (surface_exists(surf2))
     surface_free(surf2);
 ```
 
-## 放大镜
+### 放大镜
 
 下面以跟随鼠标为例，其他形式类推。同样，绘制表面的实例深度应该最低。
 
@@ -407,7 +408,7 @@ if (surface_exists(surf2))
     surface_free(surf2);
 ```
 
-## 表面上的反色
+### 表面上的反色
 
 我在[上一章]({{ site.baseurl }}{% link _tutorials/blend.md %}#区域反色效果)讲了反色的混色因素。可能会有人尝试将其放在表面上，想要反色表面，但是却发现失败了。失败是显然的，因为按照 `(bm_inv_dest_color, bm_zero)` 的混色因素，最终得到的 `Ao = 1 - Ad`，也就是说你原本是不透明的部分，反色后会变成透明，而原本透明的部分，反色后会变成不透明。我们完全是依赖 GM8 窗口强制设置 Ao 为 1 的效果，才成功实现的反色。
 
@@ -472,7 +473,7 @@ if (surface_exists(surf2))
     surface_free(surf2);
 ```
 
-# bm_normal 对表面的腐蚀
+## bm_normal 对表面的腐蚀
 
 回顾一下，`bm_normal` 是 GM8 在正常状态下的默认混色模式，其本质是 `(bm_src_alpha, bm_inv_src_alpha)` 的混色因素，也就是：
 

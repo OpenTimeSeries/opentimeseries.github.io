@@ -12,9 +12,9 @@ GMAPI 是由国外神仙 Snake 所写的，能够在 C++ 的 DLL 中直接调用
 
 该篇教程部分代码参考自 [FoxWriting 项目](https://github.com/Noisyfox/FoxWriting)。（对的，比如下面某注释里的 vs2015 就是 fw 里的注释）
 
-# 在 VS 中使用 GMAPI
+## 在 VS 中使用 GMAPI
 
-## 配置项目
+### 配置项目
 
 解压 GMAPI.zip，可以看到里面有两个文件夹：
 
@@ -36,7 +36,7 @@ GMAPI 是由国外神仙 Snake 所写的，能够在 C++ 的 DLL 中直接调用
 
 ![Command](/assets/images/gmapi/command.png)
 
-## 初始化 GMAPI
+### 初始化 GMAPI
 
 在你自己的 "**项目名.h**" 头文件中，包含 Gmapi.h：
 
@@ -87,11 +87,11 @@ return TRUE;
 
 至此，GMAPI 初始化完毕。
 
-## 调用 GM8 的函数
+### 调用 GM8 的函数
 
 任何 GM8 中的函数，均可通过 `gm::function_name(args)` 的形式来使用。
 
-# 使用 D3D8
+## 使用 D3D8
 
 **D3D8** 即 **DirectX 3D 8.0** 版本。通过 D3D8 我们可以访问 GM8 的图像数据。[D3D8 下载请点击此处](https://pan.baidu.com/s/1oid7_xQZl-4Zsz3rdFWPCg)。
 
@@ -228,7 +228,7 @@ D3DXSaveTextureToFile(L"Enter Your File Path", D3DXIFF_BMP, texture, NULL);
 
 粗略测试感觉这个函数的效率要高于 GM8 的 `surface_save()`。
 
-# 使用 OpenMP 加速 for 循环
+## 使用 OpenMP 加速 for 循环
 
 如果你觉得学 GPU 编程太麻烦了，还是想用 CPU 使用 for 循环来逐个处理像素，那么你可以考虑使用 **OpenMP** 来加速 for 循环。
 
@@ -257,6 +257,6 @@ for (int i = 0; i < width * height; i++)
 }
 ```
 
-# And More？
+## And More？
 
 GMAPI 中还有更多底层的东西，比如 GM 变量的底层实现 `gm::CGMVariable`，精灵的底层实现 `gm::GMSPRITE`（其中包含有以 `BYTE*` 储存的图像比特数据）等等，因为我本人也并不是很能看懂 GMAPI（摊手），更多的功能就留给各位一起探索。

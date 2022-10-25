@@ -9,7 +9,7 @@ parent: 绘制
 
 ---
 
-# 精灵的绘制
+## 精灵的绘制
 
 GM用来绘制精灵的函数，大都以 draw_sprite_ 开头，例如上一节提到的 `draw_sprite_ext`。其中 ext 指 extend，即“扩展，延伸”。
 
@@ -38,7 +38,7 @@ GM用来绘制精灵的函数，大都以 draw_sprite_ 开头，例如上一节�
 * `draw_sprite_part_ext(sprite, subimg, left, top, width, height, x, y, xscale, yscale, color, alpha)` 按照 left, top, width, height 尺寸绘制精灵子图的部分。
 * `draw_sprite_general(sprite, subimg, left, top, width, height, x, y, xscale, yscale, rot, c1, c2, c3, c4, alpha)` 常规绘制函数，它按照 left, top, width, height 尺寸，四角混合颜色（左上 c1，右上 c2，右下 c3，左下 c4）绘制精灵子图的部分。最好在学习混色之后再使用。
 
-# 背景图片的绘制
+## 背景图片的绘制
 
 * `draw_background(back, x, y)` 在坐标 (x, y) 绘制背景 back 。
 * `draw_background_stretched(back, x, y, w, h)` 将背景 back 扩展填充至左上角坐标为 (x, y)，宽度高度分别为 w, h 的方形区域内。
@@ -50,7 +50,7 @@ GM用来绘制精灵的函数，大都以 draw_sprite_ 开头，例如上一节�
 * `draw_background_part_ext(back, left, top, width, height, x, y, xscale, yscale, color, alpha)` 按照 left, top, width, height 尺寸绘制显示背景的部分。
 * `draw_background_general(back, left, top, width, height, x, y, xscale, yscale, rot, c1, c2, c3, c4, alpha)` 常规绘制函数，它按照 left, top, width, height 尺寸，四角混合颜色（左上 c1，右上 c2，右下 c3，左下 c4）绘制背景的部分。注意旋转以左上为中心。
 
-# 基础形状绘制
+## 基础形状绘制
 
 本节位于 GML 汉化文档 45-46 页。
 
