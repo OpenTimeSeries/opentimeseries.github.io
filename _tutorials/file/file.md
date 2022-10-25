@@ -134,7 +134,7 @@ GM8提供了一些函数可以对文件路径操作，辅助文件流。
 
 * `get_open_filename(filter, fname)` 弹出一个弹窗，要求玩家选择一个文件打开，返回这个文件的文件名（包含路径）。参数 fname 为默认文件名。参数 filter 为筛选方案，格式为 `"种类1|扩展名1;扩展名2|种类2|扩展名3...."`，下面是 filter 为 `"Image|*.png;*.jpg;*.bmp;*.ico|Vedio|*.mp4;*.flv|Text|*.txt;*.doc;*.docx"` 时的效果：
 
-    ![File Open](/assets/images/file/file_open.png)
+  ![File Open](/assets/images/file/file_open.png)
 
 * `get_save_filename(filter, fname)` 弹出一个弹窗，要求玩家选择文件储存路径，返回这个文件的文件名（包含路径）。参数同上。
 

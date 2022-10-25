@@ -13,23 +13,23 @@ nav_order: 14
 * `motion_set(dir, speed)` 设置运动。这个函数作用不大，`motion_set(a, b);` 即等效于：`direction = a; speed = b;`。
 * `motion_add(dir, speed)` 根据矢量叠加速度。
 
-    如果没有学习过矢量可能会不懂，假设物体原速度为 spd1，原方向为 dir1，则执行 `motion_add(dir2, spd2);` 得到的物体运动速度 spd3 和 dir3 如下图所示：
+  如果没有学习过矢量可能会不懂，假设物体原速度为 spd1，原方向为 dir1，则执行 `motion_add(dir2, spd2);` 得到的物体运动速度 spd3 和 dir3 如下图所示：
 
-    ![Vector Speed](/assets/images/path_move/vector_speed.jpg)
+  ![Vector Speed](/assets/images/path_move/vector_speed.jpg)
 
 * `move_wrap(hor,vert,margin)` 离开房间到另一边时卷动实例。参数 hor 为是否水平卷动（1 或 0），参数 vert 为是否垂直卷动（1 或 0）。参数 margin 为卷动前离原点多远时实例必须离开房间。等于围绕房间的一圈留白。这个函数在离开事件（outside event）中使用非常具有代表性。
 
-    什么叫卷动？就是像诺基亚上的贪吃蛇那样，从上面穿墙，会从下面出来，从左边穿墙，会从右边出来。
+  什么叫卷动？就是像诺基亚上的贪吃蛇那样，从上面穿墙，会从下面出来，从左边穿墙，会从右边出来。
 
-    如果还是不懂，就来看一下效果图：
+  如果还是不懂，就来看一下效果图：
 
-    ![Wrap](/assets/images/path_move/wrap.gif)
+  ![Wrap](/assets/images/path_move/wrap.gif)
 
-    接下来说明一下参数 margin，这个参数填写 0 的时候，只要实例的坐标 (x, y) 超出了屏幕的边界，就会自动传送到对面。但是当坐标超出屏幕边界时，实例本身的精灵一般来讲还有一半仍在房间里，卷动时就会有一种不和谐的感觉。这时候就要调大 margin 的值，margin 的作用是，当实例离开房间后，还要再超出相当于 margin 的值的像素，才会发生卷动，并且传送到对面时，也是传送到屏幕外 margin 个像素的位置。
+  接下来说明一下参数 margin，这个参数填写 0 的时候，只要实例的坐标 (x, y) 超出了屏幕的边界，就会自动传送到对面。但是当坐标超出屏幕边界时，实例本身的精灵一般来讲还有一半仍在房间里，卷动时就会有一种不和谐的感觉。这时候就要调大 margin 的值，margin 的作用是，当实例离开房间后，还要再超出相当于 margin 的值的像素，才会发生卷动，并且传送到对面时，也是传送到屏幕外 margin 个像素的位置。
 
 * `move_bounce_solid(adv)` 遇到固体实例反弹。这并不是一个设置属性的函数，写在 create 事件是无效的，必须写在 step 事件或者碰撞事件中。adv 是 advanced 的缩写，值为 1 或 0，意思是是否开启高级反弹。普通反弹只考虑水平面和垂直面，而高级反弹会考虑斜面的反弹（注意：在只有水平面和垂直面的情况下，普通反弹和高级反弹是完全一样的！）。效果如下，上面是普通反弹，下面是高级反弹：
 
-    ![Bounce](/assets/images/path_move/bounce.gif)
+  ![Bounce](/assets/images/path_move/bounce.gif)
 
 * `move_bounce_all(adv)` 遇到所有的实例都反弹。
 * `move_contact_solid(dir, maxdist)` 这是我们在[碰撞]({{ site.baseurl }}{% link _tutorials/collision/use_step.md %}#最基本的运动函数)中提到过的函数。它的含义是，令实例以最大速度不超过 maxdist 向方向 dir 运动，直到接触到固体为止。如果实例和另一固体实例之间的距离小于实例的速度，则 `move_cantact_solid` 函数会令二者紧紧地贴在一起，既不重叠也没有任何空隙。这就是为什么我们在第十二章中使用这个函数的原因了。

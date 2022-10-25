@@ -44,29 +44,29 @@ GM8提供一类函数用以绘制**纹理**（texture），纹理这个词可以
 
 * `pr_pointlist` 一组点。
 
-    ![Pointlist](/assets/images/texture/pointlist.png)
+  ![Pointlist](/assets/images/texture/pointlist.png)
 
 * `pr_linelist` 一组无关联的线。我们指定六个点 ABCDEF，`pr_linelist` 会给我们生成三条线，AB，CD 和 EF。
 
-    ![Linelist](/assets/images/texture/linelist.png)
+  ![Linelist](/assets/images/texture/linelist.png)
 
 * `pr_linestrip` 一组连续的线。与 `pr_linelist` 的区别在于，我们指定六个点 ABCDEF，`pr_linestrip` 会生成五条线，即AB，BC，CD，DE 和 EF。也就是为指定的每两个相邻的点都生成一组线。
 
-    ![Linestrip](/assets/images/texture/linestrip.png)
+  ![Linestrip](/assets/images/texture/linestrip.png)
 
 * `pr_trianglelist` 一组无关联的三角形。假设指定六个点 ABCDEF，那么 `pr_trianglelist` 会生成两个三角形 ABC 和 DEF。
 
-    ![Trianglelist](/assets/images/texture/trianglelist.png)
+  ![Trianglelist](/assets/images/texture/trianglelist.png)
 
 * `pr_trianglestrip` 一组相邻的三角形。这种图元会把所有指定顺序相邻的三个点都连接为一个三角形，假设指定六个点 ABCDEF，那么 `pr_trianglestrip` 会生成四个三角形 ABC，BCD，CDE 和 DEF。
 
-    ![Trianglestrip](/assets/images/texture/trianglestrip.png)
+  ![Trianglestrip](/assets/images/texture/trianglestrip.png)
 
 * `pr_trianglefan` 一组共用一个顶点且相邻的三角形。这种图元会固定第一个点，让它与其他任意两个指定顺序相邻的点构成三角形。假设指定六个点 ABCDEF，那么 `pr_trianglefan` 会先固定点 A 作为公共顶点，然后生成 ABC，ACD，ADE，AEF 四个三角形。事实上这个图元更适合用来生成圆形（或扇形等有弧度的图形），固定圆心作为第一个点，然后取圆周上一定数量的点构成三角形来逼近圆。
 
-    ![Trianglefan](/assets/images/texture/trianglefan1.png)
+  ![Trianglefan](/assets/images/texture/trianglefan1.png)
 
-    ![Trianglefan](/assets/images/texture/trianglefan2.png)
+  ![Trianglefan](/assets/images/texture/trianglefan2.png)
 
 ## 绘制纹理
 

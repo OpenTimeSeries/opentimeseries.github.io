@@ -95,7 +95,7 @@ GM的房间操作：
 * ctrl + alt + 鼠标左键：无视网格地移动贴图/对象
 * ctrl + 鼠标右键：显示一些可执行的操作，如图：
 
-    ![Menu](/assets/images/start/menu.jpg)
+  ![Menu](/assets/images/start/menu.jpg)
 
 其中删除所有（Delete All）指删除当前位置的所有贴图/对象，而不是指整个房间的所有贴图/对象。贴图锁定（Lock）后不能被删除，不能被移动。
 

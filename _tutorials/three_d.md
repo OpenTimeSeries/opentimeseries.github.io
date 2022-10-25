@@ -24,17 +24,17 @@ nav_order: 34
 
 * **正交投影**（orthogonal projection）
 
-    过点作一直线垂直于目标平面，垂足作为投影点。这也是“正交”一词的含义如图：
+  过点作一直线垂直于目标平面，垂足作为投影点。这也是“正交”一词的含义如图：
 
-    ![Orthogonal](/assets/images/three_d/orthogonal.png)
+  ![Orthogonal](/assets/images/three_d/orthogonal.png)
 
 * **透视投影**（perspective projection）
 
-    将点与视点（也就是你从哪儿看这个空间）连线，与目标平面的交点作为投影点。如图：
+  将点与视点（也就是你从哪儿看这个空间）连线，与目标平面的交点作为投影点。如图：
 
-    ![Perspective](/assets/images/three_d/perspective.png)
+  ![Perspective](/assets/images/three_d/perspective.png)
 
-    这种投影方式产生的效果和人眼的投影效果相近。
+  这种投影方式产生的效果和人眼的投影效果相近。
 
 GM8 中，设置这两种投影方式的函数分别如下：
 

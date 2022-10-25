@@ -32,11 +32,11 @@ at position 10: Cannot compare arguments.
 2. 第三行 “of **Create** Event” 进一步定位到 objTest 的创建事件。
 3. 第二行" action number **2**" 表示出错的是第二个代码段：
 
-    ![Code](/assets/images/debug/code.png)
+  ![Code](/assets/images/debug/code.png)
 
 4. 第六行 “Error in code at line **2**” 告诉我们，出错的代码是在第 2 行：
 
-    ![Line](/assets/images/debug/line.png)
+  ![Line](/assets/images/debug/line.png)
 
 5. 第七行 `if (a == b)` 是告诉我们出错的代码。
 6. 第八行有个 `^`，他指示了错误发生的位置。

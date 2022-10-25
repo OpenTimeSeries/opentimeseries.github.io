@@ -29,7 +29,7 @@ GM用来绘制精灵的函数，大都以 draw_sprite_ 开头，例如上一节�
 * `draw_sprite_stretched(sprite, subimg, x, y, w, h)` 将精灵 sprite 扩展填充至左上角坐标为 (x, y)，宽度高度分别为 w, h 的方形区域内。
 * `draw_sprite_tiled(sprite, subimg, x, y)` 将精灵 sprite 作为图块在整个房间内进行绘制。其中一个图像的原点与 (x, y) 重合，如下图：
 
-    ![Stretched](/assets/images/draw/stretched.png)
+  ![Stretched](/assets/images/draw/stretched.png)
 
 * `draw_sprite_part(sprite, subimg, left, top, width, height, x, y)` 绘制图像 sprite 的一部分，这部分由四个参数决定，左上角坐标 (left, top)（以图像左上角为原点），右下角坐标 (left + width, top + height)，然后将这部分图像绘制在 (x, y) 的位置，其中新图像的左上角 (0, 0)，也就是原图像的 (left, top) 与 (x, y) 重合。
 * `draw_sprite_ext(sprite, subimg, x, y, xscale, yscale, rot, color, alpha)`  扩展参数的精灵绘制函数。
@@ -101,7 +101,7 @@ draw_set_alpha(1);
 
 * `draw_set_circle_precision(precision)` 设置绘制圆的精度，就是由多少段组成，精度必须在 4-64 之间并被 4 整除，这也被使用在椭圆和圆角方形中。参数 precision 填不同值的效果如下：
 
-    ![Precision](/assets/images/draw/precision.png)
+  ![Precision](/assets/images/draw/precision.png)
 
 GM 提供了以下基本图形的绘制：
 
