@@ -16,6 +16,10 @@ code {
   }
 }
 
+pre > code {
+  border: none;
+}
+
 // Avoid appearance of dark border around visited code links in Safari
 a:visited code {
   border-color: $border-color;
