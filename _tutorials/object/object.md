@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: 对象
 nav_order: 6
 has_children: true

@@ -1,8 +1,9 @@
 ---
-layout: default
+layout: post
 title: 栅格
 nav_order: 6
 parent: 数据结构
+toc: false
 ---
 
 **栅格**（grid）可以看做列表与二维数组的组合体，它使用两个值来作为数据的索引，正因如此，栅格不能随随便便地改变其大小。

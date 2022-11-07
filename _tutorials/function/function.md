@@ -1,9 +1,10 @@
 ---
-layout: default
+layout: post
 title: 函数
 nav_order: 5
 has_children: true
 permalink: /tutorials/function/
+toc: false
 ---
 
 GML 汉化文档下载请点[这里](http://pan.baidu.com/s/1gfKRCd1)

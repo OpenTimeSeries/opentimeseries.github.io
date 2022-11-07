@@ -77,16 +77,18 @@ layout: table_wrappers
       {% include nav.html pages=site.html_pages key=nil %}
       {% endif %}
       {%- if site.nav_external_links -%}
-        <ul class="nav-list">
-          {%- for node in site.nav_external_links -%}
-            <li class="nav-list-item external">
-              <a href="{{ node.url | absolute_url }}" class="nav-list-link external">
-                {{ node.title }}
-                {% unless node.hide_icon %}<svg viewBox="0 0 24 24" aria-labelledby="svg-external-link-title"><use xlink:href="#svg-external-link"></use></svg>{% endunless %}
-              </a>
-            </li>
-          {%- endfor -%}
-        </ul>
+      <ul class="nav-list">
+        {%- for node in site.nav_external_links -%}
+        <li class="nav-list-item external">
+          <a href="{{ node.url | absolute_url }}" class="nav-list-link external">
+            {{ node.title }}
+            {% unless node.hide_icon %}<svg viewBox="0 0 24 24" aria-labelledby="svg-external-link-title">
+              <use xlink:href="#svg-external-link"></use>
+            </svg>{% endunless %}
+          </a>
+        </li>
+        {%- endfor -%}
+      </ul>
       {%- endif -%}
       {% if site.just_the_docs.collections %}
       {% assign collections_size = site.just_the_docs.collections | size %}
@@ -168,98 +170,113 @@ layout: table_wrappers
       </nav>
       {% endif %}
     </div>
-    <div id="main-content-wrap" class="main-content-wrap">
-      {% unless page.url == "/" %}
-      {% if page.parent %}
-      <nav aria-label="Breadcrumb" class="breadcrumb-nav">
-        <ol class="breadcrumb-nav-list">
-          {% if page.grand_parent %}
-          <li class="breadcrumb-nav-list-item"><a href="{{ first_level_url }}">{{ page.grand_parent }}</a></li>
-          <li class="breadcrumb-nav-list-item"><a href="{{ second_level_url }}">{{ page.parent }}</a></li>
-          {% else %}
-          <li class="breadcrumb-nav-list-item"><a href="{{ first_level_url }}">{{ page.parent }}</a></li>
-          {% endif %}
-          <li class="breadcrumb-nav-list-item"><span>{{ page.title }}</span></li>
-        </ol>
-      </nav>
-      {% endif %}
-      {% endunless %}
-      <div id="main-content" class="main-content" role="main">
-        {% include refactor.html content=content %}
-        {% if page.has_children == true and page.has_toc != false %}
-        <hr>
-        {% include toc_heading_custom.html %}
-        <ul>
-          {% for child in toc_list %}
-          <li>
-            <a href="{{ child.url | relative_url }}">{{ child.title }}</a>{% if child.summary %} - {{ child.summary }}{%
-            endif %}
-          </li>
-          {% endfor %}
-        </ul>
+
+    <div id="core-wrapper">
+      <div id="main-content-wrap" class="main-content-wrap">
+        {% unless page.url == "/" %}
+        {% if page.parent %}
+        <nav aria-label="Breadcrumb" class="breadcrumb-nav">
+          <ol class="breadcrumb-nav-list">
+            {% if page.grand_parent %}
+            <li class="breadcrumb-nav-list-item"><a href="{{ first_level_url }}">{{ page.grand_parent }}</a></li>
+            <li class="breadcrumb-nav-list-item"><a href="{{ second_level_url }}">{{ page.parent }}</a></li>
+            {% else %}
+            <li class="breadcrumb-nav-list-item"><a href="{{ first_level_url }}">{{ page.parent }}</a></li>
+            {% endif %}
+            <li class="breadcrumb-nav-list-item"><span>{{ page.title }}</span></li>
+          </ol>
+        </nav>
         {% endif %}
+        {% endunless %}
+        <div id="main-content" class="main-content" role="main">
+          {% include refactor.html content=content %}
+          {% if page.has_children == true and page.has_toc != false %}
+          <hr>
+          {% include toc_heading_custom.html %}
+          <ul>
+            {% for child in toc_list %}
+            <li>
+              <a href="{{ child.url | relative_url }}">{{ child.title }}</a>{% if child.summary %} - {{ child.summary
+              }}{%
+              endif %}
+            </li>
+            {% endfor %}
+          </ul>
+          {% endif %}
 
-        {% if page.type != 404 %}
-        {% capture footer_custom %}
-        {%- include footer_custom.html -%}
-        {% endcapture %}
-        {% if footer_custom != "" or site.last_edit_timestamp or site.gh_edit_link %}
+          {% if page.type != 404 %}
+          {% capture footer_custom %}
+          {%- include footer_custom.html -%}
+          {% endcapture %}
+          {% if footer_custom != "" or site.last_edit_timestamp or site.gh_edit_link %}
+          <hr>
+          <footer>
+            {% if site.back_to_top %}
+            <p><a href="#top" id="back-to-top">{{ site.back_to_top_text }}</a></p>
+            {% endif %}
+
+            {{ footer_custom }}
+
+            {% if site.last_edit_timestamp or site.gh_edit_link %}
+            <div class="d-flex mt-2">
+              {% if site.last_edit_timestamp and site.last_edit_time_format and page.last_modified_date %}
+              <p class="text-small text-grey-dk-000 mb-0 mr-2">
+                Page last modified: <span class="d-inline-block">{{ page.last_modified_date | date:
+                  site.last_edit_time_format }}</span>.
+              </p>
+              {% endif %}
+              {% if
+              site.gh_edit_link and
+              site.gh_edit_link_text and
+              site.gh_edit_repository and
+              site.gh_edit_branch and
+              site.gh_edit_view_mode
+              %}
+              <p class="text-small text-grey-dk-000 mb-0">
+                <a href="{{ site.gh_edit_repository }}/{{ site.gh_edit_view_mode }}/{{ site.gh_edit_branch }}{% if site.gh_edit_source %}/{{ site.gh_edit_source }}{% endif %}{% if page.collection and site.collections_dir %}/{{ site.collections_dir }}{% endif %}/{{ page.path }}"
+                  id="edit-this-page">{{ site.gh_edit_link_text }}</a>
+              </p>
+              {% endif %}
+            </div>
+            {% endif %}
+          </footer>
+          {% endif %}
+        </div>
         <hr>
-        <footer>
-          {% if site.back_to_top %}
-          <p><a href="#top" id="back-to-top">{{ site.back_to_top_text }}</a></p>
-          {% endif %}
-
-          {{ footer_custom }}
-
-          {% if site.last_edit_timestamp or site.gh_edit_link %}
-          <div class="d-flex mt-2">
-            {% if site.last_edit_timestamp and site.last_edit_time_format and page.last_modified_date %}
-            <p class="text-small text-grey-dk-000 mb-0 mr-2">
-              Page last modified: <span class="d-inline-block">{{ page.last_modified_date | date:
-                site.last_edit_time_format }}</span>.
-            </p>
-            {% endif %}
-            {% if
-            site.gh_edit_link and
-            site.gh_edit_link_text and
-            site.gh_edit_repository and
-            site.gh_edit_branch and
-            site.gh_edit_view_mode
-            %}
-            <p class="text-small text-grey-dk-000 mb-0">
-              <a href="{{ site.gh_edit_repository }}/{{ site.gh_edit_view_mode }}/{{ site.gh_edit_branch }}{% if site.gh_edit_source %}/{{ site.gh_edit_source }}{% endif %}{% if page.collection and site.collections_dir %}/{{ site.collections_dir }}{% endif %}/{{ page.path }}"
-                id="edit-this-page">{{ site.gh_edit_link_text }}</a>
-            </p>
-            {% endif %}
-          </div>
-          {% endif %}
-        </footer>
+        {% endif %}
+        {% if site.waline.enabled == true and page.type != 404 %}
+        <div id="waline"></div>
+        <script>
+          const locale = {
+            placeholder: '{{ site.waline.placeholder }}',
+          };
+          Waline.init({
+            el: '#waline',
+            serverURL: '{{ site.waline.server }}',
+            emoji: [
+              'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.1.0/qq',
+              'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.1.0/tieba',
+              'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.1.0/tw-emoji',
+              'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.1.0/bilibili',
+            ],
+            dark: 'html[data-theme="dark"]',
+            locale,
+          });
+        </script>
         {% endif %}
       </div>
-      <hr>
-      {% endif %}
-      {% if site.waline.enabled == true and page.type != 404 %}
-      <div id="waline"></div>
-      <script>
-        const locale = {
-          placeholder: '{{ site.waline.placeholder }}',
-        };
-        Waline.init({
-          el: '#waline',
-          serverURL: '{{ site.waline.server }}',
-          emoji: [
-            'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.1.0/qq',
-            'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.1.0/tieba',
-            'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.1.0/tw-emoji',
-            'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.1.0/bilibili',
-          ],
-          dark: 'html[data-theme="dark"]',
-          locale,
-        });
-      </script>
-      {% endif %}
+      <div id="right-panel">
+        {% if page.toc %}
+        <div id="toc-wrapper">
+          <div id="toc-header">
+            文章内容导航
+          </div>
+          {% include toc.html html=content id="toc" h_min=2 h_max=3 item_class="toc-h%level%" %}
+        </div>
+        {% endif %}
+      </div>
     </div>
+
 
     {% if site.search_enabled != false %}
     {% if site.search.button %}

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: 良好的编程习惯
 nav_order: 5
 ---

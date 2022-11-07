@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: 语法补充
 nav_order: 16
 ---

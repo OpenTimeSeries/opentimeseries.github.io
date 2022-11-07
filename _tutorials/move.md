@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: 运动
 nav_order: 7
 ---

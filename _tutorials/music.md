@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: 外置音频：SS 与 MM
 nav_order: 19
 ---
@@ -105,7 +105,7 @@ SS_SetSoundPosition(global.BGM_BadApple, (46 / 219) * SS_GetSoundLength(global.B
 * `mm_music_load(path, loop)` 载入音频。参数 path 请参考 SuperSound 中的 `SS_LoadSound(path, stream)`。参数 loop 指定该音频是否需要循环播放。该函数返回音频的索引，请用全局变量储存，参考 SuperSound 中的 `SS_LoadSound(path, stream)`。读取音乐文件失败时返回 0。
 * `mm_music_load_url(url)` 载入网络音频。参数 url 为字符串，填写网络音频的直接文件地址（不是音频的播放页面）。返回值为音频的索引。
 
-### 释放音乐
+### 释放音频
 
 * `mm_music_free(snd)` 当不需要某个音频时，应当释放它的内存。参数 snd 填写音频索引，即 `mm_music_load` 的返回值。
 

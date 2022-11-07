@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: 碰撞检测
 nav_order: 2
 parent: 碰撞

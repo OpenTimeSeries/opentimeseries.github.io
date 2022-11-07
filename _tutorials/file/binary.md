@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: 二进制文件流
 nav_order: 1
 parent: 文件流

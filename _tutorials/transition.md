@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: 房间过渡
 nav_order: 30
 ---

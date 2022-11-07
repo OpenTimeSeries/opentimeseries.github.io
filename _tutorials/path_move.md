@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: 路径与运动
 nav_order: 14
 ---

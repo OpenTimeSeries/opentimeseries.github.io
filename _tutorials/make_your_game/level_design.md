@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: 关卡设计
 nav_order: 2
 parent: Make Your Game!

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: 运算
 nav_order: 2
 parent: 变量

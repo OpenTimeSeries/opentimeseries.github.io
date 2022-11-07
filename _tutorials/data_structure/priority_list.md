@@ -1,8 +1,9 @@
 ---
-layout: default
+layout: post
 title: 优先队列
 nav_order: 5
 parent: 数据结构
+toc: false
 ---
 
 **优先队列**（priority list）与队列不同，不是以加入的时间顺序作为索引，而是以优先级作为索引。这种数据结构可以帮助你根据数据的重要程度来决定数据的处理顺序。

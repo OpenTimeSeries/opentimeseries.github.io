@@ -1,8 +1,9 @@
 ---
-layout: default
+layout: post
 title: 简单输入输出
 nav_order: 3
 parent: 函数
+toc: false
 ---
 
 本节对应 GML 汉化文档的 67-68 页。

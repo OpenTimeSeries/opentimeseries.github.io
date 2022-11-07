@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: 绘制
 nav_order: 17
 has_children: true

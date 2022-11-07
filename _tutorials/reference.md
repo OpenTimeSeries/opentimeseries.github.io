@@ -1,7 +1,8 @@
 ---
-layout: default
+layout: post
 title: 参考与鸣谢
 nav_order: 35
+toc: false
 ---
 
 * [Ray](https://github.com/Raynirs)

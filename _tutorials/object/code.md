@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: 代码
 nav_order: 2
 parent: 对象

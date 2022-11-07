@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: 浅谈对象
 nav_order: 2
 parent: 初识GameMaker

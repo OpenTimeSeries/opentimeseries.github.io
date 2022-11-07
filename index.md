@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: 前言
 nav_order: 1
 description: "GameMaker 8.0 从入门到入土"

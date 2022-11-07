@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: 数组
 nav_order: 8
 has_children: true

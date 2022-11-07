@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: 表面
 nav_order: 21
 ---

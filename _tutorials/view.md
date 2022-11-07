@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: 视野
 nav_order: 18
 ---

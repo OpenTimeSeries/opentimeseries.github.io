@@ -1,9 +1,10 @@
 ---
-layout: default
+layout: post
 title: 变量
 nav_order: 3
 has_children: true
 permalink: /tutorials/variable/
+toc: false
 ---
 
 **变量（Variable）**是任何编程语言的根基。

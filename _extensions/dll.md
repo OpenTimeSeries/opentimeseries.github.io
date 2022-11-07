@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: 使用 C++ 为 GM8 生成 dll
 nav_order: 2
 ---

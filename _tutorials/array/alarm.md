@@ -1,8 +1,9 @@
 ---
-layout: default
+layout: post
 title: 计时器事件
 nav_order: 1
 parent: 数组
+toc: false
 ---
 
 现在我们可以来重新审视一下**计时器事件（Alarm Event）**。

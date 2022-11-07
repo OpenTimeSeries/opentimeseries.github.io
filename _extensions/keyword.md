@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: 关键字、运算符一览
 nav_order: 1
 redirect_from:

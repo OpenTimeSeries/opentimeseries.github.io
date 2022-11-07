@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: 索引
 nav_order: 22
 ---

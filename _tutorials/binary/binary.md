@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: 二进制
 nav_order: 27
 has_children: true

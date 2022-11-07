@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: ini
 nav_order: 28
 ---

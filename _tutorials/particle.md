@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: 粒子
 nav_order: 26
 ---

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: 数据
 nav_order: 3
 parent: Make Your Game!
@@ -110,7 +110,7 @@ if (room != rTitle && room != rStageSelect)
 
 time 一次增加 `1 / fps`，刚好每一秒（60 步）增加 1。
 
-## room_caption
+## 标题栏
 
 现在我们的游戏窗口的标题栏还是空的。
 

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: 素材
 nav_order: 1
 parent: 初识GameMaker

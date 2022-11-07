@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: 位运算
 nav_order: 1
 parent: 二进制

@@ -1,9 +1,10 @@
 ---
-layout: default
+layout: post
 title: 数据结构
 nav_order: 23
 has_children: true
 permalink: /tutorials/data_structure/
+toc: false
 ---
 
 **数据结构**（data structure）是计算机中存储、组织数据的方式，描述“**数据**”及其之间的“**关系**”。参考维基百科的定义，**数组**是一种最简单的数据结构。

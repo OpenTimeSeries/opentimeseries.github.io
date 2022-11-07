@@ -1,8 +1,9 @@
 ---
-layout: default
+layout: post
 title: 脚本
 nav_order: 2
 parent: 函数
+toc: false
 ---
 
 在GM中，**脚本（Scripts）**的实质是自定义的函数。

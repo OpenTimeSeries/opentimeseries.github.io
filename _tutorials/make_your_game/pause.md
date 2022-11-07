@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: 暂停
 nav_order: 4
 parent: Make Your Game!

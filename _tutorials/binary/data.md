@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: 二进制存储数据
 nav_order: 2
 parent: 二进制

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: 颜色系统
 nav_order: 9
 ---

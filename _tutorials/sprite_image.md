@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: 精灵与图像
 nav_order: 10
 ---

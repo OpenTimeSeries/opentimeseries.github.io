@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: 存档与读档
 nav_order: 5
 parent: Make Your Game!

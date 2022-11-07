@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: 调试
 nav_order: 6
 parent: Make Your Game!

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: 文件流
 nav_order: 24
 has_children: true

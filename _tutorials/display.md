@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: 显示与窗口控制
 nav_order: 33
 ---

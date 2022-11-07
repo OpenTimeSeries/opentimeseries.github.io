@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: 命令行
 nav_order: 31
 ---

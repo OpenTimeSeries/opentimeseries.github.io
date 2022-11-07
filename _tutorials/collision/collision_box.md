@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: 碰撞盒
 nav_order: 1
 parent: 碰撞

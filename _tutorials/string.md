@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: 字符串处理
 nav_order: 15
 ---

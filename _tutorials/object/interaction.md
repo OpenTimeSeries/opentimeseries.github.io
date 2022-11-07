@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: 对象间的交流
 nav_order: 1
 parent: 对象

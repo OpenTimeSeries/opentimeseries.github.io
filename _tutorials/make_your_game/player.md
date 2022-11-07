@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: 角色控制
 nav_order: 1
 parent: Make Your Game!

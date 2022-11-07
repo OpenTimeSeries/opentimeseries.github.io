@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: GM8 设计之不合理
 nav_order: 1
 redirect_from:

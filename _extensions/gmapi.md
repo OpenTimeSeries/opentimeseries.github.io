@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: 使用 GMAPI
 nav_order: 3
 ---

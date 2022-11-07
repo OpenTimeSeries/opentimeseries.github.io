@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: 注册表
 nav_order: 29
 ---

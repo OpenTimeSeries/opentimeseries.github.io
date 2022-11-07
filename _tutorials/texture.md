@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: 纹理
 nav_order: 25
 ---

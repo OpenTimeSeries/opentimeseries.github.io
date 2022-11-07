@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: 条件语句
 nav_order: 1
 parent: 逻辑结构

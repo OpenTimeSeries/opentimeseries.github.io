@@ -1,8 +1,9 @@
 ---
-layout: default
+layout: post
 title: 赋值
 nav_order: 1
 parent: 变量
+toc: false
 ---
 
 GM8 里变量的赋值可以直接通过等号实现，如：

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: 文本
 nav_order: 2
 parent: 绘制

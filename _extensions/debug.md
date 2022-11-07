@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: Debug 技巧
 nav_order: 4
 ---

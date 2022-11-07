@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: 3D 绘制
 nav_order: 34
 ---

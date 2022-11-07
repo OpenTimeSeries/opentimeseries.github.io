@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: 循环语句
 nav_order: 2
 parent: 逻辑结构

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: 浅谈房间
 nav_order: 3
 parent: 初识GameMaker

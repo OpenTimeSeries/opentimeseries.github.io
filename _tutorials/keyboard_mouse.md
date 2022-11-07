@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: 键盘与鼠标
 nav_order: 12
 ---

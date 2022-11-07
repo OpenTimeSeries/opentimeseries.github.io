@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: 时间轴
 nav_order: 32
 ---
