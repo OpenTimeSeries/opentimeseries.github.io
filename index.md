@@ -6,8 +6,6 @@ description: "GameMaker 8.0 从入门到入土"
 permalink: /
 ---
 
-## [< 回到博客](https://nihil.cc)
-
 ## 关于Heabot论坛
 
 * 本教程最早撰写于 Heabot 论坛，该论坛目前已关停。
