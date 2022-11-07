@@ -36,3 +36,9 @@ $pink-300: #dd2cd4;
   -o-user-select: none;
   user-select: none;
 }
+
+strong {
+  code {
+    font-weight: bold;
+  }
+}

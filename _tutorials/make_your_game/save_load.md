@@ -48,6 +48,8 @@ working_directory + "\Data\save.dat"
     _map = ds_map_create();
 
     ds_map_add(_map, "room", room);
+    ds_map_add(_map, "x", objPlayer.x);
+    ds_map_add(_map, "y", objPlayer.y);
     ds_map_add(_map, "death", world.death);
     ds_map_add(_map, "time", world.time);
     ds_map_add(_map, "score", world.score);
@@ -60,15 +62,21 @@ working_directory + "\Data\save.dat"
 
 *注意，这只是一个模板，请勿盲目地复制粘贴*。我刻意把代码分成了三个部分，第一部分和第三部分是不需要理解的，照搬就行。我们只需要搞懂第二部分。
 
-第二部分就是我们所需要修改的地方了，这个部分所用到的只有一个函数：`ds_map_add(id, key, value)`，这个函数需要三个参数，其中 **id 填 _map** 就行，无需改动。**value 填所需要储存的数据**，上述例子中用了四个数据作了示范，实际使用请根据自身需求。而**参数 key，可以理解为是一种记号**，比如，我给 `world.death` 标注一个记号 "death"，那么我在存档文件中寻找 "death" 这个记号时，存档文件就会把储存的 `world.death` 的值输出给我，所以，**绝对不能出现相同的记号**（即 key）。但是，记号用啥是随意的，你想用啥就用啥，你可以用 "a" 对应 `room`，"b" 对应 `world.death` 等，只要不重复就没问题。但是，从使用的角度来看，还是建议按对应关系来标记。
+第二部分就是我们所需要修改的地方了，这个部分所用到的只有一个函数 `ds_map_add(id, key, value)`，这个函数需要三个参数：
+
+* 第一个参数 **id 填 `_map`** 就行，无需改动。
+* 第三个参数 **value 填所需要储存的数据**，上述例子中用了四个数据作了示范，实际使用请根据自身需求。
+* 而参数 **key 可以理解为是一种标记**，比如，我给 `world.death` 标注一个 `death`，那么我在存档文件中寻找 `death` 这个标记时，存档文件就会把储存的 `world.death` 的值输出给我，所以，**绝对不能出现相同的标记**（即不能使用相同的 key）。但是，标记用啥是随意的，你想用啥就用啥，你可以用 `a` 对应 `room`，`b` 对应 `world.death` 等，只要不重复就没问题。但是，从可读性的角度来看，还是建议按对应关系来标记。
 
 ## loadGame
 
 接下来打开我们的 loadGame。
 
-但是在写入代码之前，我们有个问题要处理一下。这个问题仅出现在横版类游戏和 RPG 中，做其他类型的游戏大概并不需要要考虑。
+但是在写入代码之前，我们有个问题要处理一下。这个问题仅出现在横版类游戏和 RPG 中，做其他类型的游戏大概并不需要要考虑。这个问题就是：如何在读取房间并切换房间的同时，读取 `objPlayer.x` 和 `objPlayer.y` 并赋值给 objPlayer 呢？
 
-这个问题就是如何在读取房间并切换房间的同时，读取 `objPlayer.x` 和 `objPlayer.y` 并赋值给 objPlayer 呢？做横版游戏和 RPG 的时候，如果存档是在上一个房间中，那么在这个房间死亡，读档就应该返回上一个房间，并且还要读取存档的 objPlayer 的坐标。仔细思考一下，虽然我们存档可以直接 `ds_map_add(map, "room", room);` 来存档，但是读档不能直接给 `room` 赋值啊，`room` 是一个不可改变的 GM 自带变量！我们只能先用变量来储存存档中的房间，然后使用函数 `room_goto(xxx);` 来切换房间。但是，有一个很大的问题，在 GM8 的机制中，`room_goto()` 被调用的时，并不是立即生效的，而是要等当前的代码段全都执行完毕才会生效。也就是说，即使你先 `room_goto(xxx)`，再从存档中读出数据赋值给 `objPlayer.x` 和 `objPlayer.y`，也只是赋值给了房间切换前的 objPlayer，新的房间里的 objPlayer 并没有收到指令，所以还是出现在最初的位置，而不是存档所保存的位置。
+做横版游戏和 RPG 的时候，如果存档是在上一个房间中，那么在这个房间死亡，读档就应该返回上一个房间，并且还要读取存档的 objPlayer 的坐标。仔细思考一下，虽然我们存档可以直接通过 `ds_map_add(map, "room", room);` 来存档，但是读档**不能直接给 `room` 赋值**啊，`room` 是一个不可改变的 GM 自带变量！
+
+我们只能先用变量来储存存档中的房间，然后使用函数 `room_goto(xxx);` 来切换房间。但是，有一个很大的问题，在 GM8 的机制中，`room_goto()` 被调用的时，并不是立即生效的，而是要等当前的代码段全都执行完毕才会生效。也就是说，即使你先 `room_goto(xxx)`，再从存档中读出数据赋值给 `objPlayer.x` 和 `objPlayer.y`，也只是赋值给了房间切换前的 objPlayer，新的房间里的 objPlayer 并没有收到指令，所以还是出现在最初的位置，而不是存档所保存的位置。
 
 现在有这么几种解决方法：
 
@@ -101,9 +109,31 @@ working_directory + "\Data\save.dat"
 
 在第二部分，我们使用了函数 `ds_map_find_value(id, key)`，同样的，**参数 id 只需要填 _map** 就行。而**参数 key，则是和 saveGame 互相对应**。也就是说，saveGame 的格式是：`ds_map_add(_map, 标记, 变量名);`，那么在 loadGame 的格式则是：`变量名 = ds_map_find_value(_map, 标记);`。例如 saveGame 中写 `ds_map_add(_map, "death", world.death);`，那么 loadGame 中写 `world.death = ds_map_find_value(_map, "death");`。值得注意的是，由于 `room` 是不可改变的自带变量，所以我们只能用一个其他变量来接受数据，比如例子中的 `_room`，然后用 `room_goto(_room);` 切换房间。
 
+同样的，在 saveGame 的时候就没有必要去储存 `objPlayer.x` 和 `objPlayer.y` 了
+
 ### world 跨房间传递数据
 
-首先在 **world** 的 create 事件中初始化两个变量，本节中假设为 `loadx` 和 `loady`，然后初始化为 0（因为 objPlayer 一般不可能出现在 (0, 0) 位置）。在脚本 loadGame 中，用 `world.loadx` 和 `world.loady` 来分别接收存档中 objPlayer 的 x 和 y。
+首先在 **world** 的 create 事件中初始化两个变量，本节中假设为 `loadx` 和 `loady`，然后初始化为 `0`（因为 objPlayer 一般不可能出现在 (0, 0) 位置）。在脚本 loadGame 中，用 `world.loadx` 和 `world.loady` 来分别接收存档中 objPlayer 的 `x` 和 `y`:
+
+```c
+{
+    var _file, _map, _room;
+    _file = file_text_open_read(working_directory + "\save.dat");
+    _map = ds_map_create();
+    ds_map_read(_map, file_text_read_string(_file));
+
+    _room = ds_map_find_value(_map, "room");
+    world.death = ds_map_find_value(_map, "x");
+    world.loadx = ds_map_find_value(_map, "y");
+    world.loady = ds_map_find_value(_map, "death");
+    world.time = ds_map_find_value(_map, "time");
+    world.score= ds_map_find_value(_map, "score");
+
+    room_goto(_room);
+    ds_map_destroy(_map);
+    file_text_close(_file);
+}
+```
 
 然后在 objPlayer 的 create 事件里加上这些代码：
 
@@ -124,16 +154,29 @@ if (world.loadx || world.loady)
 读档的代码要改成：
 
 ```c
-...省略其他部分
-with (objPlayer) instance_destroy();
-with (instance_create(0, 0, objPlayer))
 {
-    persistent = 1;
-    // key参数根据实际情况修改
-    x = ds_map_find_value(_map, "x");
-    y = ds_map_find_value(_map, "y");
+    var _file, _map, _room;
+    _file = file_text_open_read(working_directory + "\save.dat");
+    _map = ds_map_create();
+    ds_map_read(_map, file_text_read_string(_file));
+
+    _room = ds_map_find_value(_map, "room");
+    with (objPlayer) instance_destroy();
+    with (instance_create(0, 0, objPlayer))
+    {
+        persistent = 1;
+        // key参数根据实际情况修改
+        x = ds_map_find_value(_map, "x");
+        y = ds_map_find_value(_map, "y");
+    }
+    world.loady = ds_map_find_value(_map, "death");
+    world.time = ds_map_find_value(_map, "time");
+    world.score= ds_map_find_value(_map, "score");
+
+    room_goto(_room);
+    ds_map_destroy(_map);
+    file_text_close(_file);
 }
-...省略其他部分
 ```
 
 objPlayer 的 create 事件添加（如果 alarm 0 事件已被占用，换成其他 alarm 事件）：
