@@ -15,7 +15,9 @@ redirect_from:
 <th>格式</th>
 </tr>
 <tr>
-<td>mod</td>
+<td markdown="1">
+`mod`
+</td>
 <td>取模</td>
 <td markdown="1">
 ```c
@@ -24,7 +26,9 @@ redirect_from:
 </td>
 </tr>
 <tr>
-<td>div</td>
+<td markdown="1">
+`div`
+</td>
 <td>取整</td>
 <td markdown="1">
 ```c
@@ -33,7 +37,9 @@ redirect_from:
 </td>
 </tr>
 <tr>
-<td>if</td>
+<td markdown="1">
+`if`
+</td>
 <td>基于条件的分支结构</td>
 <td markdown="1">
 ```c
@@ -43,7 +49,9 @@ if (条件)
 </td>
 </tr>
 <tr>
-<td>else</td>
+<td markdown="1">
+`else`
+</td>
 <td>作为当 if 结构中条件为 false 时的分支</td>
 <td markdown="1">
 ```c
@@ -55,7 +63,9 @@ else
 </td>
 </tr>
 <tr>
-<td>switch</td>
+<td markdown="1">
+`switch`
+</td>
 <td>与 case，break 一起使用的多分支结构</td>
 <td markdown="1">
 ```c
@@ -72,7 +82,9 @@ switch (表达式)
 </td>
 </tr>
 <tr>
-<td>default</td>
+<td markdown="1">
+`default`
+</td>
 <td>作为 switch 结构的默认分支</td>
 <td markdown="1">
 ```c
@@ -93,7 +105,9 @@ switch (表达式)
 </td>
 </tr>
 <tr>
-<td>repeat</td>
+<td markdown="1">
+`repeat`
+</td>
 <td>最简单的循环结构</td>
 <td markdown="1">
 ```c
@@ -103,7 +117,9 @@ repeat (次数)
 </td>
 </tr>
 <tr>
-<td>while</td>
+<td markdown="1">
+`while`
+</td>
 <td>基于条件的循环结构</td>
 <td markdown="1">
 ```c
@@ -113,7 +129,9 @@ while (条件)
 </td>
 </tr>
 <tr>
-<td>for</td>
+<td markdown="1">
+`for`
+</td>
 <td>将初始化语句，循环条件，变量自增整合在一起的循环结构</td>
 <td markdown="1">
 ```c
@@ -123,7 +141,9 @@ for (初始化语句; 循环条件; 变量自增)
 </td>
 </tr>
 <tr>
-<td>do</td>
+<td markdown="1">
+`do`
+</td>
 <td>与 until 一起使用的循环结构，必定循环一次</td>
 <td markdown="1">
 ```c
@@ -134,7 +154,9 @@ until (条件);
 </td>
 </tr>
 <tr>
-<td>until</td>
+<td markdown="1">
+`until`
+</td>
 <td>与 do 一起使用的循环结构，必定循环一次</td>
 <td markdown="1">
 ```c
@@ -145,7 +167,9 @@ until (条件);
 </td>
 </tr>
 <tr>
-<td>with</td>
+<td markdown="1">
+`with`
+</td>
 <td>令其他实例运行一段代码，也属于循环结构的一种</td>
 <td markdown="1">
 ```c
@@ -155,22 +179,30 @@ with (对象/实例)
 </td>
 </tr>
 <tr>
-<td>continue</td>
+<td markdown="1">
+`continue`
+</td>
 <td>中断本次循环进入到下一次循环</td>
 <td></td>
 </tr>
 <tr>
-<td>break</td>
+<td markdown="1">
+`break`
+</td>
 <td>中断循环并跳出</td>
 <td></td>
 </tr>
 <tr>
-<td>exit</td>
+<td markdown="1">
+`exit`
+</td>
 <td>中断一个脚本或一段代码</td>
 <td></td>
 </tr>
 <tr>
-<td>return</td>
+<td markdown="1">
+`return`
+</td>
 <td>退出脚本并返回一个值</td>
 <td markdown="1">
 ```c
@@ -179,23 +211,33 @@ return 表达式;
 </td>
 </tr>
 <tr>
-<td>true</td>
+<td markdown="1">
+`true`
+</td>
 <td>逻辑真，等效于 1</td>
 <td></td>
 </tr>
 <tr>
-<td>false</td>
+<td markdown="1">
+`false`
+</td>
 <td>逻辑假，等效于 0</td>
 <td></td>
 </tr>
 <tr>
-<td>pi</td>
+<td markdown="1">
+`pi`
+</td>
 <td>圆周率</td>
 <td></td>
 </tr>
 <tr>
-<td>and</td>
-<td>逻辑与，等效于 &&</td>
+<td markdown="1">
+`and`
+</td>
+<td markdown="1">
+逻辑与，等效于 `&&`
+</td>
 <td markdown="1">
 ```c
 逻辑表达式 and 逻辑表达式
@@ -203,8 +245,12 @@ return 表达式;
 </td>
 </tr>
 <tr>
-<td>or</td>
-<td>逻辑或，等效于 ||</td>
+<td markdown="1">
+`or`
+</td>
+<td markdown="1">
+逻辑或，等效于 `||`
+</td>
 <td markdown="1">
 ```c
 逻辑表达式 or 逻辑表达式
@@ -212,8 +258,12 @@ return 表达式;
 </td>
 </tr>
 <tr>
-<td>xor</td>
-<td>逻辑异或，等效于 ^^</td>
+<td markdown="1">
+`xor`
+</td>
+<td markdown="1">
+逻辑异或，等效于 `^^`
+</td>
 <td markdown="1">
 ```c
 逻辑表达式 xor 逻辑表达式
@@ -221,8 +271,12 @@ return 表达式;
 </td>
 </tr>
 <tr>
-<td>not</td>
-<td>逻辑否，等效于 !</td>
+<td markdown="1">
+`not`
+</td>
+<td markdown="1">
+逻辑否，等效于 `!`
+</td>
 <td markdown="1">
 ```c
 not 逻辑表达式
@@ -230,37 +284,51 @@ not 逻辑表达式
 </td>
 </tr>
 <tr>
-<td>self</td>
+<td markdown="1">
+`self`
+</td>
 <td>值为 -1，表示运行代码的当前实例</td>
 <td></td>
 </tr>
 <tr>
-<td>other</td>
+<td markdown="1">
+`other`
+</td>
 <td>值为 -2，表示参与碰撞事件的另一个实例或 with 结构的调用者</td>
 <td></td>
 </tr>
 <tr>
-<td>all</td>
+<td markdown="1">
+`all`
+</td>
 <td>值为 -3，表示所有实例</td>
 <td></td>
 </tr>
 <tr>
-<td>noone</td>
+<td markdown="1">
+`noone`
+</td>
 <td>值为 -4，表示无实例</td>
 <td></td>
 </tr>
 <tr>
-<td>global</td>
+<td markdown="1">
+`global`
+</td>
 <td>值为 -5，表示全局变量</td>
 <td></td>
 </tr>
 <tr>
-<td>local</td>
+<td markdown="1">
+`local`
+</td>
 <td>值为 -7，表示局部变量</td>
 <td></td>
 </tr>
 <tr>
-<td>then</td>
+<td markdown="1">
+`then`
+</td>
 <td>兼容 pascal 语法，无特殊作用</td>
 <td markdown="1">
 ```c
@@ -270,8 +338,12 @@ if (条件) then
 </td>
 </tr>
 <tr>
-<td>begin</td>
-<td>兼容 pascal 语法，等同于 {，可混用</td>
+<td markdown="1">
+`begin`
+</td>
+<td markdown="1">
+兼容 pascal 语法，等同于 `{`，可混用
+</td>
 <td markdown="1">
 ```c
 begin
@@ -282,8 +354,12 @@ end
 </td>
 </tr>
 <tr>
-<td>end</td>
-<td>兼容 pascal 语法，等同于 }，可混用</td>
+<td markdown="1">
+`end`
+</td>
+<td markdown="1">
+兼容 pascal 语法，等同于 `}`，可混用
+</td>
 <td markdown="1">
 ```c
 begin
@@ -304,7 +380,9 @@ end
 <th>格式</th>
 </tr>
 <tr>
-<td>+</td>
+<td markdown="1">
+`+`
+</td>
 <td>正号</td>
 <td markdown="1">
 ```c
@@ -313,7 +391,9 @@ end
 </td>
 </tr>
 <tr>
-<td>+</td>
+<td markdown="1">
+`+`
+</td>
 <td>算术加号</td>
 <td markdown="1">
 ```c
@@ -322,7 +402,9 @@ end
 </td>
 </tr>
 <tr>
-<td>+=</td>
+<td markdown="1">
+`+=`
+</td>
 <td>算术加号及赋值</td>
 <td markdown="1">
 ```c
@@ -331,7 +413,9 @@ end
 </td>
 </tr>
 <tr>
-<td>-</td>
+<td markdown="1">
+`-`
+</td>
 <td>负号</td>
 <td markdown="1">
 ```c
@@ -340,7 +424,9 @@ end
 </td>
 </tr>
 <tr>
-<td>-</td>
+<td markdown="1">
+`-`
+</td>
 <td>算术减号</td>
 <td markdown="1">
 ```c
@@ -349,7 +435,9 @@ end
 </td>
 </tr>
 <tr>
-<td>-=</td>
+<td markdown="1">
+`-=`
+</td>
 <td>算术减号及赋值</td>
 <td markdown="1">
 ```c
@@ -358,7 +446,9 @@ end
 </td>
 </tr>
 <tr>
-<td>*</td>
+<td markdown="1">
+`*`
+</td>
 <td>算术乘号</td>
 <td markdown="1">
 ```c
@@ -367,7 +457,9 @@ end
 </td>
 </tr>
 <tr>
-<td>*=</td>
+<td markdown="1">
+`*=`
+</td>
 <td>算术乘号及赋值</td>
 <td markdown="1">
 ```c
@@ -376,7 +468,9 @@ end
 </td>
 </tr>
 <tr>
-<td>/</td>
+<td markdown="1">
+`/`
+</td>
 <td>算术除号</td>
 <td markdown="1">
 ```c
@@ -385,7 +479,9 @@ end
 </td>
 </tr>
 <tr>
-<td>/=</td>
+<td markdown="1">
+`/=`
+</td>
 <td>算术除号及赋值</td>
 <td markdown="1">
 ```c
@@ -394,7 +490,9 @@ end
 </td>
 </tr>
 <tr>
-<td>=（或:=）</td>
+<td markdown="1">
+`=`（或 `:=`）
+</td>
 <td>赋值等号</td>
 <td markdown="1">
 ```c
@@ -403,7 +501,9 @@ end
 </td>
 </tr>
 <tr>
-<td>==（或:=或=）</td>
+<td markdown="1">
+`==`（或 `:=` 或 `=`）
+</td>
 <td>逻辑等号</td>
 <td markdown="1">
 ```c
@@ -412,7 +512,9 @@ end
 </td>
 </tr>
 <tr>
-<td>!=（或<>）</td>
+<td markdown="1">
+`!=`（或 `<>`）
+</td>
 <td>不等号</td>
 <td markdown="1">
 ```c
@@ -421,7 +523,9 @@ end
 </td>
 </tr>
 <tr>
-<td>></td>
+<td markdown="1">
+`>`
+</td>
 <td>大于号</td>
 <td markdown="1">
 ```c
@@ -430,7 +534,9 @@ end
 </td>
 </tr>
 <tr>
-<td><</td>
+<td markdown="1">
+`<`
+</td>
 <td>小于号</td>
 <td markdown="1">
 ```c
@@ -439,7 +545,9 @@ end
 </td>
 </tr>
 <tr>
-<td>>=</td>
+<td markdown="1">
+`>=`
+</td>
 <td>大于等于号</td>
 <td markdown="1">
 ```c
@@ -448,7 +556,9 @@ end
 </td>
 </tr>
 <tr>
-<td><=</td>
+<td markdown="1">
+`<=`
+</td>
 <td>小于等于号</td>
 <td markdown="1">
 ```c
@@ -457,7 +567,9 @@ end
 </td>
 </tr>
 <tr>
-<td>&&</td>
+<td markdown="1">
+`&&`
+</td>
 <td>逻辑与</td>
 <td markdown="1">
 ```c
@@ -466,7 +578,9 @@ end
 </td>
 </tr>
 <tr>
-<td>||</td>
+<td markdown="1">
+`||`
+</td>
 <td>逻辑或</td>
 <td markdown="1">
 ```c
@@ -475,7 +589,9 @@ end
 </td>
 </tr>
 <tr>
-<td>^^</td>
+<td markdown="1">
+`^^`
+</td>
 <td>逻辑异或</td>
 <td markdown="1">
 ```c
@@ -484,7 +600,9 @@ end
 </td>
 </tr>
 <tr>
-<td>!</td>
+<td markdown="1">
+`!`
+</td>
 <td>逻辑否</td>
 <td markdown="1">
 ```c
@@ -493,7 +611,9 @@ end
 </td>
 </tr>
 <tr>
-<td>$</td>
+<td markdown="1">
+`$`
+</td>
 <td>十六进制符</td>
 <td markdown="1">
 ```c
@@ -502,7 +622,9 @@ $十六进制串
 </td>
 </tr>
 <tr>
-<td>,</td>
+<td markdown="1">
+`,`
+</td>
 <td>逗号，用以区分函数参数</td>
 <td markdown="1">
 ```c
@@ -511,7 +633,9 @@ $十六进制串
 </td>
 </tr>
 <tr>
-<td>,</td>
+<td markdown="1">
+`,`
+</td>
 <td>逗号，用以区分数组维度</td>
 <td markdown="1">
 ```c
@@ -520,7 +644,9 @@ $十六进制串
 </td>
 </tr>
 <tr>
-<td>;</td>
+<td markdown="1">
+`;`
+</td>
 <td>分号，用以结束语句</td>
 <td markdown="1">
 ```c
@@ -529,7 +655,9 @@ $十六进制串
 </td>
 </tr>
 <tr>
-<td>(...)</td>
+<td markdown="1">
+`( ... )`
+</td>
 <td>括号，用以确定运算符的执行顺序</td>
 <td markdown="1">
 ```c
@@ -538,7 +666,9 @@ $十六进制串
 </td>
 </tr>
 <tr>
-<td>(...)</td>
+<td markdown="1">
+`( ... )`
+</td>
 <td>括号，构成函数调用</td>
 <td markdown="1">
 ```c
@@ -547,7 +677,9 @@ $十六进制串
 </td>
 </tr>
 <tr>
-<td>[...]</td>
+<td markdown="1">
+`[ ... ]`
+</td>
 <td>数组运算符</td>
 <td markdown="1">
 ```c
@@ -556,7 +688,9 @@ $十六进制串
 </td>
 </tr>
 <tr>
-<td>{...}</td>
+<td markdown="1">
+`{ ... }`
+</td>
 <td>块表达式，将多个语句视作一个语句</td>
 <td markdown="1">
 ```c
@@ -568,7 +702,9 @@ $十六进制串
 </td>
 </tr>
 <tr>
-<td>"（或 '）</td>
+<td markdown="1">
+`"`（或 `'`）
+</td>
 <td>构成字符串表达式的边界</td>
 <td markdown="1">
 ```c
@@ -577,7 +713,9 @@ $十六进制串
 </td>
 </tr>
 <tr>
-<td>.</td>
+<td markdown="1">
+`.`
+</td>
 <td>成员运算符，访问其他实例的变量</td>
 <td markdown="1">
 ```c
@@ -586,7 +724,9 @@ $十六进制串
 </td>
 </tr>
 <tr>
-<td>&</td>
+<td markdown="1">
+`&`
+</td>
 <td>按位与</td>
 <td markdown="1">
 ```c
@@ -595,7 +735,9 @@ $十六进制串
 </td>
 </tr>
 <tr>
-<td>&=</td>
+<td markdown="1">
+`&=`
+</td>
 <td>按位与及赋值</td>
 <td markdown="1">
 ```c
@@ -604,7 +746,9 @@ $十六进制串
 </td>
 </tr>
 <tr>
-<td>|</td>
+<td markdown="1">
+`|`
+</td>
 <td>按位或</td>
 <td markdown="1">
 ```c
@@ -613,7 +757,9 @@ $十六进制串
 </td>
 </tr>
 <tr>
-<td>|=</td>
+<td markdown="1">
+`|=`
+</td>
 <td>按位或及赋值</td>
 <td markdown="1">
 ```c
@@ -622,7 +768,9 @@ $十六进制串
 </td>
 </tr>
 <tr>
-<td>^</td>
+<td markdown="1">
+`^`
+</td>
 <td>按位异或</td>
 <td markdown="1">
 ```c
@@ -631,7 +779,9 @@ $十六进制串
 </td>
 </tr>
 <tr>
-<td>^=</td>
+<td markdown="1">
+`^=`
+</td>
 <td>按位异或及赋值</td>
 <td markdown="1">
 ```c
@@ -640,7 +790,9 @@ $十六进制串
 </td>
 </tr>
 <tr>
-<td>~</td>
+<td markdown="1">
+`~`
+</td>
 <td>按位取反</td>
 <td markdown="1">
 ```c
@@ -649,7 +801,9 @@ $十六进制串
 </td>
 </tr>
 <tr>
-<td><<</td>
+<td markdown="1">
+`<<`
+</td>
 <td>按位左移</td>
 <td markdown="1">
 ```c
@@ -658,7 +812,9 @@ $十六进制串
 </td>
 </tr>
 <tr>
-<td>>></td>
+<td markdown="1">
+`>>`
+</td>
 <td>按位右移</td>
 <td markdown="1">
 ```c
@@ -667,7 +823,9 @@ $十六进制串
 </td>
 </tr>
 <tr>
-<td>//</td>
+<td markdown="1">
+`//`
+</td>
 <td>行注释的标识</td>
 <td markdown="1">
 ```c
@@ -676,7 +834,9 @@ $十六进制串
 </td>
 </tr>
 <tr>
-<td>/*...*/</td>
+<td markdown="1">
+`/* ... */`
+</td>
 <td>块注释的标识</td>
 <td markdown="1">
 ```c
