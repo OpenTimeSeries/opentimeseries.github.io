@@ -6,7 +6,7 @@ toc: false
 ---
 
 * [Ray](https://github.com/Rehners)
-  * 混色（链接已失效）
+  * 混色（由于 Heabot 论坛关停，链接已失效）
   * [斜向等速移动]({{ site.baseurl }}{% link _tutorials/keyboard_mouse.md %}#人物的移动)
 * [魔方 12139](https://github.com/mcube-12139)
   * [3D 绘制]({{ site.baseurl }}{% link _tutorials/three_d.md %})
@@ -20,5 +20,5 @@ toc: false
 * Snake
   * GMAPI（作者给出的链接已失效）
 * tsg1zzn
-  * [SuperSound](http://gmc.yoyogames.com/index.php?showtopic=120034)
+  * SuperSound（GM8 官方论坛已停止服务，链接无法再访问）
 * 所有为教程纠错的巨佬们
