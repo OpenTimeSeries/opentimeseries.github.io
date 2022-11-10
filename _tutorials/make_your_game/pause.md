@@ -5,7 +5,7 @@ nav_order: 4
 parent: Make Your Game!
 ---
 
-### `show_message` 法
+## `show_message` 法
 
 这大概是最简单粗暴的办法了。
 
@@ -13,7 +13,7 @@ parent: Make Your Game!
 
 所以我们可以在 **world** 的按下 P 键事件（其他什么键都行，也可以在 step 里用函数来代替按键事件）中写上 `show_message("Pausing.");` 来实现暂停效果。
 
-### 实例解散法
+## 实例解散法
 
 `show_message` 法简单，但是局限性很大，几乎不能再做额外的事情。很多游戏的暂停界面都是一个菜单面板，我们也想这么做一个。
 
@@ -99,7 +99,7 @@ background_delete(backPause);
 9. 改变 pausing 为 0。
 10. 激活所有实例。
 
-### 跨房间法
+## 跨房间法
 
 在此之前，我们需要介绍一下**房间的持续**。
 

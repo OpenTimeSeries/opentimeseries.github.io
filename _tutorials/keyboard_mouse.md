@@ -53,6 +53,8 @@ y = mouse_y;
 
 本节内容位于 GML 汉化文档 56-57 页。
 
+---
+
 * `window_set_cursor(curs)` 设置游戏窗口的光标类型。参数 curs 必须使用 GM 内置的常量。所有常量请自行查阅 GML 汉化文档，这里不一一列出。常用的是用 `cr_none` 来隐藏鼠标，然后用一个对象实例跟随鼠标以实现自定义光标的效果。
 * `window_get_cursor()` 返回当前使用的光标类型。
 * `cursor_sprite` GM 内置变量，可以用精灵给它赋值，GM 会用这个精灵来替代光标图案。赋值 -1 则可以返回系统默认光标。
@@ -60,6 +62,8 @@ y = mouse_y;
 ## 鼠标检测
 
 本节内容位于 GML 汉化文档 40 页。
+
+---
 
 `mouse_check_button(numb)`，`mouse_check_button_pressed(numb)`，`mouse_check_button_released(numb)` 这三个函数分别用来检测鼠标键是否按住、按下、松开，与鼠标事件相互对应，返回值为1或0。
 

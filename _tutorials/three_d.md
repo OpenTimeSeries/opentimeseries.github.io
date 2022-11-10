@@ -4,7 +4,7 @@ title: 3D 绘制
 nav_order: 34
 ---
 
-（by 魔方 12139）
+author: [魔方 12139](https://github.com/mcube-12139)
 
 众所周知，GameMaker8 在图形绘制方面最主要、最强大、最全面的方面是 2D 绘制，也就是在平面上绘制图形。而在 3D 绘制方面，GameMaker8 虽有一定功能，但：
 

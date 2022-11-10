@@ -7,6 +7,8 @@ parent: Make Your Game!
 
 本节无需理解，只要照着做就行了。
 
+## 准备
+
 存档与读档，不可避免地要使用到[数据结构]({{ site.baseurl }}{% link _tutorials/data_structure/data_structure.md %})，而数据结构，即使是学 C++ 的人都感觉头疼不已。GM 提供的数据结构有栈（stack），队列（queue），列表（list），配对（map），优先队列（priority）和栈格（grid）六种，无需记忆，只要了解一下就行。
 
 本节我们通过[配对（map）]({{ site.baseurl }}{% link _tutorials/data_structure/map.md %})来实现存读档，但并不是只有配对才能存读档。

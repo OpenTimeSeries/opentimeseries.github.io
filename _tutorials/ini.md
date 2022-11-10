@@ -4,6 +4,8 @@ title: ini
 nav_order: 28
 ---
 
+## ini 文件
+
 **ini 文件**（initialization file）俗称配置文件，属于一种文本文件，可以直接使用记事本打开查看其中的内容，例如：
 
 ![INI File](/assets/images/ini/ini_file.png)

@@ -5,6 +5,8 @@ nav_order: 1
 parent: Make Your Game!
 ---
 
+## 上下左右运动
+
 在[前一章]({{ site.baseurl }}{% link _tutorials/keyboard_mouse.md %}#人物的移动)，我们讲解了如何用几句代码就实现常规的**上下左右式移动**模式。再添加上碰撞固体检测的代码，就变成了：
 
 ```c

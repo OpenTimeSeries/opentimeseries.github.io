@@ -4,6 +4,7 @@ title: 时间轴
 nav_order: 32
 ---
 
+## 时间轴
 
 **时间轴**（Time Line）是 GameMaker 中的一种资源，放在第七个文件夹中：
 

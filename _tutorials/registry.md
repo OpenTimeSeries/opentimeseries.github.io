@@ -4,6 +4,8 @@ title: 注册表
 nav_order: 29
 ---
 
+## 注册表
+
 **注册表**（registry）是 Windows 系统下的一个重要数据库。要查看注册表，我们可以借助 Windows 自带的工具**注册表编辑器**（regedit）。按下快捷键 Win + R，输入 regedit 后按回车，即可打开注册表编辑器。
 
 ![Regedit](/assets/images/registry/regedit.png)
