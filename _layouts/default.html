@@ -171,8 +171,10 @@ layout: table_wrappers
       {% endif %}
     </div>
 
+    {% if page.type != 404 %}
     <div id="core-wrapper">
       <div id="main-content-wrap" class="main-content-wrap">
+        {% endif %}
         {% unless page.url == "/" %}
         {% if page.parent %}
         <nav aria-label="Breadcrumb" class="breadcrumb-nav">
@@ -264,6 +266,7 @@ layout: table_wrappers
           });
         </script>
         {% endif %}
+      {% if page.type != 404 %}
       </div>
       <div id="right-panel">
         {% if page.toc %}
@@ -276,6 +279,7 @@ layout: table_wrappers
         {% endif %}
       </div>
     </div>
+    {% endif %}
 
 
     {% if site.search_enabled != false %}
