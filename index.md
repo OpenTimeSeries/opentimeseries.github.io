@@ -9,7 +9,7 @@ permalink: /
 ## 关于Heabot论坛
 
 * 本教程最早撰写于 Heabot 论坛，该论坛目前已关停。
-* Heabot 关停后，本教程目前仅有当前 [Github 版本](https://gm8.nihil.cc/)，未在任何其他平台发布，尤其是未在 990 游戏资源素材网上发布。
+* Heabot 关停后，本教程目前仅剩[当前版本](https://gm8.nihil.cc/)（原托管在 Github Pages 上，现托管在腾讯云 COS 上），未在任何其他平台发布，尤其是未在 990 游戏资源素材网上发布。
 
 ## 关于内容
 
