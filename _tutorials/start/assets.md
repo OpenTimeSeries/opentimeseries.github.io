@@ -72,7 +72,7 @@ PS：给资源命名时，一般遵照下面规则：
 
 * 开头写**资源类型简写**，如精灵（Sprites）简写为 spr，背景（Backgrounds）简写为 back，音效（Sounds）简写为 snd，均使用小写。
 * 之后写上素材的性质，如形状，用途，颜色，可以组合，一般以便于区分作为第一法则，每个单词第一个字母大写，例：sprGreenApple，sndGameOver，backSky，sndJump 等。
-* 其他资源中，对象（Objects）简写为 obj，时间轴（Timeline）简写为 tl，房间（Rooms）简写为 r，也可以写 room，字体（Fonts）仍用 font，脚本（Scripts）不使用类型名开头，而是根据实际用途命名，首字母也要大写，例如 FlashScreen。（有兴趣可以去百度一下骆驼命名法）
+* 其他资源中，对象（Objects）简写为 obj，时间轴（Timeline）简写为 tl，房间（Rooms）简写为 r，也可以写 room，字体（Fonts）仍用 font，脚本（Scripts）不使用类型名开头，而是根据实际用途命名，首字母也要大写，例如 FlashScreen。（有兴趣可以去百度一下驼峰命名法）
 
 ## 编辑素材
 

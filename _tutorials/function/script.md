@@ -57,4 +57,4 @@ ans = VectorValue(xx, yy, 7, 2);
 
 一个脚本可以不接受参数，也可以没有 return 语句（即没有返回值）。但是没有返回值的脚本不能用于赋值，或者运算。
 
-脚本的命名规则一般以自身的用途为基准，如 PlayerMove，SaveGame，InitializeGlobal 之类的，最好遵循**骆驼命名法**。当然也可以使用 GM8 库函数的**蛇形命名**法，如 player_move, game_save, global_init 等。
+脚本的命名规则一般以自身的用途为基准，如 PlayerMove，SaveGame，InitializeGlobal 之类的，最好遵循**驼峰命名法**。当然也可以使用 GM8 库函数的**蛇形命名**法，如 player_move, game_save, global_init 等。
