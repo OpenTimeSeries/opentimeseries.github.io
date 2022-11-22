@@ -4,6 +4,8 @@ function changeImgToA() {
         let img = imgs[i];
         if (img.className == 'wl-emoji')
             continue;
+        if (img.parentElement.tagName.toLowerCase() == 'a')
+            continue;
         let a = document.createElement("a");
         a.href = img.src;
         a.setAttribute("data-lightbox", img.alt.replace(/\s+/g, '-').toLowerCase());
