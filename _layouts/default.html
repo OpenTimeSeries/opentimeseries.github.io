@@ -249,24 +249,26 @@ layout: table_wrappers
         {% if site.waline.enabled == true and page.type != 404 %}
         <div id="waline"></div>
         <script>
-          const locale = {
-            placeholder: '{{ site.waline.placeholder }}',
-          };
-          Waline.init({
-            el: '#waline',
-            serverURL: '{{ site.waline.server }}',
-            emoji: [
-              'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.1.0/qq',
-              'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.1.0/tieba',
-              'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.1.0/tw-emoji',
-              'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.1.0/bilibili',
-            ],
-            dark: 'html[data-theme="dark"]',
-            locale,
+          $(function () {
+            const locale = {
+              placeholder: '{{ site.waline.placeholder }}',
+            };
+            Waline.init({
+              el: '#waline',
+              serverURL: '{{ site.waline.server }}',
+              emoji: [
+                'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.1.0/qq',
+                'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.1.0/tieba',
+                'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.1.0/tw-emoji',
+                'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.1.0/bilibili',
+              ],
+              dark: 'html[data-theme="dark"]',
+              locale,
+            });
           });
         </script>
         {% endif %}
-      {% if page.type != 404 %}
+        {% if page.type != 404 %}
       </div>
       <div id="right-panel">
         {% if page.toc %}
