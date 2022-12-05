@@ -10,6 +10,8 @@ toc: false
   * [斜向等速移动]({{ site.baseurl }}{% link _tutorials/keyboard_mouse.md %}#人物的移动)
 * [魔方 12139](https://github.com/mcube-12139)
   * [3D 绘制]({{ site.baseurl }}{% link _tutorials/three_d.md %})
+* [Vicklleall](https://vicklleall.com/)
+  * [详解 GameMaker 表面混色奇怪的原因](https://vicklleall.com/p/a?t3)
 * [玉米](https://www.magecorn.com)
   * [GM8 汉化破解版](https://down.magecorn.com/s/gm8)
   * [用 C++ 给 GM8 做插件](https://www.bilibili.com/video/av4062379)
