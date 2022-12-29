@@ -1,7 +1,7 @@
 // Code and syntax highlighting
 //
 // stylelint-disable selector-no-qualifying-type, declaration-block-semicolon-newline-after,declaration-block-single-line-max-declarations, selector-no-type, selector-max-type
-@import url("https://cdn.jsdelivr.net/gh/tonsky/FiraCode@5.2/distr/fira_code.css");
+@import url("https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.min.css");
 
 code {
   padding: 0.2em 0.15em;
