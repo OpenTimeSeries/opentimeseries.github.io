@@ -21,7 +21,7 @@ permalink: /
 ## 关于GameMaker
 
 * GameMaker8.0 是一个用来制作 2D 游戏的引擎。如果想做 3D 游戏，建议使用 Unity3D 或者 Unreal Engine。
-* GameMaker8.0 已不再售卖许可证，这意味着你只能使用破解版，只能发布非商业游戏。如果你需要上架 steam，请购买并使用 [GameMaker: Studio 2](https://gamemaker.io/en/gamemaker)。
+* GameMaker8.0 已不再售卖许可证，这意味着你只能使用破解版，只能发布非商业游戏。如果你需要上架 steam，请购买并使用 YoYo Games 发行的 [GameMaker](https://gamemaker.io/)（前身为 GameMaker: Studio 2）。
 * GameMaker8.0 是泛用性 2D 游戏引擎，他不偏心任何一个方面，制作任何类型的游戏都无法避免使用大量代码。如果你只是想制作简单的 RPG 小游戏，你可以考虑使用 [RPG Maker](https://www.rpgmakerweb.com/)。
 
 ## 关于授权

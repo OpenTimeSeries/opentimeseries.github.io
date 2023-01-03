@@ -9,7 +9,7 @@ permalink: /tutorials/start/
 
 * **GM8** 是 ~~GayMaker~~ **GameMaker8.0** 的缩写。顾名思义，GM8 是一款专门针对**制作游戏**而开发的编程工具。
 * **GM8.1/GM81** 是 GameMaker8.1 的缩写，GM8 的底层实现是 Delphi，而 GM8.1 的底层实现是 C++，由于 bug 众多为人诟病。总的来说 GM8.1 是 GMS 的试验品，不建议使用。
-* **GMS** 是 GameMaker: Studio 的缩写，为 GM8 的后续增强版本，目前有 GMS1 和 GMS2 两代。
+* **GMS** 是 GameMaker: Studio 的缩写，为 GM8 的后续增强版本，目前有 GameMaker: Studio（简称 GMS 或 GMS1）和 GameMaker: Studio 2（简称 GMS2）两代，其中 GameMaker: Studio 2 现在已经更名为 [GameMaker](https://gamemaker.io/)，并且从买断制变成了订阅制。新版本的 GameMaker 也习惯性地被称为 GMS2 以和旧版本 GameMaker 区分。
 * **GML** 是 **GameMaker Language** 的缩写，为 GM 系列所使用的编程语言。由于 GMS2 中对 GML 的改动越来越大，近年来也出现了 GMSL（即GameMaker Studio Language）的说法来称呼 GMS2 中的 GML。
 * **gmk** 是指 GameMaker8.0 的工程文件，即源文件。
 
