@@ -15,7 +15,7 @@ permalink: /tutorials/start/
 
 ## 下载地址
 
-我知道你们懒得找，[下载地址戳这](https://down.magecorn.com/s/gm8)（~~正版是不存在的~~）
+我知道你们懒得找，[下载地址戳这](https://pan.baidu.com/s/1AbKfIDRf8coPeZpcfAHdFw?pwd=qt2c)（~~正版是不存在的~~）
 
 ## 打开高级模式
 
