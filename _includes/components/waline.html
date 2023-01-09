@@ -1,0 +1,20 @@
+<div id="waline"></div>
+<script>
+    $(function () {
+    const locale = {
+        placeholder: '{{ site.waline.placeholder }}',
+    };
+    Waline.init({
+        el: '#waline',
+        serverURL: '{{ site.waline.server }}',
+        emoji: [
+        'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.1.0/qq',
+        'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.1.0/tieba',
+        'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.1.0/tw-emoji',
+        'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.1.0/bilibili',
+        ],
+        dark: 'html[data-theme="dark"]',
+        locale,
+    });
+    });
+</script>
