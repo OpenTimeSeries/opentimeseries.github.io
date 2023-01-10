@@ -5,7 +5,7 @@ nav_order: 35
 toc: false
 ---
 
-* [Ray](https://github.com/Rehners)
+* [Ray](https://github.com/Rehnas)
   * 混色（由于 Heabot 论坛关停，链接已失效）
   * [斜向等速移动]({{ site.baseurl }}{% link _tutorials/keyboard_mouse.md %}#人物的移动)
 * [魔方 12139](https://github.com/mcube-12139)
