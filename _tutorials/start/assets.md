@@ -20,7 +20,7 @@ parent: 初识GameMaker
 
 一般来讲做个**非商业性质**小游戏偷偷用一下别人的音乐是没有太大关系的（除非作者明确表示了非商业性使用也禁止）。如果你担心出事的话，那么下面这个网站就是为你准备的：
 
-* [魔王魂](https://maoudamashii.jokersounds.com/music_bgm.html)
+* [魔王魂](https://maou.audio/category/bgm/)
 
 这个网站是**完全免费**的原创音乐素材网站，里面的音乐资源授权给任何人使用。（使用网站需要一点**日语**功底）
 
