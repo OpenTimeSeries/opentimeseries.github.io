@@ -90,6 +90,7 @@ function initSearch() {
         this.metadataWhitelist = ['position']
 
         for (var i in docs) {
+          {% include lunr/custom-index.js %}
           this.add({
             id: i,
             title: docs[i].title,
