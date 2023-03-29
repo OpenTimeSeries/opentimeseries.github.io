@@ -92,26 +92,43 @@ strong {
     }
   }
 
-  ul#toc {
-    margin: 0.5rem 0;
+  #toc-header {
+    font-size: 1.25rem;
+    font-weight: bold;
+    line-height: 1.25rem;
+    padding-bottom: 0.5rem;
+  }
+
+  ul.toc-list {
     padding: 0;
     font-size: 1rem;
     list-style-type: none;
 
-    li.toc-h2 {
+    li.toc-list-item {
       padding-top: 2px;
       padding-bottom: 2px;
+      list-style-type: none;
 
       > ul {
         font-size: 0.85rem;
         list-style-type: none;
         padding-inline-start: 1.25rem;
       }
-    }
 
-    li.toc-h3 {
-      padding-top: 2px;
-      padding-bottom: 2px;
+      > a {
+        display: block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
     }
+  }
+
+  .toc-link:not(.is-active-link)::before {
+    background-color: transparent !important;
+  }
+
+  .toc-link::before {
+    height: 1.4rem !important;
   }
 }

@@ -7,6 +7,4 @@ group :jekyll_plugins do
 gem "wdm", "~> 0.1.1", :platforms => [:mingw, :x64_mingw, :mswin]
 gemspec
 
-gem "jekyll-github-metadata", ">= 2.15"
-
 gem "webrick", "~> 1.7"

@@ -39,7 +39,19 @@ layout: table_wrappers
           <div id="toc-header">
             文章内容导航
           </div>
-          {% include toc.html html=content id="toc" h_min=2 h_max=3 item_class="toc-h%level%" %}
+          <nav id="toc" data-toggle="toc"></nav>
+          <script>
+            $(function () {
+              tocbot.init({
+                tocSelector: '#toc',
+                contentSelector: '#main-content',
+                ignoreSelector: '[toc-skip]',
+                headingSelector: 'h2, h3',
+                orderedList: false,
+                scrollSmooth: false
+              });
+            });
+          </script>
         </div>
         {% endif %}
       </div>

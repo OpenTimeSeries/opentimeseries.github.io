@@ -17,7 +17,6 @@ title: GameMaker 8.0 从入门到入土
 description: 托管于Github的《GameMaker 8.0 从入门到入土》教程的Markdown版本。
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://gm8.nihil.cc" # the base hostname & protocol for your site, e.g. http://example.com
-repository: NichtsHsu/gm8_tutorial # for github-metadata
 permalink: pretty
 exclude: ["node_modules/", "*.gemspec", "*.gem", "Gemfile", "Gemfile.lock", "package.json", "package-lock.json",  "script/", "LICENSE.txt", "lib/", "bin/", "README.md", "Rakefile", "vendor"]
 lang: zh-CN
@@ -182,7 +181,6 @@ plugins:
   - jekyll-feed
   - jekyll-redirect-from
   - jekyll-sitemap
-  - jekyll-github-metadata
 
 kramdown:
   syntax_highlighter: rouge
