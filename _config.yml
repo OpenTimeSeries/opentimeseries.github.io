@@ -13,19 +13,19 @@
 # you will see them accessed via {{ site.title }}, {{ site.github_repo }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: GameMaker 8.0 从入门到入土
-description: 托管于Github的《GameMaker 8.0 从入门到入土》教程的Markdown版本。
+title: Open Time Series
+description: All-in-One Time Series Resources
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://gm8.nihil.cc" # the base hostname & protocol for your site, e.g. http://example.com
+url: "opentimeseries.com" # the base hostname & protocol for your site, e.g. http://example.com
 permalink: pretty
 exclude: ["node_modules/", "*.gemspec", "*.gem", "Gemfile", "Gemfile.lock", "package.json", "package-lock.json",  "script/", "LICENSE.txt", "lib/", "bin/", "README.md", "Rakefile", "vendor"]
-lang: zh-CN
+lang: en
 
 # Use waline comments system.
 waline:
-  enabled: true
-  server: https://walinegm8.nihil.cc/
-  placeholder: 说点什么吧！填入邮箱可以收到回复提醒哦~
+  enabled: false
+  server: https://opentimeseries.com/
+  placeholder: make a comment here:)
   avatar: mp
 
 # Regression tests
@@ -114,41 +114,39 @@ heading_anchors: true
 
 # Aux links for the upper right navigation
 aux_links:
-  "转到 GitHub 仓库":
-    - "https://github.com/NichtsHsu/gm8_tutorial"
+  "Github":
+    - "https://github.com/Opentimeseries/opentimeseries.github.io"
 
 # Makes Aux links open in a new tab. Default is false
-aux_links_new_tab: false
+aux_links_new_tab: true
 
 # Sort order for navigation links
 # nav_sort: case_insensitive # default, equivalent to nil
 nav_sort: case_sensitive # Capital letters sorted before lowercase
 
-# External navigation links
-nav_external_links:
-  - title: 返回博客首页
-    url: https://nihil.cc/
-    hide_icon: false # set to true to hide the external link icon - defaults to false
+## External navigation links
+#nav_external_links:
+#  - title: 返回博客首页
+#    url: opentimeseries.com
+#    hide_icon: false # set to true to hide the external link icon - defaults to false
 
 # Footer content
 # appears at the bottom of every page's main content
 
 # Back to top link
-back_to_top: false
-back_to_top_text: "回到顶部"
+back_to_top: true
+back_to_top_text: "Back to Top"
 
-footer_content: "本文由作者 <a href=\"https://nihil.cc/\" target=\"_blank\">Nihil</a> 按照 <a href=\"https://creativecommons.org/licenses/by/4.0/\" target=\"_blank\">CC BY 4.0</a> 进行授权"
+footer_content: "Buy me a coffee <a href=\"https://www.buymeacoffee.com/\" target=\"_blank\"> "
 
 # Footer last edited timestamp
 last_edit_timestamp: false # show or hide edit time - page must have `last_modified_date` defined in the frontmatter
 last_edit_time_format: "%b %e %Y at %I:%M %p" # uses ruby's time format: https://ruby-doc.org/stdlib-2.7.0/libdoc/time/rdoc/Time.html
 
-
-
 # Footer "Edit this page on GitHub" link text
 gh_edit_link: false # show or hide edit this page link
 gh_edit_link_text: "Edit this page on GitHub"
-gh_edit_repository: "https://github.com/NichtsHsu/gm8_tutorial" # the github URL for your repo
+gh_edit_repository: "https://https://github.com/opentimeseries/opentimeseries.github.io" # the github URL for your repo
 gh_edit_branch: "main" # the branch that your docs is served from
 # gh_edit_source: docs # the source that your files originate from
 gh_edit_view_mode: "tree" # "tree" or "edit" if you want the user to jump into the editor immediately
@@ -175,7 +173,7 @@ callouts:
 
 # Google Analytics Tracking (optional)
 # Supports a CSV of tracking ID strings (eg. "UA-1234567-89,G-1AB234CDE5")
-ga_tracking: G-L2NNDMHQ7K
+ga_tracking:
 ga_tracking_anonymize_ip: true # Use GDPR compliant Google Analytics settings (true/nil by default)
 
 plugins:
@@ -206,6 +204,12 @@ compress_html:
   #   envs: all
 
 collections:
+  python_packages:
+    permalink: "/:collection/:path/"
+    output: true
+  paper_with_code:
+    permalink: "/:collection/:path/"
+    output: true
   tutorials:
     permalink: "/:collection/:path/"
     output: true
@@ -220,30 +224,26 @@ just_the_docs:
   # Define which collections are used in just-the-docs
   collections:
     # Reference the "docs" collection
-    tutorials:
+    python_packages:
       # Give the collection a name
-      name: TUTORIALS
+      name: PYTHON PACKAGES
       # Exclude the collection from the navigation
       # Supports true or false (default)
       nav_exclude: false
       # Exclude the collection from the search
       # Supports true or false (default)
+      search_exclude: false
+    paper_with_code:
+      name: PAPER WITH CODE
+      nav_exclude: false
       search_exclude: false
     extensions:
       name: EXTENSIONS
-      # Exclude the collection from the navigation
-      # Supports true or false (default)
       nav_exclude: false
-      # Exclude the collection from the search
-      # Supports true or false (default)
       search_exclude: false
     talks:
       name: TALKS
-      # Exclude the collection from the navigation
-      # Supports true or false (default)
       nav_exclude: false
-      # Exclude the collection from the search
-      # Supports true or false (default)
       search_exclude: false
 
 defaults:
