@@ -8,7 +8,7 @@ redirect_from:
 
 如果要讲 GM8 缺少的功能，那我可以从天亮一直讲到天黑。所以，这里我姑且不去谈那些 GM8 没有的功能，光说说那些实现了的功能中，令人窒息的智障设计。
 
-## ICC 早于 Create
+## TEST
 
 描述：ICC 即 Instance Creation Code 的执行顺序早于实例的 Create 事件。
 
