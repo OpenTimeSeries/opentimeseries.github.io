@@ -18,7 +18,9 @@ description: All-in-One Time Series Resources
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "opentimeseries.com" # the base hostname & protocol for your site, e.g. http://example.com
 permalink: pretty
-exclude: ["node_modules/", "*.gemspec", "*.gem", "Gemfile", "Gemfile.lock", "package.json", "package-lock.json",  "script/", "LICENSE.txt", "lib/", "bin/", "README.md", "Rakefile", "vendor"]
+exclude: ["node_modules/", "*.gemspec", "*.gem", "Gemfile", "Gemfile.lock",
+          "package.json", "package-lock.json",  "script/", "LICENSE.txt",
+          "lib/", "bin/", "README.md", "Rakefile", "vendor"]
 lang: en
 
 # Use waline comments system.
@@ -34,33 +36,33 @@ waline:
 # Uncommenting the following line doesn't work - see https://github.com/jekyll/jekyll/issues/4791
 # include: ["docs/tests/"]
 
-exclude:
- # from https://github.com/jekyll/jekyll/blob/master/lib/site_template/_config.yml:
-   - .sass-cache/
-   - .jekyll-cache/
-   - gemfiles/
-   - Gemfile
-   - Gemfile.lock
-   - node_modules/
-   - vendor/bundle/
-   - vendor/cache/
-   - vendor/gems/
-   - vendor/ruby/
- # specific to the theme website:
-   - bin/
-   - lib/
-   - "*.gemspec"
-   - "*.gem"
-   - LICENSE.txt
-   - package.json
-   - package-lock.json
-   - Rakefile
-   - README.md
-   - CODE_OF_CONDUCT.md
-   - docker-compose.yml
-   - Dockerfile
- # theme test code
-   - fixtures/
+#exclude:
+# # from https://github.com/jekyll/jekyll/blob/master/lib/site_template/_config.yml:
+#   - .sass-cache/
+#   - .jekyll-cache/
+#   - gemfiles/
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules/
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
+# # specific to the theme website:
+#   - bin/
+#   - lib/
+#   - "*.gemspec"
+#   - "*.gem"
+#   - LICENSE.txt
+#   - package.json
+#   - package-lock.json
+#   - Rakefile
+#   - README.md
+#   - CODE_OF_CONDUCT.md
+#   - docker-compose.yml
+#   - Dockerfile
+# # theme test code
+#   - fixtures/
 
 # Set a path/url to a logo that will be displayed instead of the title
 logo: "assets/images/logo.png"
@@ -126,7 +128,7 @@ nav_sort: case_sensitive # Capital letters sorted before lowercase
 
 ## External navigation links
 #nav_external_links:
-#  - title: 返回博客首页
+#  - title: Back to Home
 #    url: opentimeseries.com
 #    hide_icon: false # set to true to hide the external link icon - defaults to false
 
@@ -207,18 +209,16 @@ collections:
   python_packages:
     permalink: "/:collection/:path/"
     output: true
+  datasets:
+    permalink: "/:collection/:path/"
+    output: true
   paper_with_code:
     permalink: "/:collection/:path/"
     output: true
   tutorials:
     permalink: "/:collection/:path/"
     output: true
-  extensions:
-    permalink: "/:collection/:path/"
-    output: true
-  talks:
-    permalink: "/:collection/:path/"
-    output: true
+
     
 just_the_docs:
   # Define which collections are used in just-the-docs
@@ -233,16 +233,17 @@ just_the_docs:
       # Exclude the collection from the search
       # Supports true or false (default)
       search_exclude: false
+    datasets:
+      name: DATASETS
+      nav_exclude: false
+      search_exclude:
+        false
     paper_with_code:
       name: PAPER WITH CODE
       nav_exclude: false
       search_exclude: false
-    extensions:
-      name: EXTENSIONS
-      nav_exclude: false
-      search_exclude: false
-    talks:
-      name: TALKS
+    tutorials:
+      name: BOOKS & TUTORIALS
       nav_exclude: false
       search_exclude: false
 

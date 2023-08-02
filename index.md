@@ -6,13 +6,15 @@ description: "Open Time Series"
 permalink: /
 ---
 
-## Welcome to Open Time Series!
-
-Welcome to Open Time Series, an all-in-one web page where you can find all different 
-kinds of time series related resources including python packages, research papers, books, tutorials, etc. 
+![large logo](/assets/images/large-logo.png)
 
 
+<div style="text-align:center;">
+  <h1>Welcome!</h1>
+</div>
 
+<span style="color: #5638DC;">**Open Time Series**</span> is an all-in-one time series resources website where you can find all different 
+kinds of time series related topics including python packages, research papers, books, tutorials, etc. 
 
 
 {: .highlight } 

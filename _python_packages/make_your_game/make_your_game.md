@@ -3,7 +3,7 @@ layout: post
 title: Make Your Game!
 nav_order: 13
 has_children: true
-permalink: /tutorials/make_your_game/
+permalink: /python_packages/make_your_game/
 toc: false
 ---
 
