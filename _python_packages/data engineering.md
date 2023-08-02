@@ -6,8 +6,8 @@ nav_order: 6
 # Data Engineering
 ## Data Extraction/Generation/Augmentation
 
-|      Packages       | Description                                                                                                                                                                                   |                                          Downloads (pypi)                                           |
-|:-------------------:|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------:|
+| Packages | Description | Downloads (pypi) |
+|:--:|:--|:--:|
 |   **[TimeSynth]**   | TimeSynth is an open source library for generating synthetic time series for model testing. The library can generate regular and irregular time series.                                       |    [![Downloads](https://static.pepy.tech/badge/timesynth)](https://pepy.tech/project/timesynth)    |
 |   **[Deepecho]**    | DeepEcho is a Synthetic Data Generation Python library for mixed-type, multivariate time series.                                                                                              |     [![Downloads](https://static.pepy.tech/badge/deepecho)](https://pepy.tech/project/deepecho)     |
 |   **[Torchtime]**   | Torchtime provides PyTorch data sets for supervised time series classification and prediction problems.                                                                                       |    [![Downloads](https://static.pepy.tech/badge/torchtime)](https://pepy.tech/project/torchtime)    |

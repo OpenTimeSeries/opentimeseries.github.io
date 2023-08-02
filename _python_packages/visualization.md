@@ -6,8 +6,8 @@ nav_order: 8
 # Time Series Visualization
 
 
-|     Packages     | Description                                                                                                                                                                                                           |                                        Downloads (pypi)                                         |
-|:----------------:|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------:|
+| Packages | Description | Downloads (pypi) |
+|:--:|:--|:--:|
 |   **[Atlair]**   | Vega-Altair is a declarative statistical visualization library for Python.                                                                                                                                            |     [![Downloads](https://static.pepy.tech/badge/altair)](https://pepy.tech/project/altair)     |
 |   **[Bokeh]**    | Bokeh is an interactive visualization library for modern web browsers. It provides elegant, concise construction of versatile graphics and affords high-performance interactivity across large or streaming datasets. |      [![Downloads](https://static.pepy.tech/badge/bokeh)](https://pepy.tech/project/bokeh)      |
 | **[Matplotlib]** | Matplotlib is a comprehensive library for creating static, animated, and interactive visualizations in Python.                                                                                                        | [![Downloads](https://static.pepy.tech/badge/matplotlib)](https://pepy.tech/project/matplotlib) |
