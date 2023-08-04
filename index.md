@@ -20,44 +20,21 @@ permalink: /
   </div>
 </div>
 
-We aim to provide a one-stop destination for all things time series. 
-Explore a wide range of resources, including Python packages, research papers, free books, tutorials, and more. Let's get started! 
+We aim to provide the most comprehensive one-stop destination for time series resources. 
+Explore a wide range of resources, including Python packages, books, tutorials, interview questions and more. Let's get started! 
 
-* <span style="color: #5638DC;">**[Python Package]**</span>
-* <span style="color: #5638DC;">**[Datasets]**</span> 
-* <span style="color: #5638DC;">**[Paper with Code]**</span> 
-* <span style="color: #5638DC;">**[Books and Tutorials]**</span> 
-* <span style="color: #5638DC;">**[Interview Questions]**</span> 
-
-
-[Python Package]: 
-[Datasets]: 
-[Paper with Code]: 
-[Books and Tutorials]: 
-[Interview Questions]: 
-
-
-
-
-[//]: # ({: .note })
-
-[//]: # (Explore time series resources including:)
-
-[//]: # ({: .warning })
-
-[//]: # (Welcome to Open Time Series!)
-
-[//]: # ()
-[//]: # ({: .highlight } )
-
-[//]: # (Welcome to Open Time Series!)
-
-[//]: # ()
-[//]: # ({: .important } )
-
-[//]: # (Welcome to Open Time Series!)
-
-[//]: # ()
-[//]: # ({: .new })
-
-[//]: # (Welcome to Open Time Series!)
+<div style="text-align: center;">
+  <a href="https://awesometimeseries.github.io/" class="btn btn-primary fs-5 mb-4 mb-md-0 mr-2" style="width: 200px;">Python Package</a>
+</div>
+<div style="text-align: center;">
+  <a href="https://awesometimeseries.github.io/" class="btn btn-primary fs-5 mb-4 mb-md-0 mr-2" style="width: 200px;">Datasets</a>
+</div>
+<div style="text-align: center;">
+  <a href="https://awesometimeseries.github.io/" class="btn btn-primary fs-5 mb-4 mb-md-0 mr-2" style="width: 200px;">Books and Tutorials</a>
+</div>
+<div style="text-align: center;">
+  <a href="https://awesometimeseries.github.io/" class="btn btn-primary fs-5 mb-4 mb-md-0 mr-2" style="width: 200px;">Interview Questions</a>
+</div>
+<div style="text-align: center;">
+  <a href="https://awesometimeseries.github.io/" class="btn btn-primary fs-5 mb-4 mb-md-0 mr-2" style="width: 200px;">Paper with Code</a>
+</div>
