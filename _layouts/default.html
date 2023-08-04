@@ -34,26 +34,26 @@ layout: table_wrappers
       </div>
       {% if page.type != 404 %}
       <div id="right-panel">
-        {% if page.toc %}
-        <div id="toc-wrapper">
-          <div id="toc-header">
-            NAVIGATION
-          </div>
-          <nav id="toc" data-toggle="toc"></nav>
-          <script>
-            $(function () {
-              tocbot.init({
-                tocSelector: '#toc',
-                contentSelector: '#main-content',
-                ignoreSelector: '[toc-skip]',
-                headingSelector: 'h2, h3',
-                orderedList: false,
-                scrollSmooth: false
-              });
-            });
-          </script>
-        </div>
-        {% endif %}
+
+<!--      {% if page.toc %}-->
+<!--      <div id="toc-wrapper">-->
+<!--        <span style="font-size: 14px; white-space: nowrap;">NAVIGATION</span>-->
+<!--        <nav id="toc" data-toggle="toc" style="white-space: nowrap; overflow-x: auto;"></nav>-->
+<!--        <script>-->
+<!--          $(function () {-->
+<!--            tocbot.init({-->
+<!--              tocSelector: '#toc',-->
+<!--              contentSelector: '#main-content',-->
+<!--              ignoreSelector: '[toc-skip]',-->
+<!--              headingSelector: 'h2, h3',-->
+<!--              orderedList: false,-->
+<!--              scrollSmooth: false-->
+<!--            });-->
+<!--          });-->
+<!--        </script>-->
+<!--      </div>-->
+<!--      {% endif %}-->
+
       </div>
       {% endif %}
     </div>

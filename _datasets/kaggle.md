@@ -1,10 +1,11 @@
 ---
 layout: post
-title: Kaggle
-nav_order: 1
+title: Kaggle Competition
+nav_order: 2
 ---
 
-## Kaggle Datasets
+
+## Kaggle Competition Datasets
 
 |Competition |Sponsor |Year |Prize |Description|
 |:--:|:--:|:--:|:--:|:--|

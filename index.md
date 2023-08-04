@@ -10,24 +10,47 @@ permalink: /
 
 
 <div style="text-align:center;">
-  <h1>Welcome!</h1>
+  <h1>Welcome to Open Time Series!</h1>
 </div>
 
-<span style="color: #5638DC;">**Open Time Series**</span> is an all-in-one time series resources website where you can find all different 
-kinds of time series related topics including python packages, research papers, books, tutorials, etc. 
+We aim to provide a one-stop destination for all things time series. 
+Explore a wide range of resources, including Python packages, research papers, free books, tutorials, and more. Let's get started! 
+
+* <span style="color: #5638DC;">**[Python Package]**</span>
+* <span style="color: #5638DC;">**[Datasets]**</span> 
+* <span style="color: #5638DC;">**[Paper with Code]**</span> 
+* <span style="color: #5638DC;">**[Books and Tutorials]**</span> 
+* <span style="color: #5638DC;">**[Interview Questions]**</span> 
 
 
-{: .highlight } 
-Welcome to Open Time Series!
+[Python Package]: 
+[Datasets]: 
+[Paper with Code]: 
+[Books and Tutorials]: 
+[Interview Questions]: 
 
-{: .important } 
-Welcome to Open Time Series!
 
-{: .new }
-Welcome to Open Time Series!
 
-{: .note }
-Welcome to Open Time Series!
 
-{: .warning }
-Welcome to Open Time Series!
+[//]: # ({: .note })
+
+[//]: # (Explore time series resources including:)
+
+[//]: # ({: .warning })
+
+[//]: # (Welcome to Open Time Series!)
+
+[//]: # ()
+[//]: # ({: .highlight } )
+
+[//]: # (Welcome to Open Time Series!)
+
+[//]: # ()
+[//]: # ({: .important } )
+
+[//]: # (Welcome to Open Time Series!)
+
+[//]: # ()
+[//]: # ({: .new })
+
+[//]: # (Welcome to Open Time Series!)

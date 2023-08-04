@@ -218,8 +218,12 @@ collections:
   tutorials:
     permalink: "/:collection/:path/"
     output: true
+  interview_questions:
+    permalink: "/:collection/:path/"
+    output: true
 
-    
+
+
 just_the_docs:
   # Define which collections are used in just-the-docs
   collections:
@@ -238,15 +242,18 @@ just_the_docs:
       nav_exclude: false
       search_exclude:
         false
-    paper_with_code:
-      name: PAPER WITH CODE
-      nav_exclude: false
-      search_exclude: false
     tutorials:
       name: BOOKS & TUTORIALS
       nav_exclude: false
       search_exclude: false
-
+    interview_questions:
+      name: Interview Questions
+      nav_exclude: false
+      search_exclude: false
+    paper_with_code:
+      name: PAPER WITH CODE
+      nav_exclude: false
+      search_exclude: false
 defaults:
   -
     scope:
