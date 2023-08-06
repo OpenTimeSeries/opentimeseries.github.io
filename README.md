@@ -13,10 +13,16 @@ We aim to provide the most comprehensive one-stop destination for time series re
 Explore a wide range of resources, including Python packages, books, tutorials, interview questions and more. 
 
 #### Python Packages
+
 ![Python Packages](/assets/images/screenshots/Python Packages.png)
 
+
 #### Interview Questions
+
 ![Interview Questions](/assets/images/Interview Questions.png)
+
+
+<img src="/assets/images/Interview Questions.png" alt="Interview Questions" style="max-width: 400px;">
 
 ## [Let's get started!](opentimeseries.com)
 * [Python Package]()
