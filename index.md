@@ -7,7 +7,7 @@ permalink: /
 ---
 
 <div style="display: flex; flex-direction: column; align-items: center;">
-  <img src="/assets/images/large-logo.png" alt="Large Logo" style="max-width: 400px;">
+  <img src="/assets/images/large-logo.png" alt="Open Time Series" style="max-width: 400px;">
 </div>
 
 
@@ -16,7 +16,7 @@ permalink: /
     <h1>Welcome to Open Time Series!</h1>
   </div>
   <div style="margin-left: 20px;">
-    <img src="/assets/images/bulb.gif" alt="Alt Text" width="60">
+    <img src="/assets/images/bulb.gif" alt="Welcome!" width="60">
   </div>
 </div>
 
