@@ -19,10 +19,10 @@ Explore a wide range of resources, including Python packages, books, tutorials, 
 
 #### Interview Questions
 
-![Interview Questions](/assets/images/Interview Questions.png)
+![Interview Questions](/assets/images/screenshots/Interview Questions.png)
 
 
-<img src="/assets/images/Interview Questions.png" alt="Interview Questions" style="max-width: 400px;">
+<img src="/assets/images/screenshots/Interview Questions.png" alt="Interview Questions" style="max-width: 400px;">
 
 ## [Let's get started!](opentimeseries.com)
 * [Python Package]()
