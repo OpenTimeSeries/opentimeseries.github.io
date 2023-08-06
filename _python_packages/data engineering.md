@@ -4,7 +4,6 @@ title: Data Engineering
 nav_order: 6
 ---
 # Data Engineering
-## Data Extraction/Generation/Augmentation
 
 | Packages | Description | Downloads (pypi) |
 |:--:|:--|:--:|

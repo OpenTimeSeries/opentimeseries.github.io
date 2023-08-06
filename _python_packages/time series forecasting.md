@@ -3,7 +3,7 @@ layout: post
 title: Forecasting
 nav_order: 2
 ---
-## Classical Forecasting Methods
+# Classical Forecasting Methods
 
 | Packages | Description | Downloads (pypi) |
 |:--:|:--|:--:|

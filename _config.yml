@@ -246,11 +246,11 @@ just_the_docs:
       nav_exclude: false
       search_exclude: false
     interview_questions:
-      name: Interview Questions
+      name: INTERVIEW QUESTIONS
       nav_exclude: false
       search_exclude: false
     paper_with_code:
-      name: PAPER WITH CODE
+      name: PAPERS WITH CODE
       nav_exclude: false
       search_exclude: false
 defaults:
