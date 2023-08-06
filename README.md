@@ -18,7 +18,7 @@ Explore a wide range of resources, including Python packages, books, tutorials, 
 #### Interview Questions
 ![Interview Questions](/assets/images/Interview Questions.png)
 
-## [Let's get started!](Opentimeseries.com)
+## [Let's get started!](opentimeseries.com)
 * [Python Package]()
 * [Datasets]()
 * [Books and Tutorials]()
