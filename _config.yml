@@ -115,9 +115,9 @@ mermaid:
 heading_anchors: true
 
 # Aux links for the upper right navigation
-aux_links:
-  "Github":
-    - "https://github.com/Opentimeseries/opentimeseries.github.io"
+#aux_links:
+#  "Github":
+#    - "https://github.com/Opentimeseries/opentimeseries.github.io"
 
 # Makes Aux links open in a new tab. Default is false
 aux_links_new_tab: true
@@ -138,7 +138,8 @@ nav_sort: case_sensitive # Capital letters sorted before lowercase
 # Back to top link
 back_to_top: true
 back_to_top_text: "Back to Top"
-footer_content: <a href="https://github.com/Opentimeseries/opentimeseries.github.io">Open Time Series</a>
+#footer_content: <a href="https://github.com/Opentimeseries/opentimeseries.github.io">Open Time Series</a>
+footer_content: Copyright (c) 2023 OpenTimeSeries.com
 
 # Footer last edited timestamp
 last_edit_timestamp: false # show or hide edit time - page must have `last_modified_date` defined in the frontmatter
@@ -147,7 +148,7 @@ last_edit_time_format: "%b %e %Y at %I:%M %p" # uses ruby's time format: https:/
 # Footer "Edit this page on GitHub" link text
 gh_edit_link: false # show or hide edit this page link
 gh_edit_link_text: "Edit this page on GitHub"
-gh_edit_repository: "https://https://github.com/opentimeseries/opentimeseries.github.io" # the github URL for your repo
+gh_edit_repository: "https://github.com/opentimeseries/opentimeseries.github.io" # the github URL for your repo
 gh_edit_branch: "main" # the branch that your docs is served from
 # gh_edit_source: docs # the source that your files originate from
 gh_edit_view_mode: "tree" # "tree" or "edit" if you want the user to jump into the editor immediately
@@ -185,7 +186,7 @@ plugins:
 
 kramdown:
   syntax_highlighter: rouge
-  syntax_highlighter_opts:   # Rouge 设置 › https://github.com/jneen/rouge#full-options
+  syntax_highlighter_opts:
     css_class: highlight
     # default_lang: console
     span:

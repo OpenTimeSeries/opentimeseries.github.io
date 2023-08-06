@@ -26,17 +26,25 @@ Explore a wide range of resources, including Python packages, books, tutorials, 
 
 
 <div style="text-align: center;">
-  <a href="https://awesometimeseries.github.io/" class="btn btn-primary fs-5 mb-4 mb-md-0 mr-2" style="width: 200px;">Python Packages</a>
+  <a href="https://opentimeseries.com/python_packages/all_in_one/" class="btn btn-primary fs-5 mb-4 mb-md-0 mr-2" style="width: 200px;">Python Packages</a>
 </div>
 <div style="text-align: center;">
-  <a href="https://awesometimeseries.github.io/" class="btn btn-primary fs-5 mb-4 mb-md-0 mr-2" style="width: 200px;">Datasets</a>
+  <a href="https://opentimeseries.com/datasets/public_datasets/" class="btn btn-primary fs-5 mb-4 mb-md-0 mr-2" style="width: 200px;">Datasets</a>
 </div>
 <div style="text-align: center;">
-  <a href="https://awesometimeseries.github.io/" class="btn btn-primary fs-5 mb-4 mb-md-0 mr-2" style="width: 200px;">Books and Tutorials</a>
+  <a href="https://opentimeseries.com/tutorials/books/" class="btn btn-primary fs-5 mb-4 mb-md-0 mr-2" style="width: 200px;">Books and Tutorials</a>
 </div>
 <div style="text-align: center;">
-  <a href="https://awesometimeseries.github.io/" class="btn btn-primary fs-5 mb-4 mb-md-0 mr-2" style="width: 200px;">Interview Questions</a>
+  <a href="https://opentimeseries.com/interview_questions/interview_questions/" class="btn btn-primary fs-5 mb-4 mb-md-0 mr-2" style="width: 200px;">Interview Questions</a>
 </div>
 <div style="text-align: center;">
-  <a href="https://awesometimeseries.github.io/" class="btn btn-primary fs-5 mb-4 mb-md-0 mr-2" style="width: 200px;">Papers with Code</a>
+  <a href="https://opentimeseries.com/paper_with_code/survey/" class="btn btn-primary fs-5 mb-4 mb-md-0 mr-2" style="width: 200px;">Papers with Code</a>
 </div>
+
+
+## [Let's get started!](opentimeseries.com)
+* 📦[Python Package](https://opentimeseries.com/python_packages/all_in_one/)
+* 🗄️[Datasets](https://opentimeseries.com/datasets/public_datasets/)
+* 📚[Books and Tutorials](https://opentimeseries.com/tutorials/books/)
+* ☎️[Interview Questions](https://opentimeseries.com/interview_questions/interview_questions/)
+* 📄[Papers with Code](https://opentimeseries.com/paper_with_code/survey/)
