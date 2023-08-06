@@ -1,6 +1,6 @@
 <img src="/assets/images/large-logo.png" alt="Open Time Series" style="max-width: 400px;">
 
-# Welcome to Open Time Series!
+# Welcome to [Open Time Series](opentimeseries.com)!
 💬We aim to provide the most comprehensive one-stop destination for time series resources. Explore a wide range of resources, including Python packages, books, tutorials, interview questions and more! 
 
 ### 📦Python Packages
