@@ -4,7 +4,7 @@ title: Books
 nav_order: 1
 ---
 
-# Books
+# Time Series Books
 
 |Name|Cost|Author (Year)|Description|
 |:--:|:--:|:--:|:--|

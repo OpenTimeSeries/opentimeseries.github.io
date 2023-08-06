@@ -3,7 +3,7 @@ layout: post
 title: Clustering and Classficatin
 nav_order: 7
 ---
-# Clustering and Classfication
+# Time Series Clustering and Classification
 
 
 | Packages | Description | Downloads (pypi) |

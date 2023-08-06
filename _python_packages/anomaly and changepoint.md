@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Anomaly/Changepoint detection
+title: Anomaly Detection
 nav_order: 3
 ---
-# Anomaly/Changepoint detection
+# Time Series Anomaly/Changepoint detection
 
 
 | Packages | Description | Downloads (pypi) |

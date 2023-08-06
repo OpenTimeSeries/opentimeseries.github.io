@@ -1,10 +1,9 @@
 ---
 layout: post
-title: All-in-One & AutoML 
+title: All-in-One & AutoML
 nav_order: 1
 ---
-# All-in-one & AutoML
-
+# Time Series All-in-One Python Packages
 
 | Packages | Description | Downloads (pypi) |
 |:--:|:--|:--:|

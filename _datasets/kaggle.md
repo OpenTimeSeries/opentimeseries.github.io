@@ -5,7 +5,7 @@ nav_order: 2
 ---
 
 
-# Kaggle Competition Datasets
+# Time Series Kaggle Competition Datasets
 
 |Competition |Sponsor |Year |Prize |Description|
 |:--:|:--:|:--:|:--:|:--|

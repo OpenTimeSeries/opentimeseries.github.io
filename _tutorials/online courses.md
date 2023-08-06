@@ -4,7 +4,7 @@ title: Free Online Courses
 nav_order: 3
 ---
 
-# Free Online Courses
+# Free Time Series Online Courses
 
 |Name|Platform|Description|
 |:--:|:--:|:--|

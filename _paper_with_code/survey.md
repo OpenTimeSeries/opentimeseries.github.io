@@ -1,10 +1,10 @@
 ---
 layout: post
-title: SOTA Survey
+title: SOTA Survey Papers
 nav_order: 1
 ---
 
-# State-of-the-Art Time Series Survey Papers
+# Time Series State-of-the-Art Survey Papers
 
 |Title|Year|Code|Abstract (Key Contributions)|
 |:--:|:--:|:--|

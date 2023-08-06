@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Youtube Tutorials
+title: YouTube Tutorials
 nav_order: 2
 ---
 
-# Youtube Videos
+# Time Series YouTube Tutorials
 
 ## Introduction playlists
 #### **Time Series Analysis** | Youtuber: ritvikmath

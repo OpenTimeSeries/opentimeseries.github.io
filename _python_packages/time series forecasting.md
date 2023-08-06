@@ -3,7 +3,7 @@ layout: post
 title: Forecasting
 nav_order: 2
 ---
-# Classical Forecasting Methods
+# Time Series Classical Forecasting Methods
 
 | Packages | Description | Downloads (pypi) |
 |:--:|:--|:--:|
@@ -28,8 +28,7 @@ nav_order: 2
 [Tslearn]: https://github.com/tslearn-team/tslearn
 
 
-
-## Deep Learning Forecasting Methods
+# Time Series Deep Learning Forecasting Methods
 
 | Packages | Description | Downloads (pypi) |
 |:--:|:--|:--:|
