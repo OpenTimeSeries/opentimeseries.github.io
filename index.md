@@ -40,11 +40,3 @@ Explore a wide range of resources, including Python packages, books, tutorials, 
 <div style="text-align: center;">
   <a href="https://opentimeseries.com/paper_with_code/survey/" class="btn btn-primary fs-5 mb-4 mb-md-0 mr-2" style="width: 200px;">Papers with Code</a>
 </div>
-
-
-## [Let's get started!](opentimeseries.com)
-* 📦[Python Package](https://opentimeseries.com/python_packages/all_in_one/)
-* 🗄️[Datasets](https://opentimeseries.com/datasets/public_datasets/)
-* 📚[Books and Tutorials](https://opentimeseries.com/tutorials/books/)
-* ☎️[Interview Questions](https://opentimeseries.com/interview_questions/interview_questions/)
-* 📄[Papers with Code](https://opentimeseries.com/paper_with_code/survey/)
