@@ -26,7 +26,7 @@ Explore a wide range of resources, including Python packages, books, tutorials, 
 
 
 <div style="text-align: center;">
-  <a href="https://awesometimeseries.github.io/" class="btn btn-primary fs-5 mb-4 mb-md-0 mr-2" style="width: 200px;">Python Package</a>
+  <a href="https://awesometimeseries.github.io/" class="btn btn-primary fs-5 mb-4 mb-md-0 mr-2" style="width: 200px;">Python Packages</a>
 </div>
 <div style="text-align: center;">
   <a href="https://awesometimeseries.github.io/" class="btn btn-primary fs-5 mb-4 mb-md-0 mr-2" style="width: 200px;">Datasets</a>
@@ -38,6 +38,5 @@ Explore a wide range of resources, including Python packages, books, tutorials, 
   <a href="https://awesometimeseries.github.io/" class="btn btn-primary fs-5 mb-4 mb-md-0 mr-2" style="width: 200px;">Interview Questions</a>
 </div>
 <div style="text-align: center;">
-  <a href="https://awesometimeseries.github.io/" class="btn btn-primary fs-5 mb-4 mb-md-0 mr-2" style="width: 200px;">Paper with Code</a>
+  <a href="https://awesometimeseries.github.io/" class="btn btn-primary fs-5 mb-4 mb-md-0 mr-2" style="width: 200px;">Papers with Code</a>
 </div>
-
