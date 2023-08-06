@@ -6,8 +6,17 @@
 ### 📦Python Packages
 <img src="/assets/images/screenshots/Python Packages.png" alt="Python Packages" style="max-width: 400px;">
 
+### 🗄️Datasets
+<img src="/assets/images/screenshots/Datasets.png" alt="Datasets" style="max-width: 400px;">
+
+### 📚Books & Tutorials
+<img src="/assets/images/screenshots/Books and Tutorials.png" alt="Books and Tutorials" style="max-width: 400px;">
+
 ### ☎️Interview Questions
 <img src="/assets/images/screenshots/Interview Questions.png" alt="Interview Questions" style="max-width: 400px;">
+
+### 📄️Papers with Code
+<img src="/assets/images/screenshots/Papers with Code.png" alt="Papers with Code" style="max-width: 400px;">
 
 ## [Let's get started!](opentimeseries.com)
 * 📦[Python Package]()
