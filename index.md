@@ -21,9 +21,7 @@ permalink: /
 </div>
 
 
-We aim to provide the most comprehensive one-stop destination for time series resources. 
-Explore a wide range of resources, including Python packages, books, tutorials, interview questions and more. Let's get started! 
-
+Dive into the science of time series with us. We've gathered a collection of Python packages, books, tutorials, and interview questions to support your learning journey. Let's explore together!
 
 <div style="text-align: center;">
   <a href="https://opentimeseries.com/python_packages/all_in_one/" class="btn btn-primary fs-5 mb-4 mb-md-0 mr-2" style="width: 200px;">Python Packages</a>
