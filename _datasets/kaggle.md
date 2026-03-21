@@ -9,6 +9,8 @@ nav_order: 2
 
 |Competition |Sponsor |Year |Prize |Description|
 |:--:|:--:|:--:|:--:|:--|
+|**[Stanford STATS 202 Forecasting 2023]**|Stanford / Kaggle|2023|NA|Recent community competition page that is useful as a pointer to forecasting notebooks and leaderboard baselines.|
+|**[More Kaggle Time Series Competitions]**|Kaggle|All|NA|Use the live Kaggle search results page to find the latest forecasting and time-series-related competitions.|
 |**[Walmart Recruiting - Store Sales Forecasting]** |Walmart |2014 |Recruitment |You are provided with historical sales data for 45 Walmart stores located in different regions. Each store contains a number of departments, and you are tasked with predicting the department-wide sales for each store.|
 |**[Walmart Recruiting II: Sales in Stormy Weather]**|Walmart|2015|Recruitment|You have been provided with sales data for 111 products whose sales may be affected by the weather (such as milk, bread, umbrellas, etc.). These 111 products are sold in stores at 45 different Walmart locations. The competition task is to predict the amount of each product sold around the time of major weather events. |
 |**[Rossmann Store Sales]**|Rossmann|2015|$35K|You are provided with historical sales data for 1,115 Rossmann stores. The task is to forecast the "Sales" column for the test set. Note that some stores in the dataset were temporarily closed for refurbishment.|
@@ -21,6 +23,7 @@ nav_order: 2
 |**[G-Research Crypto Forecasting]**|G-Research|2022|$125K|In this competition, you'll use your machine learning expertise to forecast short term returns in 14 popular cryptocurrencies. We have amassed a dataset of millions of rows of high-frequency market data dating back to 2018 which you can use to build your model. |
 |**[More Kaggle Time Series Competitions]**|Kaggle|All|NA|Kaggle has over 200+ time series related competitions.|
 
+[Stanford STATS 202 Forecasting 2023]: https://www.kaggle.com/competitions/stanford-stats-202-forecasting-2023
 [Walmart Recruiting - Store Sales Forecasting]: https://www.kaggle.com/competitions/walmart-recruiting-store-sales-forecasting/overview
 [Walmart Recruiting II: Sales in Stormy Weather]: https://www.kaggle.com/c/walmart-recruiting-sales-in-stormy-weather
 [Rossmann Store Sales]: https://www.kaggle.com/c/rossmann-store-sales
@@ -32,4 +35,3 @@ nav_order: 2
 [Walmart M5 Forecasting - Uncertainty]: https://www.kaggle.com/competitions/m5-forecasting-uncertainty
 [G-Research Crypto Forecasting]: https://www.kaggle.com/competitions/g-research-crypto-forecasting/overview 
 [More Kaggle Time Series Competitions]: https://www.kaggle.com/search?q=time+series+in%3Acompetitions
-

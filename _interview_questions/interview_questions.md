@@ -98,3 +98,30 @@ nav_order: 1
 * LSTM is a type of RNN that addresses the vanishing gradient problem. Unlike traditional RNNs, LSTM incorporates memory cells and gates (i.e., input, output, and forget gates) that control the flow of information within the network. 
 This allows LSTMs to retain information over long time lags, making them more effective in capturing long-term dependencies and handling time series data with extended sequences.
 
+### **Q: What are time-series foundation models, and how are they different from training a forecasting model from scratch?**
+* Time-series foundation models are large pre-trained models that are trained on many datasets or domains before being adapted to a downstream task such as forecasting, anomaly detection, classification, or imputation.
+* The key difference from training from scratch is transfer learning: instead of learning all patterns from a single dataset, the model starts with representations learned from broad historical data.
+* In interviews, mention examples like Chronos, TimesFM, MOMENT, MOIRAI, and TimeGPT, and explain that they are especially attractive when labeled data is limited or when fast zero-shot baselines are needed.
+
+### **Q: What is zero-shot forecasting, and when would you trust it?**
+* Zero-shot forecasting means using a pre-trained model directly on a new time series without task-specific fine-tuning.
+* It is most useful as a strong baseline, for cold-start scenarios, or when you need forecasts quickly across many series.
+* You should trust it more when the new data distribution is similar to the model's pre-training data, the horizon is not extreme, and backtests on a holdout period show stable results.
+* Even with strong zero-shot models, you should compare against simple baselines such as seasonal naive, moving average, or AutoARIMA before deploying.
+
+### **Q: What are the most common leakage mistakes in time series modeling?**
+* Random train-test split instead of chronological split.
+* Using future covariates or target-derived features that would not be available at prediction time.
+* Fitting scalers, imputers, encoders, or feature generators on the full dataset before splitting.
+* Using revised data instead of point-in-time data, especially in finance, macroeconomics, and operations settings.
+* A strong answer should mention rolling-origin or walk-forward validation as the fix.
+
+### **Q: How do you evaluate probabilistic forecasts and prediction intervals?**
+* Point metrics such as MAE or RMSE are not enough for probabilistic forecasting.
+* You should also evaluate calibration and sharpness using interval coverage, weighted interval score (WIS), CRPS, pinball loss, or quantile loss.
+* In practice, you want intervals that are both well-calibrated and reasonably narrow, not just wide enough to cover everything.
+
+### **Q: When would you choose a classical model over a deep learning or foundation model?**
+* Classical models are often better when the dataset is small, the signal is simple and interpretable, and the business needs transparent components like trend, seasonality, and holiday effects.
+* Deep learning or foundation models become more attractive with many related series, complex covariates, long contexts, or when transfer learning provides a measurable lift.
+* A strong production answer is: start with simple baselines, validate improvements carefully, and only pay the complexity cost when the added accuracy or operational flexibility is worth it.

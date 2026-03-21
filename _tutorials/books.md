@@ -8,6 +8,8 @@ nav_order: 1
 
 |Name|Cost|Author (Year)|Description|
 |:--:|:--:|:--:|:--|
+|**[Time Series Analysis with Python Cookbook (2nd ed)]**|Paid|Tarek A. Atwan (2026)|Expanded second edition with updated recipes for EDA, preprocessing, forecasting, feature engineering, and evaluation.|
+|**[Modern Time Series Forecasting with Python (2nd ed)]**|Paid|Manu Joseph (2025)|Updated edition covering modern machine learning and deep learning workflows for large-scale forecasting systems.|
 |**[Time Series Analysis Handbook]**|Free|PhDs at Asian Institute of Management (2023)|This handbook extensively covers time series analysis and forecasting, delving from the most fundamental methods to the state-of-the-art. The handbook was made in Python and is designed such that readers can both learn the theory and apply them to real-world problems.|
 |**[Forecasting: Principles and Practice (3rd ed)]**<img src="/assets/images/books/Forecasting Principles and Practice.png" alt="ICON" width="300" height="300">|Free|Rob J Hyndman and George Athanasopoulos (2021)|This textbook is intended to provide a comprehensive introduction to forecasting methods and to present enough information about each method for readers to be able to use them sensibly. |
 |**[Time Series Analysis with Python Cookbook]** <img src="/assets/images/books/Time Series Analysis with Python Cookbook.png" alt="ICON" width="300" height="300">|Paid|Tarek A. Atwan (2022)|Explore forecasting and anomaly detection techniques using statistical, machine learning, and deep learning algorithms.|
@@ -23,6 +25,8 @@ nav_order: 1
 
 
 [Forecasting: Principles and Practice (3rd ed)]: https://otexts.com/fpp3/
+[Time Series Analysis with Python Cookbook (2nd ed)]: https://www.oreilly.com/library/view/time-series-analysis/9781805124283/
+[Modern Time Series Forecasting with Python (2nd ed)]: https://github.com/PacktPublishing/Modern-Time-Series-Forecasting-with-Python-2E
 [Time Series Analysis Handbook]: https://phdinds-aim.github.io/time_series_handbook/Preface/Preface.html
 [Time Series Analysis with Python Cookbook]: https://www.oreilly.com/library/view/time-series-analysis/9781801075541/
 [Modern Time Series Forecasting with Python]: https://www.oreilly.com/library/view/modern-time-series/9781803246802/

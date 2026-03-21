@@ -8,6 +8,10 @@ nav_order: 1
 
 |Name |Purpose|Description|
 |:--:|:--:|:--|
+|**[Monash Forecasting Repository]**|Forecasting benchmark|A curated repository of benchmark forecasting datasets and standardized evaluation resources used widely in recent literature.|
+|**[Hugging Face Datasets]**|All purpose|Large and actively updated hub that includes many time series datasets and benchmark loaders.|
+|**[Kaggle Time Series Datasets]**|All purpose|Community-updated collection of public datasets for forecasting, anomaly detection, and competition-style evaluation.|
+|**[GIFT-Eval]**|Foundation-model benchmark|Open benchmark suite for evaluating time series foundation models across domains and tasks.|
 |**[Github - Awesome Public Datasets]** |All purpose|This is a list of a topic-centric public data sources in high quality from various domains. Most of the data sets listed below are free.|
 |**[Github - Turing Change Point Dataset]** |Change Point Detection| Turing Change Point Dataset is a set of time series specifically collected for the evaluation of change point detection algorithms on real-world data. |
 |**[Time Series Classification]** |Time series classification|This site contains data, reference results and links to code for Time Series Classification (TSC), Time Series Clustering (TSCL) and Time Series Extrinsic Regression (TSER). The classification data form part of the UCR time series archive. Regression data are part of the TSER repository.|
@@ -18,6 +22,10 @@ nav_order: 1
 |**[CompEngine]** |All purpose|A self-organizing database with over 29K time series.|
 |**[Papers with code]** |All purpose|A crowd-sourcing website for research papers, codes, and datesets. |
 
+[Monash Forecasting Repository]: https://forecastingdata.org/
+[Hugging Face Datasets]: https://huggingface.co/datasets
+[Kaggle Time Series Datasets]: https://www.kaggle.com/datasets?search=time+series
+[GIFT-Eval]: https://github.com/SalesforceAIResearch/gift-eval
 [Github - Awesome Public Datasets]: https://github.com/awesomedata/awesome-public-datasets#time-series
 [Github - Turing Change Point Dataset]: https://github.com/alan-turing-institute/TCPD
 [Time Series Classification]: https://timeseriesclassification.com/
@@ -27,4 +35,3 @@ nav_order: 1
 [UC Irvine ML Repository]: https://archive.ics.uci.edu/datasets
 [CompEngine]: https://www.comp-engine.org/
 [Papers with code]: https://paperswithcode.com/datasets?q=time+series&v=lst&o=match
-

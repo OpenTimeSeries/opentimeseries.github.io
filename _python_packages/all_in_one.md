@@ -7,6 +7,10 @@ nav_order: 1
 
 | Packages | Description | Downloads (pypi) |
 |:--:|:--|:--:|
+|  **[Nixtla SDK (TimeGPT)]**  | Official Python SDK for using TimeGPT for forecasting and anomaly detection workflows. | [PyPI](https://pypi.org/project/nixtla/) |
+| **[Chronos Forecasting]** | Pretrained probabilistic time series forecasting models released by Amazon Science (Chronos / Chronos-Bolt family). | N/A |
+|   **[Uni2TS]**   | Salesforce library for universal time series forecasting transformers (Moirai family), supporting pretraining, fine-tuning, and inference. | [PyPI](https://pypi.org/project/uni2ts/) |
+|   **[TimesFM]**   | Google Research time series foundation model repository for zero-shot forecasting and long-context inference. | N/A |
 |  **[Auto_TS]**  | Auto_TimeSeries enables you to build and select multiple time series models using techniques such as ARIMA, SARIMAX, VAR, decomposable (trend+seasonality+holidays) models, and ensemble machine learning models.                                                                                                                                                 |   [![Downloads](https://static.pepy.tech/badge/auto-ts)](https://pepy.tech/project/auto-ts)   |
 |  **[AutoTS]**   | AutoTS is a time series package for Python designed for rapidly deploying high-accuracy forecasts at scale. In 2023, AutoTS has won in the M6 forecasting competition, delivering the highest performance investment decisions across 12 months of stock market forecasting.                                                                                      |    [![Downloads](https://static.pepy.tech/badge/autots)](https://pepy.tech/project/autots)    |
 |   **[Darts]**   | Darts is a Python library for user-friendly forecasting and anomaly detection on time series. It contains a variety of models, from classics such as ARIMA to deep neural networks. The forecasting models can all be used in the same way, using `fit()` and `predict()` functions, similar to scikit-learn.                                                     |     [![Downloads](https://static.pepy.tech/badge/darts)](https://pepy.tech/project/darts)     |                                                                                                                                                                                                                                                                                                                                                                                                                                      
@@ -19,6 +23,10 @@ nav_order: 1
 |  **[Sktime]**   | Sktime is a library for time series analysis in Python. It provides a unified interface for multiple time series learning tasks. Currently, this includes time series classification, regression, clustering, annotation, and forecasting. It comes with time series algorithms and scikit-learn compatible tools to build, tune and validate time series models. |    [![Downloads](https://static.pepy.tech/badge/sktime)](https://pepy.tech/project/sktime)    |
 
 
+[Nixtla SDK (TimeGPT)]: https://github.com/Nixtla/nixtla
+[Chronos Forecasting]: https://github.com/amazon-science/chronos-forecasting
+[Uni2TS]: https://github.com/SalesforceAIResearch/uni2ts
+[TimesFM]: https://github.com/google-research/timesfm
 [Auto_TS]: https://github.com/AutoViML/Auto_TS
 [AutoTS]: https://github.com/winedarksea/AutoTS
 [Darts]: https://github.com/unit8co/darts
@@ -29,5 +37,4 @@ nav_order: 1
 [Pycaret]: https://github.com/pycaret/pycaret
 [Scalecast]: https://github.com/mikekeith52/scalecast
 [Sktime]: https://github.com/sktime/sktime
-
 

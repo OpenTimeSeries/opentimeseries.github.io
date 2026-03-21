@@ -1,4 +1,5 @@
 *.gem
+.gem/
 .bundle
 .ruby-version
 .jekyll-cache
@@ -7,4 +8,5 @@ _site
 Gemfile.lock
 package-lock.json
 node_modules
+vendor/
 .DS_Store

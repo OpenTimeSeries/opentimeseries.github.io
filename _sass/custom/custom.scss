@@ -44,6 +44,167 @@ strong {
   }
 }
 
+.ots-hero {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 2rem;
+  align-items: center;
+  margin: 1rem 0 2.5rem;
+  padding: 2rem;
+  border: 1px solid rgba(40, 53, 79, 0.12);
+  border-radius: 18px;
+  background:
+    radial-gradient(circle at top right, rgba(66, 153, 225, 0.16), transparent 32%),
+    radial-gradient(circle at bottom left, rgba(56, 178, 172, 0.14), transparent 28%),
+    linear-gradient(135deg, rgba(250, 251, 252, 0.98), rgba(244, 248, 252, 0.96));
+}
+
+.ots-eyebrow {
+  margin-bottom: 0.75rem;
+  color: #0f6c8d;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.ots-hero-copy h1 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  line-height: 1.05;
+  font-size: clamp(2.2rem, 4vw, 3.8rem);
+}
+
+.ots-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.ots-hero-art {
+  display: flex;
+  justify-content: center;
+}
+
+.ots-hero-art img {
+  max-width: 100%;
+  width: min(360px, 100%);
+  filter: drop-shadow(0 20px 30px rgba(34, 68, 106, 0.12));
+}
+
+.ots-grid {
+  display: grid;
+  gap: 1rem;
+  margin: 1rem 0 2rem;
+}
+
+.ots-section {
+  margin: 2.8rem 0;
+}
+
+.ots-section-head {
+  margin-bottom: 1rem;
+}
+
+.ots-section-head h2 {
+  margin: 0 0 0.35rem;
+  font-size: clamp(1.5rem, 2.2vw, 2.2rem);
+}
+
+.ots-section-head p {
+  max-width: 46rem;
+  margin: 0;
+  color: #526173;
+}
+
+.ots-kicker {
+  margin: 0 0 0.35rem;
+  color: #0f6c8d;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.ots-grid-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.ots-grid-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.ots-card,
+.ots-list-card,
+.ots-note,
+.ots-path {
+  display: block;
+  padding: 1.35rem;
+  border: 1px solid rgba(40, 53, 79, 0.1);
+  border-radius: 18px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(248, 251, 253, 0.98));
+  box-shadow: 0 12px 28px rgba(15, 31, 54, 0.055);
+}
+
+.ots-card,
+.ots-list-card {
+  text-decoration: none;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+
+.ots-card:hover,
+.ots-list-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 34px rgba(15, 31, 54, 0.09);
+  border-color: rgba(15, 108, 141, 0.28);
+}
+
+.ots-card h3,
+.ots-list-card h3,
+.ots-note h3,
+.ots-path h3 {
+  margin-top: 0;
+  margin-bottom: 0.6rem;
+  font-size: 1.15rem;
+  line-height: 1.2;
+}
+
+.ots-card p,
+.ots-list-card p,
+.ots-note p,
+.ots-path p {
+  margin-bottom: 0;
+  color: #445264;
+}
+
+.ots-card span {
+  display: inline-block;
+  margin-top: 0.9rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #0f6c8d;
+}
+
+.ots-paths {
+  display: grid;
+  gap: 1rem;
+  margin: 1rem 0 2rem;
+}
+
+@media all and (max-width: 900px) {
+  .ots-hero,
+  .ots-grid-2,
+  .ots-grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .ots-hero {
+    padding: 1.4rem;
+  }
+}
+
 @media all and (max-width: 1199px) {
   #core-wrapper {
     display: block;

@@ -7,6 +7,10 @@ nav_order: 2
 
 | Packages | Description | Downloads (pypi) |
 |:--:|:--|:--:|
+| **[Nixtla SDK (TimeGPT)]** | Official Python SDK for TimeGPT with APIs for forecasting and anomaly detection. | [PyPI](https://pypi.org/project/nixtla/) |
+| **[Chronos Forecasting]** | Amazon Science pretrained forecasting models (Chronos / Chronos-Bolt) for probabilistic forecasting. | N/A |
+| **[Uni2TS]** | Salesforce universal forecasting transformer toolkit (Moirai family) for transfer learning across domains. | [PyPI](https://pypi.org/project/uni2ts/) |
+| **[TimesFM]** | Google Research foundation model for zero-shot time series forecasting. | N/A |
 |  **[Statsmodels]**  | Statsmodels is one of the most popular Python packages that provides statistical computations including descriptive statistics and estimation and inference for statistical models. The time series module covers a comprehensive list of model types such as `statespace`, `ARIMA`, `VAR`, `ES`, `HMM`, etc.                                                                                 |   [![Downloads](https://static.pepy.tech/badge/statsmodels)](https://pepy.tech/project/statsmodels)   |
 |    **[Prophet]**    | Prophet is a procedure for forecasting time series data based on an additive model where non-linear trends are fit with yearly, weekly, and daily seasonality, plus holiday effects. It works best with time series that have strong seasonal effects and several seasons of historical data. Prophet is robust to missing data and shifts in the trend, and typically handles outliers well. |       [![Downloads](https://static.pepy.tech/badge/prophet)](https://pepy.tech/project/prophet)       |
 |     **[Orbit]**     | Orbit is a Python package for Bayesian time series forecasting and inference. It provides a familiar and intuitive initialize-fit-predict interface for time series tasks, while utilizing probabilistic programming languages under the hood.                                                                                                                                                |         [![Downloads](https://static.pepy.tech/badge/orbit)](https://pepy.tech/project/orbit)         |                                                                                                                                                                                                                                                                                                     
@@ -27,6 +31,10 @@ nav_order: 2
 [StatsForecast]: https://github.com/Nixtla/statsforecast
 [Tslearn]: https://github.com/tslearn-team/tslearn
 
+[Nixtla SDK (TimeGPT)]: https://github.com/Nixtla/nixtla
+[Chronos Forecasting]: https://github.com/amazon-science/chronos-forecasting
+[Uni2TS]: https://github.com/SalesforceAIResearch/uni2ts
+[TimesFM]: https://github.com/google-research/timesfm
 
 # Time Series Deep Learning Forecasting Methods
 

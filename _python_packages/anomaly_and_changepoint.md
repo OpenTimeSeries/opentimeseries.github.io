@@ -5,9 +5,11 @@ nav_order: 3
 ---
 # Time Series Anomaly/Changepoint Detection
 
-
 | Packages | Description | Downloads (pypi) |
 |:--:|:--|:--:|
+| **[aeon]** | Modern scikit-learn-compatible toolkit that now includes experimental anomaly detection and segmentation modules in addition to classification, clustering, and forecasting. | [PyPI](https://pypi.org/project/aeon/) |
+| **[Merlion]** | End-to-end framework from Salesforce for anomaly detection, forecasting, and evaluation with a strong focus on monitoring use cases. | [![Downloads](https://static.pepy.tech/badge/salesforce-merlion)](https://pepy.tech/project/salesforce-merlion) |
+| **[Kats]** | Meta's time series toolkit with utilities for anomaly detection, change point analysis, forecasting, and feature extraction. | [PyPI](https://pypi.org/project/kats/) |
 |              **[ADTK]**              | Anomaly Detection Toolkit (ADTK) is a Python package for unsupervised / rule-based time series anomaly detection.                                                                                                                                                                                                                                                                                                                                                              |                           [![Downloads](https://static.pepy.tech/badge/adtk)](https://pepy.tech/project/adtk)                           |
 |          **[Alibi Detect]**          | Alibi Detect is an open source Python library focused on outlier, adversarial and drift detection. The package aims to cover both online and offline detectors for tabular data, text, images and time series. Both TensorFlow and PyTorch backends are supported for drift detection.                                                                                                                                                                                         |                   [![Downloads](https://static.pepy.tech/badge/alibi-detect)](https://pepy.tech/project/alibi-detect)                   |
 | **[Bayesian Changepoint Detection]** | Bayesian Changepoint Detection package provides methods to get the probability of a changepoint in a time series. Both online and offline methods are available.                                                                                                                                                                                                                                                                                                               | [![Downloads](https://static.pepy.tech/badge/bayesian-changepoint-detection)](https://pepy.tech/project/bayesian-changepoint-detection) |
@@ -18,6 +20,9 @@ nav_order: 3
 |             **[Stumpy]**             | STUMPY is a powerful and scalable Python library that efficiently computes something called the matrix profile, which can be used to identify common patterns (motifs) and anomalies.                                                                                                                                                                                                                                                                                          |                         [![Downloads](https://static.pepy.tech/badge/stumpy)](https://pepy.tech/project/stumpy)                         |
 
 
+[aeon]: https://github.com/aeon-toolkit/aeon
+[Merlion]: https://github.com/salesforce/Merlion
+[Kats]: https://github.com/facebookresearch/Kats
 [ADTK]: https://github.com/arundo/adtk
 [Alibi Detect]: https://github.com/SeldonIO/alibi-detect
 [Bayesian Changepoint Detection]: https://github.com/hildensia/bayesian_changepoint_detection
@@ -26,8 +31,6 @@ nav_order: 3
 [PyOD]: https://github.com/yzhao062/Pyod
 [Ruptures]: https://github.com/deepcharles/ruptures
 [Stumpy]: https://github.com/TDAmeritrade/stumpy
-
-
 
 
 

@@ -5,9 +5,10 @@ nav_order: 4
 ---
 # Time Series Feature Engineering
 
-
 | Packages | Description | Downloads (pypi) |
 |:--:|:--|:--:|
+| **[AntroPy]** | Fast entropy and complexity features for time series, commonly used in biosignal and sensor applications. | [![Downloads](https://static.pepy.tech/badge/antropy)](https://pepy.tech/project/antropy) |
+| **[aeon]** | Includes modern transformation and feature-extraction utilities alongside classification and clustering algorithms. | [PyPI](https://pypi.org/project/aeon/) |
 |   **[Catch22]**    | Catch22 is a collection of 22 time-series features coded in C that can be run from Python, R, Matlab, and Julia. The catch22 features are a high-performing subset of the over 7000 features in `hctsa`.                                                                                                                          |                                                                                                                                                                   [![Downloads](https://static.pepy.tech/badge/catch22)](https://pepy.tech/project/catch22)                                                                                                                                                                   |
 | **[Featuretools]** | Featuretools is a framework to perform automated feature engineering. It excels at transforming temporal and relational datasets into feature matrices for machine learning.                                                                                                                                                      |                                                                                                                                                              [![Downloads](https://static.pepy.tech/badge/featuretools)](https://pepy.tech/project/featuretools)                                                                                                                                                              |
 |    **[Hctsa]**     | Hctsa (Highly comparative time-series analysis) is a Matlab software package for running highly comparative time-series analysis. It extracts thousands of time-series features from a collection of univariate time series and includes a range of tools for visualizing and analyzing the resulting time-series feature matrix. |                                                                                                                                                                     [![Downloads](https://static.pepy.tech/badge/hctsa)](https://pepy.tech/project/hctsa)                                                                                                                                                                     |
@@ -18,6 +19,8 @@ nav_order: 4
 |  **[Tsmoothie]**   | Tsmoothie is a Python library for time-series smoothing and outlier detection in a vectorized way.                                                                                                                                                                                                                                |                                                                                                                                                                 [![Downloads](https://static.pepy.tech/badge/tsmoothie)](https://pepy.tech/project/tsmoothie)                                                                                                                                                                 |
 
 
+[AntroPy]: https://github.com/raphaelvallat/antropy
+[aeon]: https://github.com/aeon-toolkit/aeon
 [Catch22]: https://github.com/DynamicsAndNeuralSystems/catch22
 [Featuretools]: https://github.com/alteryx/featuretools
 [Hctsa]: https://github.com/benfulcher/hctsa
@@ -26,8 +29,6 @@ nav_order: 4
 [Tsflex]: https://github.com/predict-idlab/tsflex
 [Tsfresh]: https://github.com/blue-yonder/tsfresh
 [Tsmoothie]: https://github.com/cerlymarco/tsmoothie
-
-
 
 
 

@@ -8,6 +8,9 @@ nav_order: 1
 
 |Title|Year|Code|Abstract (Key Contributions)|
 |:--:|:--:|:--|
+|[Foundation Models for Time Series Analysis: A Tutorial and Survey](https://arxiv.org/abs/2403.14735)|2024|none|A tutorial-style survey that systematizes architectures, pre-training strategies, adaptation methods, and data modalities for time series foundation models.|
+|[Empowering Time Series Analysis with Foundation Models: A Comprehensive Survey](https://arxiv.org/abs/2405.02358)|2024 (updated 2025)|none|A modality-aware and challenge-oriented survey covering time-series, language, and vision pretraining paradigms for time series tasks, with updated versions through 2025.|
+|[Foundation Models for Time Series: A Survey](https://arxiv.org/abs/2504.04011)|2025|none|A taxonomy-focused survey of transformer-based time series foundation models across architecture style, prediction type, and objective design.|
 |[A Survey on Time-Series Pre-Trained Models](https://arxiv.org/pdf/2305.10716v1.pdf)|2023|[code](https://github.com/qianlima-lab/time-series-ptms)|In this survey, we provide a comprehensive review of Time-Series Pre-Trained Models (TS-PTMs), aiming to guide the understanding, applying, and studying TS-PTMs. Specifically, we first briefly introduce the typical deep learning models employed in TSM. Then, we give an overview of TS-PTMs according to the pre-training techniques. |
 |[Self-Supervised Learning for Time Series Analysis: Taxonomy, Progress, and Prospects](https://arxiv.org/pdf/2306.10125v2.pdf)|2023|[code](https://github.com/qingsongedu/Awesome-SSL4TS)|We first comprehensively review existing surveys related to SSL and time series, and then provide a new taxonomy of existing time series SSL methods by summarizing them from three perspectives: generative-based, contrastive-based, and adversarial-based. We also summarize datasets commonly used in time series forecasting, classification, anomaly detection, and clustering tasks. Finally, we present the future directions of SSL for time series analysis. |
 |[Weakly Supervised Anomaly Detection: A Survey](https://arxiv.org/pdf/2302.04549v1.pdf)|2023|[code](https://github.com/yzhao062/wsad)|In this study, we present the first comprehensive survey of WSAD methods by categorizing them into the above three weak supervision settings across four data modalities (i.e., tabular, graph, time-series, and image/video data). For each setting, we provide formal definitions, key algorithms, and potential future directions. To support future research, we conduct experiments on a selected setting and release the source code, along with a collection of WSAD methods and data.|
@@ -39,6 +42,4 @@ nav_order: 1
 [//]: # ()
 [//]: # (|[]&#40;&#41;|2022|[code]&#40;&#41;||)
 [//]: # (|[]&#40;&#41;|2022|[code]&#40;&#41;||)
-
-
 

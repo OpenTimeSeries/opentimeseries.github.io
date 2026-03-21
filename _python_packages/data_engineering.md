@@ -7,6 +7,9 @@ nav_order: 6
 
 | Packages | Description | Downloads (pypi) |
 |:--:|:--|:--:|
+| **[DatasetsForecast]** | Nixtla package for downloading and loading common forecasting benchmarks such as M3, M4, M5, Favorita, and long-horizon datasets. | [PyPI](https://pypi.org/project/datasetsforecast/) |
+| **[Tsbootstrap]** | Bootstrap toolkit for generating resampled time series with a unified sklearn-like API. | [PyPI](https://pypi.org/project/tsbootstrap/) |
+| **[YData Synthetic]** | Synthetic data generation library that includes time series generation workflows and low-code tooling. | [PyPI](https://pypi.org/project/ydata-synthetic/) |
 |   **[TimeSynth]**   | TimeSynth is an open source library for generating synthetic time series for model testing. The library can generate regular and irregular time series.                                       |    [![Downloads](https://static.pepy.tech/badge/timesynth)](https://pepy.tech/project/timesynth)    |
 |   **[Deepecho]**    | DeepEcho is a Synthetic Data Generation Python library for mixed-type, multivariate time series.                                                                                              |     [![Downloads](https://static.pepy.tech/badge/deepecho)](https://pepy.tech/project/deepecho)     |
 |   **[Torchtime]**   | Torchtime provides PyTorch data sets for supervised time series classification and prediction problems.                                                                                       |    [![Downloads](https://static.pepy.tech/badge/torchtime)](https://pepy.tech/project/torchtime)    |
@@ -16,12 +19,13 @@ nav_order: 6
 
 
 
+[DatasetsForecast]: https://github.com/Nixtla/datasetsforecast
+[Tsbootstrap]: https://github.com/astrogilda/tsbootstrap
+[YData Synthetic]: https://github.com/ydataai/ydata-synthetic
 [TimeSynth]: https://github.com/TimeSynth/TimeSynth
 [Deepecho]: https://github.com/sdv-dev/DeepEcho
 [Torchtime]: https://github.com/philipdarke/torchtime
 [Tsaug]: https://github.com/arundo/tsaug
 [Tsdb]: https://github.com/WenjieDu/TSDB
 [Tsdownsample]: https://github.com/predict-idlab/tsdownsample
-
-
 
