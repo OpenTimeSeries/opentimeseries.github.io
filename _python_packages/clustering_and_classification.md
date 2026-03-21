@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Clustering and Classficatin
+title: Clustering and Classification
 nav_order: 7
 ---
 # Time Series Clustering and Classification
@@ -18,7 +18,6 @@ nav_order: 7
 [Sktime]: https://github.com/sktime/sktime
 [DTW-Python]: https://github.com/DynamicTimeWarping/dtw-Python
 [Pyts]: https://github.com/johannfaouzi/pyts
-
 
 
 

@@ -14,8 +14,8 @@ nav_order: 6
 |   **[Deepecho]**    | DeepEcho is a Synthetic Data Generation Python library for mixed-type, multivariate time series.                                                                                              |     [![Downloads](https://static.pepy.tech/badge/deepecho)](https://pepy.tech/project/deepecho)     |
 |   **[Torchtime]**   | Torchtime provides PyTorch data sets for supervised time series classification and prediction problems.                                                                                       |    [![Downloads](https://static.pepy.tech/badge/torchtime)](https://pepy.tech/project/torchtime)    |
 |     **[Tsaug]**     | Tsaug is a Python package for time series data augmentation. It offers a set of augmentation methods for time series, as well as a simple API to connect multiple augmenters into a pipeline. |        [![Downloads](https://static.pepy.tech/badge/tsaug)](https://pepy.tech/project/tsaug)        | 
-|     **[Tsdb]**      | TSDB provides all-in-one-stop convenience for downloading and loading open-source time-series datasets.                                                                                       |         [![Downloads](https://static.pepy.tech/badge/tsdb)](https://pepy.tech/project/tsdb)         |
-| **[Tsdownsample]**  | Tsdownsample is a Python package  for fast time series downsampling.                                                                                                                          | [![Downloads](https://static.pepy.tech/badge/tsdownsample)](https://pepy.tech/project/tsdownsample) | 
+|     **[Tsdb]**      | TSDB provides an all-in-one solution for downloading and loading open-source time-series datasets.                                                                                            |         [![Downloads](https://static.pepy.tech/badge/tsdb)](https://pepy.tech/project/tsdb)         |
+| **[Tsdownsample]**  | Tsdownsample is a Python package for fast time series downsampling.                                                                                                                           | [![Downloads](https://static.pepy.tech/badge/tsdownsample)](https://pepy.tech/project/tsdownsample) | 
 
 
 
@@ -28,4 +28,3 @@ nav_order: 6
 [Tsaug]: https://github.com/arundo/tsaug
 [Tsdb]: https://github.com/WenjieDu/TSDB
 [Tsdownsample]: https://github.com/predict-idlab/tsdownsample
-

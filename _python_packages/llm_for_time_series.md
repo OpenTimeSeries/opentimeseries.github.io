@@ -3,7 +3,7 @@ layout: post
 title: LLM for Time Series
 nav_order: 9
 ---
-# Foundational Model
+# Foundation Models
 
 | Packages | Description | Paper |
 |:--:|:--|:--:|
@@ -26,7 +26,6 @@ nav_order: 9
 | **[Awesome Time Series](https://github.com/lmmentel/awesome-time-series)** | Broad GitHub collection of libraries, datasets, and resources across the time series ecosystem. |
 | **[TS-PTMs Survey Repo](https://github.com/qianlima-lab/time-series-ptms)** | Survey companion repository summarizing time-series pre-trained models and their task coverage. |
 | **[Awesome-time-series Papers](https://github.com/cure-lab/Awesome-time-series)** | Paper-centric GitHub summary of forecasting, classification, anomaly detection, and benchmark datasets. |
-
 
 
 

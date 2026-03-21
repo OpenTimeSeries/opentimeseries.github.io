@@ -159,9 +159,9 @@ div.listingblock {
 // {% highlight LANG %}...{% endhighlight %},
 // {% highlight LANG linenos %}...{% endhighlight %}:
 
-// setting the spacing and scrollbar on the second level for the thirt case
-// the css rule are apply only to the last code enviroment
-// setting the scroolbar
+// setting the spacing and scrollbar on the second level for the third case
+// the CSS rules are applied only to the last code environment
+// setting the scrollbar
 figure.highlight {
   pre,
   :not(pre) > code {
@@ -175,7 +175,7 @@ figure.highlight {
 // ```[LANG]...```, kramdown line_numbers = true,
 // {% highlight LANG linenos %}...{% endhighlight %}:
 
-// setting the spacing and scrollbar on the thirt level for the second case
+// setting the spacing and scrollbar on the third level for the second case
 .highlight .table-wrapper {
   padding: $sp-3 0;
   margin: 0;

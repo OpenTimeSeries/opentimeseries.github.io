@@ -105,6 +105,10 @@ heading_anchors: false
       <h3>Feature Engineering</h3>
       <p>Feature extraction, entropy and complexity measures, smoothing, and automated feature generation libraries.</p>
     </a>
+    <a class="ots-list-card" href="/journal_and_conference/journal_and_conference/">
+      <h3>Journal and Conference</h3>
+      <p>Common journals and conferences for time-series, forecasting, anomaly detection, and machine learning research.</p>
+    </a>
   </div>
 </section>
 
